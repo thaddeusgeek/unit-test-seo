@@ -1,14 +1,27 @@
 #coding:UTF-8
 require 'mechanize'
 require 'pp'
+require 'w3c_validators'
+include W3CValidators
 
 shared_examples_for "所有主机" do
     it "robots" do
         expect{Mechanize.new.get "http://#{$host}/robots.txt"}.not_to raise_error
     end
     
+    $links.each do |link|
+        link_from = link.shift
+        Mechanize.new.get "http://#{$host}#{link_from}" do|page|
+            link.each do|link_to|
+                it "保证从'#{link_from}'链接到'#{link_to}' 而且没有nofollow" do
+                    page.links.any?{|link|link.href==link_to}.should == true
+                end
+            end
+        end
+    end unless $links.nil?
+    
     $redirects.each do |redirect|
-        redirect[0] = "http://#{$host}#{redirect[0]}"
+        redirect[0] = "http://#{$host}#{redirect[0]}" unless redirect[0].start_with? 'http://'
         redirect[1] = "http://#{$host}#{redirect[1]}" unless redirect[1].start_with? 'http://'
 =begin
         it "访问'#{redirect[0]}'不应返回4xx代码" do
@@ -34,34 +47,76 @@ shared_examples_for "所有主机" do
     end unless $redirects.nil?
 end
 shared_examples_for "固定链接页面" do
-        $necessary_links.each do |nlink|
-            it "应包含必要链接到#{nlink[0]}" do
-                #$page.links.any?{|link|link.href == nlink[0] and link.text == nlink[1] and link.title == nlink[2]}.should == true #
-                index = $page.links.index{|link|link.href == nlink[0]}
-                index.should_not == nil
-                next if index.nil?
-                link = $page.links[index]
-                unless nlink[2].nil?
-                    it "链接\"#{nlink[0]}\"的title应该是 #{nlink[2]}" do
-                        link.title.should == nlink[2]
-                    end
+    $necessary_links.each do |nlink|
+        it "应包含必要链接到#{nlink[0]}" do
+            #$page.links.any?{|link|link.href == nlink[0] and link.text == nlink[1] and link.title == nlink[2]}.should == true #
+            index = $page.links.index{|link|link.href == nlink[0]}
+            index.should_not == nil
+            next if index.nil?
+            link = $page.links[index]
+            unless nlink[2].nil?
+                it "链接\"#{nlink[0]}\"的title应该是 #{nlink[2]}" do
+                    link.title.should == nlink[2]
                 end
-                link.text.should == nlink[1]
             end
-        end unless $necessary_links.nil?
+            link.text.should == nlink[1]
+        end
+    end unless $necessary_links.nil?
 end
-shared_examples_for "所有页面" do
 
-    it_behaves_like "固定链接页面"
+shared_examples_for "基本页面" do
     
-    it "必须有canonical标签,而且和标准uri一致" do
-        canonical = $page.search "//link[@rel='canonical']"
-        canonical.size.should == 1
-        canonical.first.href.should == $uri
+    it "'#{$uri}'的title应 == #{$title} " do
+        $page.title.should == $title unless $title.nil?
     end
     
-    it "应包含h1标签" do
-        $page.search("//h1").should_not == nil
+    it "应包含正确的h1标签" do
+        h1 = $page.search("//h1").should_not be_empty
+        h1.first.text.should == $h1 unless $h1.nil?
+        h1.each do |h|
+            $keywords.any{|keyword|h.text.include? keyword}.should == true
+        end unless $keywords.nil?
+    end
+
+    it "必须有唯一的canonical标签,而且其href值和标准uri一致" do
+        canonical = $page.search "//link[@rel='canonical']"
+        canonical.should_not be_empty
+        canonical.size.should == 1
+        canonical.first.attr('href').should == $uri
+    end
+
+    it "应包含唯一一个正确的meta keywords标签" do
+        keywords = $page.search("//meta[@name='keywords']")
+        keywords.size.should == 1
+        keywords.first.content.should == $keywords unless $keywords.nil?
+    end
+    
+    it "应包含唯一一个正确的meta description标签" do
+        description = $page.search("//meta[@name='description']")
+        description.size.should == 1
+        description.first.content.should == $desciption unless $desciption.nil?
+    end
+end
+
+shared_examples_for "所有页面" do
+
+    it_behaves_like "基本页面"
+    
+    it "应把css归类用<link>引入,不应包含<style>标签" do
+        $page.search("//style").should be_empty
+    end
+    
+    it "应包含连续的<h>标签,假如有<h4>则应该存在<h3> <h2>" do
+        $page.search("//h2").should_not be_empty unless $page.search("//h3").empty?
+        $page.search("//h3").should_not be_empty unless $page.search("//h4").empty?
+        $page.search("//h4").should_not be_empty unless $page.search("//h5").empty?
+        $page.search("//h5").should_not be_empty unless $page.search("//h6").empty?
+    end
+    
+    it "应遵守w3c规定" do
+        @validator = MarkupValidator.new
+        @validator.set_doctype!(:html32)
+        @validator.validate_text($page.body).errors.should == nil
     end
     
     it "不应包含注释" do
@@ -83,16 +138,9 @@ shared_examples_for "所有页面" do
         doc.internal_subset.system_id.should == nil
     end
     
-    it "应包含且只包含一个meta keywords标签" do
-        $page.search("//meta[@name='keywords']").size.should == 1
-    end
-    
-    it "应把css归类用<link>引入,不应包含<style>标签" do
-        $page.search("//style").should == nil
-    end
     
     it '应把js归类用<script src="">引入,不应包含<script type="text/javascript">' do
-        $page.search("//script[@type='text/javascript']").should == nil
+        $page.search("//script[@type='text/javascript']").should be_empty
     end
 
     it "每个URI应该都符合w3c标准" do
@@ -128,6 +176,13 @@ shared_examples_for "所有页面" do
         end
     end
     
+    $useless_link_texts = %w(隐私政策 服务条款 设置 登录 登入 注册 快速注册)
+    $page.links.each do |link|
+        it "一般无用链接应该标记nofollow" do
+            link.rel.first.should == 'nofollow' if $useless_link_texts.include?link.text
+        end
+    end
+
     $page.links.each do |link|
         next if link.href.nil?
         begin
