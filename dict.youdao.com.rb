@@ -1,11 +1,10 @@
 #coding:UTF-8
 require './common.rb'
-$domains = %w(youdao.com 163.com)
-$host = 'dict.youdao.com'
-$uri_patterns = [] <<
+domains = %w(youdao.com 163.com)
+uri_patterns = [] <<
     %r(^/(eng|fr|ko|jap|wiki|wikis)/[^/]+/$) << #/eng/go/
     %r(^/(eng|fr|ko|jap)/[^/]+/example/$) << #/eng/go/example/
-    %r(^/(eng|fr|ko|jap)/[^/]+/example/(media|video|audio|auth|paper|oral|written)\.html$) << #/eng/go/example/media.html
+    %r(^/(eng|fr|ko|jap)/[^/]+/example/(media|video|audio|auth|paper|oral|written)\.html$) # /eng/go/example/media.html
 =begin
     %r(^/example/[^/]+/$) <<
     %r(^/example/oral/[^/]+/$) <<
@@ -17,25 +16,30 @@ $uri_patterns = [] <<
 =end
 agent = Mechanize.new
 agent.redirect_ok = :permanet
-shared_examples_for "小语种页面" do
+shared_examples "小语种页面" do |meta|
     it "不应出现到英汉页面的链接" do
-        $page.links.each do |link|
+        meta[:page].links.each do |link|
             link.href.should_not =~ /^\/w\//
             link.href.should_not =~ /^\/eng\//
         end
     end
 end
+
 describe "站点地图/map/index.html" do
-    $necessary_files = %w(/map/index.html /map/style.css /map/nav.png)
-    $necessary_files.each do |file|
+    host = 'dict.youdao.com'
+    necessary_files = %w(/map/index.html /map/style.css /map/nav.png)
+    necessary_files.each do |file|
         it "必要文件#{file}不能丢失" do
-            expect{Mechanize.new.get "http://#{$host}#{file}"}.not_to raise_error
+            expect{Mechanize.new.get "http://#{host}#{file}"}.not_to raise_error
         end
     end
 end
 
-describe "#{$host}" do
-    $redirects = [] << 
+host = 'dict.youdao.com'
+describe "#{host}" do
+    meta = {}
+    meta[:host] = host
+    meta[:redirects] = [] << 
     ['/w/Go/','/eng/go/'] <<
     ['/w/_Go/','/eng/go/'] <<
     ['/w/Go_/','/eng/go/'] <<
@@ -59,7 +63,7 @@ describe "#{$host}" do
     ['/?keyfrom=abc&vendor=bcd','/'] <<
     ['/drawsth','http://cidian.youdao.com/drawsth'] <<
     ['/m/search?keyfrom=dict.mindex&q=Go','/m/go/'] <<
-    ['/search?q=Go&le=jap','/${lng}/${keyword}/'] <<
+    ['/search?q=Go&le=jap','/jap/go/'] <<
     ['/search?keyfrom=selector&q=Go','/eng/go/']
 
 
@@ -67,7 +71,7 @@ describe "#{$host}" do
     word_ko = URI.encode("음악")
     word_jap = URI.encode('ワード')
     word_fr = URI.encode('écrire')
-    $links = [] <<
+    meta[:links] = [] <<
     ["/eng/go/","/m/go/","/eng/go/example/","/eng/go/example/media.html","/eng/go/example/auth.html","/wiki/go/","/wikis/go/","/eng/going/","/eng/gone/","/eng/went/","/eng/goes/","http://fanyi.youdao.com/"] <<
     %w(/m/go/ /m/go/online.html /m/go/example.html)
     ["/eng/#{word_cn}/","/m/#{word_cn}/","/eng/#{word_cn}/example/","/eng/#{word_cn}/example/media.html","/eng/#{word_cn}/example/auth.html","/wiki/#{word_cn}/","/wikis/#{word_cn}","/eng/mental_philosophy/"] <<
@@ -80,22 +84,24 @@ describe "#{$host}" do
     %w(/eng/goes/ /eng/go/) <<
     %w(/eng/fern/ /eng/ferns/) <<
     %w(/eng/ferns/ /eng/fern/)
-    it_behaves_like "所有主机"
+    it_behaves_like "所有主机", meta
     
     baduri = 'http://dict.youdao.com/example/written/make_a_dash_through_the_smoke_and_fire/'
     ['Sogou web spider/4.0','Sogou inst spider/4.0','YodaoBot','Googlebot','Baiduspider','Sosospider'].each do |ua|
         agent.user_agent = ua
         it "当查询#{baduri} 无结果时,应针对#{ua}返回404" do
-            expect{$page = agent.get baduri}.to raise_error(Mechanize::ResponseCodeError,/^404/)
+            expect{agent.get baduri}.to raise_error(Mechanize::ResponseCodeError,/^404/)
         end
     end
 end
 
 describe "一般单词页面" do
-    %w(abc go fine).each do |word|
-        $uri = "http://dict.youdao.com/eng/#{word}/"
+        meta = {}
+    #%w(abc go fine).each do |word|
+        word = 'go'
+        meta[:uri] = "http://dict.youdao.com/eng/#{word}/"
 =begin
-        $necessary_links = [] <<
+        meta[:necessary_links] = [] <<
         ["/m/#{word}/",                     word,                               "#{word}的意思 手机版"] <<
         ["/wiki/#{word}/",                  word,                               nil] <<
         ["/wikis/#{word}/",                 "更多与\"word\"相关的百科词条 »",   nil] <<
@@ -109,94 +115,98 @@ describe "一般单词页面" do
         ["/eng/gone/",                      "gone",                             "#{word}的过去分词"]
 =end
 
-        $page = agent.get($uri)
-        it_behaves_like "所有页面"
+        meta[:page] = agent.get meta[:uri]
+        it_behaves_like "所有页面", meta
 
         it '<div id="ads" class="ads"> 中不能有内容(需要用js显示)' do
-            $page.search("//div[@id='ads']").first.text.should be_empty
+            meta[:page].search("//div[@id='ads']").first.text.should be_empty
         end
+    #end
+end
+%w(écrire bon fleur).each do |word|
+    meta = {}
+    meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】什么意思_法语#{word}在线翻译成中文_有道词典"
+    describe "法语#{word}单词页面" do
+        it_behaves_like "基本页面", meta
     end
 end
 
-describe "法语页面" do
-    %w(écrire bon fleur).each do |word|
-        $uri = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】什么意思_#{word}在线翻译成中文_有道词典"
-        it_behaves_like "基本页面"
+%w(にほん ちゅうごく アメリカ合衆国).each do |word|
+    meta = {}
+    meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】什么意思_法语#{word}在线翻译成中文_有道词典"
+    describe "法语#{word}单词页面" do
+        it_behaves_like "基本页面", meta
     end
 end
 
-describe "日语页面" do
-    %w(にほん ちゅうごく アメリカ合衆国).each do |word|
-        $uri = "http://dict.youdao.com/jap/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】什么意思_#{word}在线翻译成中文_有道词典"
-        it_behaves_like "基本页面"
+%w(중국 한국 미국).each do |word|
+    meta = {}
+    meta[:uri] = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】什么意思_韩语#{word}在线翻译成中文_有道词典"
+    describe "韩语#{word}页面" do
+        it_behaves_like "基本页面", meta
     end
 end
 
-describe "韩语页面" do
-    %w(중국 한국 미국).each do |word|
-        $uri = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】什么意思_#{word}在线翻译成中文_有道词典"
-        it_behaves_like "基本页面"
-    end
-end
-
-describe "英语页面" do
-    %w(china america world).each do |word|
-        $uri = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】什么意思_#{word} 英语怎么说_在线翻译成英文_有道词典"
-        it_behaves_like "基本页面"
+%w(china america world).each do |word|
+    meta = {}
+    meta[:uri] = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】什么意思_#{word} 英语怎么说_在线翻译成英文_有道词典"
+    describe "英语#{word}页面" do
+        it_behaves_like "基本页面", meta
     end
 end
 
 %w(无 有 心理学).each do |word|
+    meta = {}
+    meta[:uri] = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】英语怎么说_ #{word} 在线翻译成英文_有道词典"
     describe "汉英#{word}页面" do
-        $uri = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "<title>【#{word}】英语怎么说_ #{word} 在线翻译成英文_有道词典</title>"
-        it_behaves_like "基本页面"
+        it_behaves_like "基本页面", meta
     end
 
+    meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】法语怎么说_#{word}在线翻译成法语_有道词典"
     describe "汉法查#{word}页面" do
-        $uri = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】法语怎么说_#{word}在线翻译成法语_有道词典"
-        it_behaves_like "基本页面"
+        it_behaves_like "基本页面", meta
     end
+
+    meta[:uri] = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】韩语怎么说_#{word}在线翻译成韩语_有道词典"
     describe "汉韩查#{word}页面" do
-        $uri = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】韩语怎么说_#{word}在线翻译成韩语_有道词典"
-        it_behaves_like "基本页面"
+        it_behaves_like "基本页面", meta
     end
+    
+    meta[:uri] = "http://dict.youdao.com/jap/#{URI.encode(word)}/"
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = "【#{word}】日语怎么说_#{word}在线翻译成日语_有道词典"
     describe "汉日查#{word}页面" do
-        $uri = "http://dict.youdao.com/jap/#{URI.encode(word)}/"
-        $page = Mechanize.new.get $uri
-        $title = "【#{word}】日语怎么说_#{word}在线翻译成日语_有道词典"
-        it_behaves_like "基本页面"
+        it_behaves_like "基本页面", meta
     end
 end
 
 
 describe "首页" do
-    $page = agent.get 'http://dict.youdao.com'
-    
-    $necessary_links = [] << ['http://dict.youdao.com/map/index.html','站点地图',nil]
-    
-    specify{$page.title.should == '英语_汉语_法语_日语_韩语_有道多语言在线词典'}
-
-    specify{$page.search("//meta[@name='keywords']").text.should include '词典'}
-    
-    specify{$page.search("//meta[@name='description']").text.should == '有道词典网页版,支持中文、英语、法语、日语、韩语五种语言,不仅提供常规的英汉、法汉、日汉、韩汉互译以及汉语词典的功能,还收录了各类词汇的网络释义、例句和百科知识。'}
+    meta = {}
+    meta[:uri] = 'http://dict.youdao.com/'
+    meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:title] = '英语_汉语_法语_日语_韩语_有道多语言在线词典'
+    meta[:keywords] = %w(词典)
+    meta[:description] = '有道词典网页版,支持中文、英语、法语、日语、韩语五种语言,不仅提供常规的英汉、法汉、日汉、韩汉互译以及汉语词典的功能,还收录了各类词汇的网络释义、例句和百科知识。'
+    meta[:necessary_links] = [] << ['http://dict.youdao.com/map/index.html','站点地图',nil]
     
     it "应该包含到'/map/index.html'的链接,而且没被标nofollow" do
-        $page.link_with(:href => %r(/map/index.html)).rel.should be_empty
+        meta[:page].link_with(:href => %r(/map/index.html)).rel.should be_empty
     end
     
-    it_behaves_like "所有页面"
+    it_behaves_like "所有页面", meta
 end
