@@ -19,6 +19,10 @@ describe "首页" do
     end
 end
 
-
-describe "关于有道" do
+describe "快速翻译页" do
 end
+
+describe "文档翻译页" do
+end
+
+

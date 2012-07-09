@@ -1,21 +1,7 @@
 #coding:UTF-8
+$project = 'youdao'
 require './common.rb'
-domains = %w(youdao.com 163.com)
-uri_patterns = [] <<
-    %r(^/(eng|fr|ko|jap|wiki|wikis)/[^/]+/$) << #/eng/go/
-    %r(^/(eng|fr|ko|jap)/[^/]+/example/$) << #/eng/go/example/
-    %r(^/(eng|fr|ko|jap)/[^/]+/example/(media|video|audio|auth|paper|oral|written)\.html$) # /eng/go/example/media.html
-=begin
-    %r(^/example/[^/]+/$) <<
-    %r(^/example/oral/[^/]+/$) <<
-    %r(^/example/written/[^/]+/$) <<
-    %r(^/example/paper/[^/]+/$) <<
-    %r(^/example/media/[^/]+/$) <<
-    %r(^/example/audio/[^/]+/$) <<
-    %r(^/example/video/[^/]+/$) <<
-=end
-agent = Mechanize.new
-agent.redirect_ok = :permanet
+
 shared_examples "小语种页面" do |meta|
     it "不应出现到英汉页面的链接" do
         meta[:page].links.each do |link|
@@ -39,6 +25,7 @@ host = 'dict.youdao.com'
 describe "#{host}" do
     meta = {}
     meta[:host] = host
+=begin
     meta[:redirects] = [] << 
     ['/w/Go/','/eng/go/'] <<
     ['/w/_Go/','/eng/go/'] <<
@@ -66,7 +53,6 @@ describe "#{host}" do
     ['/search?q=Go&le=jap','/jap/go/'] <<
     ['/search?keyfrom=selector&q=Go','/eng/go/']
 
-
     word_cn = URI.encode("心理学")
     word_ko = URI.encode("음악")
     word_jap = URI.encode('ワード')
@@ -84,10 +70,13 @@ describe "#{host}" do
     %w(/eng/goes/ /eng/go/) <<
     %w(/eng/fern/ /eng/ferns/) <<
     %w(/eng/ferns/ /eng/fern/)
+=end
     it_behaves_like "所有主机", meta
     
     baduri = 'http://dict.youdao.com/example/written/make_a_dash_through_the_smoke_and_fire/'
     ['Sogou web spider/4.0','Sogou inst spider/4.0','YodaoBot','Googlebot','Baiduspider','Sosospider'].each do |ua|
+        agent = Mechanize.new
+        agent.redirect_ok = :permanet
         agent.user_agent = ua
         it "当查询#{baduri} 无结果时,应针对#{ua}返回404" do
             expect{agent.get baduri}.to raise_error(Mechanize::ResponseCodeError,/^404/)
@@ -100,6 +89,7 @@ describe "一般单词页面" do
     #%w(abc go fine).each do |word|
         word = 'go'
         meta[:uri] = "http://dict.youdao.com/eng/#{word}/"
+        meta[:keywords] = [] << word
 =begin
         meta[:necessary_links] = [] <<
         ["/m/#{word}/",                     word,                               "#{word}的意思 手机版"] <<
@@ -115,11 +105,11 @@ describe "一般单词页面" do
         ["/eng/gone/",                      "gone",                             "#{word}的过去分词"]
 =end
 
-        meta[:page] = agent.get meta[:uri]
+        #meta[:page] = agent.get meta[:uri]
         it_behaves_like "所有页面", meta
 
         it '<div id="ads" class="ads"> 中不能有内容(需要用js显示)' do
-            meta[:page].search("//div[@id='ads']").first.text.should be_empty
+            Mechanize.new.get(meta[:uri]).search("//div[@id='ads']").first.text.should be_empty
         end
     #end
 end
@@ -127,6 +117,7 @@ end
     meta = {}
     meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:keywords] = [] << word
     meta[:title] = "【#{word}】什么意思_法语#{word}在线翻译成中文_有道词典"
     describe "法语#{word}单词页面" do
         it_behaves_like "基本页面", meta
@@ -137,6 +128,7 @@ end
     meta = {}
     meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:keywords] = [] << word
     meta[:title] = "【#{word}】什么意思_法语#{word}在线翻译成中文_有道词典"
     describe "法语#{word}单词页面" do
         it_behaves_like "基本页面", meta
@@ -147,8 +139,9 @@ end
     meta = {}
     meta[:uri] = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:keywords] = [] << word
     meta[:title] = "【#{word}】什么意思_韩语#{word}在线翻译成中文_有道词典"
-    describe "韩语#{word}页面" do
+    describe "韩语页面:#{word}" do
         it_behaves_like "基本页面", meta
     end
 end
@@ -157,8 +150,9 @@ end
     meta = {}
     meta[:uri] = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
-    meta[:title] = "【#{word}】什么意思_#{word} 英语怎么说_在线翻译成英文_有道词典"
-    describe "英语#{word}页面" do
+    meta[:keywords] = []<< word
+    meta[:title] = "【#{word}】什么意思_英语#{word}在线翻译_有道词典"
+    describe "英语页面:#{word}" do
         it_behaves_like "基本页面", meta
     end
 end
@@ -167,29 +161,33 @@ end
     meta = {}
     meta[:uri] = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
-    meta[:title] = "【#{word}】英语怎么说_ #{word} 在线翻译成英文_有道词典"
-    describe "汉英#{word}页面" do
+    meta[:keywords] = [] << word
+    meta[:title] = "【#{word}】英语怎么说_在线翻译_有道词典"
+    describe "汉英页面:#{word}" do
         it_behaves_like "基本页面", meta
     end
 
     meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:keywords] = [] << word
     meta[:title] = "【#{word}】法语怎么说_#{word}在线翻译成法语_有道词典"
-    describe "汉法查#{word}页面" do
+    describe "汉法页面:#{word}" do
         it_behaves_like "基本页面", meta
     end
 
     meta[:uri] = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:keywords] = [] << word
     meta[:title] = "【#{word}】韩语怎么说_#{word}在线翻译成韩语_有道词典"
-    describe "汉韩查#{word}页面" do
+    describe "汉韩页面#{word}" do
         it_behaves_like "基本页面", meta
     end
     
     meta[:uri] = "http://dict.youdao.com/jap/#{URI.encode(word)}/"
     meta[:page] = Mechanize.new.get meta[:uri]
+    meta[:keywords] = [] << word
     meta[:title] = "【#{word}】日语怎么说_#{word}在线翻译成日语_有道词典"
-    describe "汉日查#{word}页面" do
+    describe "汉日页面#{word}" do
         it_behaves_like "基本页面", meta
     end
 end
@@ -205,7 +203,7 @@ describe "首页" do
     meta[:necessary_links] = [] << ['http://dict.youdao.com/map/index.html','站点地图',nil]
     
     it "应该包含到'/map/index.html'的链接,而且没被标nofollow" do
-        meta[:page].link_with(:href => %r(/map/index.html)).rel.should be_empty
+        meta[:page].link_with(:href => %r(/map/index\.html)).rel.should be_empty
     end
     
     it_behaves_like "所有页面", meta

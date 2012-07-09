@@ -1,38 +1,93 @@
 #coding:UTF-8
-
 require 'mechanize'
 require 'pp'
 require 'w3c_validators'
+require 'yaml'
+require 'pismo'
+require 'rmmseg'
 include W3CValidators
+def get_regex(host)
+    YAML.load(File.read("project/#{$project}/#{host}/regex"))||{}
+end
+
+def get_redirects(host)
+    YAML.load(File.read("project/#{$project}/#{host}/redirects"))||{}
+end
+
+def get_links(host)
+    YAML.load(File.read("project/#{$project}/#{host}/links"))||{}
+end
+
+def get_robots(host)
+    File.read("project/#{$project}/#{host}/robots")
+end
+
+def uri_obj(uri)
+    require 'uri'
+    begin
+        URI uri
+    rescue URI::InvalidURIError
+        URI URI.encode(uri)
+    end
+end
+class Mechanize::Page::Link
+    def title
+        attributes['title']
+    end
+    def to_html
+        code = "<a href=\"#{href}\""
+        code += " title=\"#{title}\"" unless title.nil?
+        code += " rel=\"#{rel}\"" unless rel.nil?
+        code += ">#{text}</atest>"
+        return code
+    end
+end
+$framework = {}
+Dir.glob("project/#{$project}/*").each do |file|
+    host = File.basename(file)
+    $framework[host] ||= {}
+    $framework[host]['regex'] = get_regex(host)
+    $framework[host]['redirects'] = get_redirects(host)
+    $framework[host]['robots'] = get_robots(host).strip
+    $framework[host]['links'] = get_links(host)
+end
 
 shared_examples "所有主机" do |meta|
-    begin
-        robots = Mechanize.new.get("http://#{meta[:host]}/robots.txt").body.lines.map{|line|line.strip}
-        meta[:robots].each do |line|
-            it "#{meta[:host]}/robots.txt应包含#{line}" do
-                robots.should include line
-            end
-        end unless meta[:robots].nil?
-    rescue Mechanize::ResponseCodeError
-        it "robots" do
-            expect{Mechanize.new.get "http://#{meta[:host]}/robots.txt"}.not_to raise_error
-        end
+    host = meta[:host]
+    it "检查配置" do
+        $framework[host].should_not be_empty
+        $framework[host]['regex'].should_not be_empty
+        $framework[host]['redirects'].should_not be_empty
+        $framework[host]['robots'].should_not be_empty
+        $framework[host]['links'].should_not be_empty
     end
     
-    meta[:links].each do |link|
-        link_from = link.shift
-        Mechanize.new.get "http://#{meta[:host]}#{link_from}" do|page|
-            link.each do|link_to|
-                it "保证从'#{link_from}'链接到'#{link_to}' 而且没有nofollow" do
-                    page.links.any?{|link|link.href==link_to}.should == true
+    robots_uri = "http://#{host}/robots.txt"
+    begin
+        it "robots文件应与配置文件一致,请检查更新配置文件" do
+            $framework[host]['robots'].should == Mechanize.new.get(robots_uri).body.strip
+        end
+    rescue Mechanize::ResponseCodeError
+        it "应该有robots文件 #{robots_uri}" do
+            expect{Mechanize.new.get robots_uri}.not_to raise_error
+        end
+    end
+
+    $framework[host]['links'].each_pair do |link_from,link_tos,|
+        Mechanize.new.get "http://#{host}#{link_from}" do |page|
+            link_tos.each do|link_to|
+                the_links = page.links_with(:href=>link_to[0]).delete_if{|link|link.rel=='nofollow'}.delete_if{|link|link.text.nil? or link.text != link_to[1]}.delete_if{|link|link.attributes['title'].nil? or link.attributes['title'] != link_to[2]}
+                it "保证'http://#{host}#{link_from}'中有链接<a href=\"#{link_to[0]}\">#{link_to[1]} title=\"#{link_to[2]}\"</a> (不能有nofollow)" do
+                    the_links.should_not be_empty
+                    #page.links.any?{|link|link.href==link_to}.should == true
                 end
             end
         end
-    end unless meta[:links].nil?
+    end
     
-    meta[:redirects].each do |redirect|
-        redirect[0] = "http://#{meta[:host]}#{redirect[0]}" unless redirect[0].start_with? 'http://'
-        redirect[1] = "http://#{meta[:host]}#{redirect[1]}" unless redirect[1].start_with? 'http://'
+    $framework[host]['redirects'].each do |redirect|
+        redirect[0] = "http://#{host}#{redirect[0]}" unless redirect[0].start_with? 'http://'
+        redirect[1] = "http://#{host}#{redirect[1]}" unless redirect[1].start_with? 'http://'
 =begin
         it "访问'#{redirect[0]}'不应返回4xx代码" do
             expect{agent.get redirect[0]}.not_to raise_error Mechanize::ResponseCodeError
@@ -42,11 +97,11 @@ shared_examples "所有主机" do |meta|
         agent.redirect_ok = :permanent
         begin
             agent.get redirect[0] do |result|
-                it "访问'#{redirect[0]}'应跳转到'#{redirect[1]}',且跳转一次" do
-                    agent.history.size.should == 2
-                end
                 it "访问'#{redirect[0]}'应跳转到'#{redirect[1]}'" do
                     result.uri.to_s.should == redirect[1]
+                end
+                it "访问'#{redirect[0]}'应跳转到'#{redirect[1]}',只能跳一次" do
+                    agent.history.size.should < 3
                 end
             end
         rescue Mechanize::ResponseCodeError => e
@@ -54,40 +109,23 @@ shared_examples "所有主机" do |meta|
                 e.response_code.should == "200"
             end
         end
-    end unless meta[:redirects].nil?
-end
-shared_examples "固定链接页面" do |meta|
-    meta[:page] = Mechanize.new.get meta[:uri] if meta[:page].nil?
-    meta[:necessary_links].each do |nlink|
-        it "应包含必要链接到#{nlink[0]}" do
-            #meta[:page].links.any?{|link|link.href == nlink[0] and link.text == nlink[1] and link.title == nlink[2]}.should == true #
-            index = meta[:page].links.index{|link|link.href == nlink[0]}
-            index.should_not == nil
-            next if index.nil?
-            link = meta[:page].links[index]
-            unless nlink[2].nil?
-                it "链接\"#{nlink[0]}\"的title应该是 #{nlink[2]}" do
-                    link.title.should == nlink[2]
-                end
-            end
-            link.text.should == nlink[1]
-        end
-    end unless meta[:necessary_links].nil?
+    end
 end
 
 shared_examples "基本页面" do |meta|
-    meta[:page] = Mechanize.new.get meta[:uri] if meta[:page].nil?
-    it "'#{meta[:uri]}'的title应 == #{meta[:title]} " do
-        meta[:page].title.should == meta[:title] unless meta[:title].nil?
+    uri = meta[:uri]
+    #page = meta[:page].nil? ? Mechanize.new.get(uri) : meta[:page]
+    page = Mechanize.new.get uri
+    title = meta[:title]
+    h1 = meta[:h1]
+    keywords = meta[:keywords]
+    it "'#{uri}'的title应 == #{title} " do
+        page.title.should == title unless title.nil?
     end
-    
-    meta[:page].links.each do |link|
+
+    page.links.each do |link|
         next if link.href.nil?
-        begin
-            queries = URI(link.href).query
-        rescue URI::InvalidURIError
-            queries = URI(URI.encode(link.href)).query
-        end
+        queries = uri_obj(link.href).query
         queries.split('&').each do |query|
             query = query.split('=')[0]
             it "'#{link.href}'.URI中不能包含keyfrom或vendor" do
@@ -97,41 +135,44 @@ shared_examples "基本页面" do |meta|
         end unless queries.nil?
     end
     
+    h1_online = page.search("//h1")#.should_not be_empty
     it "应包含正确的h1标签" do
-        h1 = meta[:page].search("//h1")#.should_not be_empty
-        h1.first.text.should == meta[:h1] unless meta[:h1].nil?
-        h1.each do |h|
-            meta[:keywords].any{|keyword|h.text.include? keyword}.should == true
-        end unless meta[:keywords].nil?
+        h1_online.first.text.should == h1 unless h1.nil?
+    end
+    
+    it "<h1>应包含至少一个关键词#{keywords}" do
+        h1_online.each do |h|
+            keywords.any{|keyword|h.text.include? keyword}.should == true
+        end unless keywords.nil?
     end
 
     it "必须有唯一的canonical标签,而且其href值和标准uri一致" do
-        canonical = meta[:page].search "//link[@rel='canonical']"
+        canonical = page.search "//link[@rel='canonical']"
         canonical.should_not be_empty
         canonical.size.should == 1
-        canonical.first.attr('href').should == meta[:uri]
+        canonical.first.attr('href').should == uri
     end
 
     it "应只包含一个meta keywords标签" do
-        keywords = meta[:page].search("//meta[@name='keywords']")
+        keywords = page.search("//meta[@name='keywords']")
         keywords.size.should == 1
     end
     
     it "keywords = '#{meta[:keywords]}'" do
-        keywords = meta[:page].search("//meta[@name='keywords']")
+        keywords_online = page.search("//meta[@name='keywords']")
         text = ''
-        keywords.each do |key|
+        keywords_online.each do |key|
             text += key.attributes['content'].value
         end
         text.should == meta[:keywords].join(',') unless meta[:keywords].nil?
     end
 
     it "应只包含一个meta description标签" do
-        meta[:page].search("//meta[@name='description']").size.should == 1
+        page.search("//meta[@name='description']").size.should == 1
     end
     
     it "description = '#{meta[:description]}'" do
-        description = meta[:page].search("//meta[@name='description']")
+        description = page.search("//meta[@name='description']")
         text = ''
         description.each do |desc|
             text += desc.attributes['content'].value
@@ -141,52 +182,84 @@ shared_examples "基本页面" do |meta|
 end
 
 shared_examples "所有页面" do |meta|
-    meta[:page] = Mechanize.new.get meta[:uri] if meta[:page].nil?
+    uri = meta[:uri]
+    keywords = meta[:keywords]
+    begin
+        uri_obj = URI(uri)
+    rescue URI::InvalidURIError
+        uri_obj = URI(URI.encode(uri))
+    end
+    host = uri_obj.host
+    domain = (host.match /\.?([a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)$/)[1]
+    #page = meta[:page].nil? ? Mechanize.new.get(uri) : meta[:page]
+    page = Mechanize.new.get uri
+    anchors = page.search("//@id | //@name").map{|node|node.value}
+    links_follow = page.links.delete_if{|link|link.rel.include? 'nofollow'}
+    links_nofollow = page.links.delete_if{|link|link.rel.nil? or !link.rel.include? 'nofollow'}
+    text = page.search("//text()")
+    text_squeeze = text.to_s.squeeze
+    pismo_text = Pismo::Document.new(page.body).body.squeeze
 
     it_behaves_like "基本页面" ,meta
-    it "页面尺寸应小于100kb" do
-        meta[:page].body.bytesize.should < 102400
+
+    it "主体内容应占总内容的50%以上(功能不稳定)" do
+        (pismo_text.size/text.to_s.squeeze.size.to_f).should > 0.5
     end
-    it "总链接数应小于101" do
-        meta[:page].links.size.should < 101
-    end
-    it "nofollow的链接应小于正常链接" do
-        count_nofollow = 0
-        meta[:page].links.each do |link|
-            count_nofollow += 1 if link.rel.first == 'nofollow'
+    
+    RMMSeg::Dictionary.load_dictionaries#  Ferret::Analysis::StopFilter
+    rmmseg = RMMSeg::Algorithm.new(text_squeeze)
+    seg_count = 0
+    seg_count += 1 while rmmseg.next_token
+    keywords.each do |keyword|
+        it "'#{keyword}'的密度应该在2%到10%之间" do
+            tmp_density = (text_squeeze.scan(/#{keyword}/).size.to_f / seg_count)
+            tmp_density.should < 0.1
+            tmp_density.should > 0.02
+            warn (text_squeeze.scan(/#{keyword}/).size.to_f / seg_count)
         end
-        count_nofollow.should < meta[:page].links.size/2.0
     end
+
+    
+    it "页面尺寸应小于100kb" do
+        page.body.bytesize.should < 102400
+    end
+
+    it "总链接数应小于101" do
+        page.links.size.should < 101
+    end
+
+    it "nofollow的链接应小于正常链接" do
+        links_nofollow.size.should <= page.links.size/2
+    end
+
     it "应把css归类用<link>引入,不应包含<style>标签" do
-        css = meta[:page].search("//style")
+        css = page.search("//style")
         css.to_s.should == nil unless css.empty?
     end
     
     it "应包含连续的<h>标签,假如有<h4>则应该存在<h3> <h2>" do
-        meta[:page].search("//h2").should_not == nil unless meta[:page].search("//h3").empty?
-        meta[:page].search("//h3").should_not be_empty unless meta[:page].search("//h4").empty?
-        meta[:page].search("//h4").should_not be_empty unless meta[:page].search("//h5").empty?
-        meta[:page].search("//h5").should_not be_empty unless meta[:page].search("//h6").empty?
+        page.search("//h2").should_not == nil unless page.search("//h3").empty?
+        page.search("//h3").should_not be_empty unless page.search("//h4").empty?
+        page.search("//h4").should_not be_empty unless page.search("//h5").empty?
+        page.search("//h5").should_not be_empty unless page.search("//h6").empty?
     end
     
     it "不符合w3c规定的错误数应为0" do
         validator = MarkupValidator.new
         validator.set_doctype!(:html32)
-        errors = validator.validate_text(meta[:page].body).errors
-        `rm /tmp/w3errors` if File.exists? '/tmp/w3errors'
+        errors = validator.validate_text(page.body).errors
         File.open("/tmp/w3errors",'a'){|f|
-            f.puts "===============================#{meta[:uri]}========================================"
+            f.puts "===============================#{uri}========================================"
             f.puts errors.join("\n")
         } unless errors.size == 0
         errors.size.should == 0
     end
     
     it "不应包含注释" do
-        comment = meta[:page].search("//comment()")
-        comment.to_s.should == nil unless comment.empty?
+        comment = page.search("//comment()")
+        comment.to_s[0..500].should == nil unless comment.empty?
     end
     
-    text = meta[:page].search("//text()")
     text.each do|seg|
         it "不应包含多余空白符号" do
             seg.should_not include "\n\n"
@@ -196,7 +269,7 @@ shared_examples "所有页面" do |meta|
     end unless text.nil?
     
     it "应使用HTML5定义标签" do
-        doc = Nokogiri::HTML(meta[:page].body)
+        doc = Nokogiri::HTML(page.body)
 
         doc.internal_subset.name.downcase.should == 'html'
         doc.internal_subset.external_id.should == nil
@@ -204,67 +277,82 @@ shared_examples "所有页面" do |meta|
     end
     
     
-    it '应把js归类用<script src="">引入,不应包含<script type="text/javascript">' do
-        js = meta[:page].search("//script[@type='text/javascript']")
-        js.to_s.should == nil unless js.nil?
+    page.search("//script").each do |js|
+        tmp_src = js.attributes['src'].to_s
+        it '应把js归类用<script src="">引入' do
+            tmp_src.should_not be_empty
+        end if tmp_src.to_s.empty?
     end
 
-    it "每个URI应该都符合w3c标准" do
-        meta[:page].links.each do|link|
-            expect{URI(link.href)}.not_to raise_error(URI::InvalidURIError)
-        end
-    end
-    
-    it "图片必须使用绝对路径,不许使用相对路径" do
-        meta[:page].images.each do|image|
-            URI(image.src).path.should start_with '/'
-        end
-    end
-
+=begin
     it "链接中不能包含空白符号" do
-        meta[:page].links.each do |link|
+        page.links.each do |link|
+            next if link.href.nil?
             link.href.should_not =~ /\s/
             link.href.should_not include "%20"
             link.href.should_not include "%09"
         end
     end
+=end
     
-    it "没标nofollow的链接,必须遵守URI正则规范" do
-        meta[:page].links.each do |link|
-            next if link.rel.first == 'nofollow' or link.href.nil?
-            host = URI(link.href).host
-            next if host.nil? or meta[:domains].any?{|domain|host.end_with?domain}
-            path = URI(link.href).path
-            next unless path
-            link.should do
-                meta[:uri_patterns].any?{|pattern|path =~ pattern}.should == true
-            end
+    it "图片必须使用绝对路径,不许使用相对路径" do
+        page.images.each do|image|
+            uri_obj(image.src).path.should start_with 'http://' or start_with '/'
         end
     end
     
+
+    
     useless_link_texts = %w(隐私政策 服务条款 设置 登录 登入 注册 快速注册)
-    meta[:page].links.each do |link|
+    page.links.each do |link|
         it "一般无用链接应该标记nofollow #{useless_link_texts.join(' ')}" do
             link.rel.first.should == 'nofollow' if useless_link_texts.include?link.text
         end
     end
 
-    meta[:page].links.each do |link|
-        next if link.href.nil?
-        begin
-            host = URI(link.href).host
-        rescue
-            host = URI(URI.encode(link.href)).host
+    page.links do |link| #禁止href为空的,禁止javascript,禁止route_to为空的,而且fragment为空的
+        next unless link.name.nil? #页内锚点
+        if link.href.nil?#空的基本就是当按钮
+            it "#{link.to_html} 禁止使用<a>当按钮" do #todo: 分析href协议,不是http, https则 错误, 分析uri 和 fragment , uri 是本页,而且fragment空的 错误. 考虑href="http://本页地址#"
+            #(page.links_with(:href=>nil) + page.links_with(:href=>'#')).should == nil
+                link.href.should_not == nil
+            end
+        elsif (uri_obj.route_to(link_uri_obj).to_s).empty? #链接到本页的基本都是业内锚点,或者当按钮的
+            it "#{link.to_html} 禁止使用<a>当按钮" do #todo: 分析href协议,不是http, https则 错误, 分析uri 和 fragment , uri 是本页,而且fragment空的 错误. 考虑href="http://本页地址#"
+                if (uri_obj.route_to(link_uri_obj).to_s).empty?
+                    anchors.should include link_uri_obj.fragment #buttons = page.links_with(:href=>'#') + page.links_with(:href=>'#?') + page.links_with(:href=>nil) + page.links_with(:href=>/^javascript:/)
+                end
+            end
+        else#javascript协议的,相对路径的,不符合w3c标准的,不符合regex的
+            it "#{link.to_html} 禁止使用<a>当按钮" do #todo: 分析href协议,不是http, https则 错误, 分析uri 和 fragment , uri 是本页,而且fragment空的 错误. 考虑href="http://本页地址#"
+                link.href.downcase.should_not =~ /^javascript:/
+            end
+
+            it "#{link.to_html} 链接必须使用绝对路径,不许使用相对路径" do
+                link.href.should start_with 'http://' or start_with '/'
+            end
+
+            it "#{link.to_html} 需要URI encode" do #可能跟w3c认证重合
+                link.href.delete("A-Za-z0-9._~:/?#[]@!$&%'()*+,;= -").should == ""
+            end
+
+            begin
+                link_uri_obj = URI(link.href)
+            rescue URI::InvalidURIError
+                it "#{link.to_html} URI应符合w3c标准" do
+                    expect{URI(link.href)}.not_to raise_error(URI::InvalidURIError)
+                end
+                link_uri_obj = URI(URI.encode(link.href))
+            end
+            link_host = link_uri_obj.host
+            link_path = link_uri_obj.path.to_s
+            link_path += "?"+link_uri_obj.query.to_s unless link_uri_obj.query.empty?
+            next unless !$framework.has_key?link_host and !link_host.end_with?domain #不处理外域名,交给友情链接
+
+            it "#{link.to_html}, 属于非法链接请纠正,或标nofollow,或请更新regex" do
+                #($framework.has_key?link_host).should == true
+                $framework[link_host]['regex'].any?{|regex|link_path =~ regex}.should == true
+            end
         end
-        next if host.nil? or meta[:domains].any?{|domain|host.end_with?domain}
-        it "#{link.inspect}, 属于站外链接应该标nofollow" do
-            link.rel.first.should == 'nofollow'
-        end
-    end unless meta[:domains].nil?
-    
-    it "禁止使用<a>当按钮" do
-        #(meta[:page].links_with(:href=>nil) + page.links_with(:href=>'#')).should == nil
-        buttons = meta[:page].links_with(:href=>'#') +  meta[:page].links_with(:href=>nil)
-        buttons.map{|b|b.to_s}.should == nil unless buttons.empty?
     end
 end

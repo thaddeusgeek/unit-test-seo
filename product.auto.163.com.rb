@@ -1,8 +1,8 @@
 #coding:UTF-8
 require './common.rb'
-$domains = %w(auto.163.com)
-$hosts = %w(auto.163.com product.auto.163.com)
-$uri_patterns = [] <<
+domains = %w(auto.163.com)
+hosts = %w(auto.163.com product.auto.163.com)
+uri_patterns = [] <<
     %r(^/brand/$) <<
     %r(^/brand/\d+\.html$) <<
     %r(^/series/\d+\.html$) <<
@@ -19,14 +19,14 @@ $uri_patterns = [] <<
     %r(^/include/auto_calculate_dk\.html$) << #贷款计算器
     %r(^/include/auto_calculate_bf\.html$) << #保险计算器
     %r(^/opinion_more/\d+/\d_\d.html$)
-$outter_uri_patterns = [] <<
+outter_uri_patterns = [] <<
     %r(^http://auto\.163\.com/\d\d/\d{4}/\d\d/[A-Z0-0]+\.html$) << #新闻页
     %r(^http://dealer\.auto\.163\.com/\d+/$) << #经销商
     %r(^http://dealer\.auto\.163\.com/\d+/news/201\d+/\d+\.html$) << #经销商新闻
     %r(^http://auto\.163\.com/$)
     
-$host = 'product.auto.163.com'
-$redirects = [] <<
+host = 'product.auto.163.com'
+redirects = [] <<
 %w(/search.html /) <<
 %w(/index.html /) <<
 %w(/auto!search2.action /) <<
@@ -40,14 +40,28 @@ $redirects = [] <<
 %w(/car/parameter/id=00080BSA0BeQ0BSK0BSO.html /series/config1/2225.html) <<
 %w(/2/00LS.html /series/2171.html) <<
 %w(/car/auto_news/key=00080BSA0BeQ0BTL.html /brand/1654.html)
-$robots = ['User-agent: *','Allow: /','Sitemap: /sitemap/sitemap.xml']
-describe $host do
-    it_behaves_like '所有主机'
+describe host do
+    meta = {}
+    meta[:robots] = ['User-agent: *','Allow: /','Sitemap: /sitemap/sitemap.xml']
+    meta[:domains] = domains
+    meta[:uri_patterns] = uri_patterns
+    meta[:host] = host
+    meta[:redirects] = redirects
+    it_behaves_like '所有主机',meta
 end
-describe '汽车产品库首页' do
-    $uri = 'http://product.auto.163.com'
-    $page = Mechanize.new.get $uri
-    $page.body.force_encoding('gb2312').encode('utf-8')
-    it_behaves_like '所有页面'
+uri = 'http://product.auto.163.com'
+describe "汽车产品库首页#{uri}" do
+    meta = {}
+    meta[:uri] = uri
+    meta[:page] = Mechanize.new.get(uri)
+    #.body.force_encoding('gb2312').encode('utf-8')
+    it_behaves_like '所有页面',meta
 end
 
+uri = 'http://auto.163.com/12/0628/07/852Q3NJE00084TUQ.html'
+describe "汽车新闻页#{uri}" do
+    meta = {}
+    meta[:uri] = uri
+    meta[:page] = Mechanize.new.get uri
+    it_behaves_like '所有页面',meta
+end
