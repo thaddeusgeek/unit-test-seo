@@ -2,15 +2,6 @@
 $project = 'youdao'
 require './common.rb'
 
-shared_examples "小语种页面" do |meta|
-    it "不应出现到英汉页面的链接" do
-        meta[:page].links.each do |link|
-            link.href.should_not =~ /^\/w\//
-            link.href.should_not =~ /^\/eng\//
-        end
-    end
-end
-
 describe "站点地图/map/index.html" do
     host = 'dict.youdao.com'
     necessary_files = %w(/map/index.html /map/style.css /map/nav.png)
@@ -25,52 +16,6 @@ host = 'dict.youdao.com'
 describe "#{host}" do
     meta = {}
     meta[:host] = host
-=begin
-    meta[:redirects] = [] << 
-    ['/w/Go/','/eng/go/'] <<
-    ['/w/_Go/','/eng/go/'] <<
-    ['/w/Go_/','/eng/go/'] <<
-    ['/w/_Go_/','/eng/go/'] <<
-    ['/w/Go','/eng/go/'] <<
-    ['/w/Go/to/','/eng/go/'] <<
-    ['/w/Go/to','/eng/go/'] <<
-    ['/w/Go__to/','/eng/go_to'] <<
-    ['/w/lj:Go/','/eng/go/example/'] <<
-    ['/example/media/go/','/eng/go/example/media.html'] <<
-    ['/search','/'] <<
-    ['/search?q=bk:Go','/wiki/go/'] <<
-    ['/w/bk:Go/','/wiki/go/'] <<
-    ['/w/bk%3AGo/','/wiki/go/'] <<
-    ['/w/bk:Go','/wiki/go/'] <<
-    ['/w/bk:_Go/','/wiki/go/'] <<
-    ['/w/bk:Go_/','/wiki/go/'] <<
-    ['/w/bk:_Go_/','/wiki/go/'] <<
-    ['/search?q=bk%3AGo&wiki.related&wikisearch=','/wikis/go/'] <<
-    ['/search?q=bk:Go','/wiki/go/'] <<
-    ['/?keyfrom=abc&vendor=bcd','/'] <<
-    ['/drawsth','http://cidian.youdao.com/drawsth'] <<
-    ['/m/search?keyfrom=dict.mindex&q=Go','/m/go/'] <<
-    ['/search?q=Go&le=jap','/jap/go/'] <<
-    ['/search?keyfrom=selector&q=Go','/eng/go/']
-
-    word_cn = URI.encode("心理学")
-    word_ko = URI.encode("음악")
-    word_jap = URI.encode('ワード')
-    word_fr = URI.encode('écrire')
-    meta[:links] = [] <<
-    ["/eng/go/","/m/go/","/eng/go/example/","/eng/go/example/media.html","/eng/go/example/auth.html","/wiki/go/","/wikis/go/","/eng/going/","/eng/gone/","/eng/went/","/eng/goes/","http://fanyi.youdao.com/"] <<
-    %w(/m/go/ /m/go/online.html /m/go/example.html)
-    ["/eng/#{word_cn}/","/m/#{word_cn}/","/eng/#{word_cn}/example/","/eng/#{word_cn}/example/media.html","/eng/#{word_cn}/example/auth.html","/wiki/#{word_cn}/","/wikis/#{word_cn}","/eng/mental_philosophy/"] <<
-    ["/ko/#{word_ko}/","/m/#{word_ko}/","/ko/#{word_ko}/example/","/ko/#{word_ko}/example/media.html","/ko/#{word_ko}/example/auth.html","/wiki/#{word_ko}/","/wikis/#{word_ko}","/wiki/#{URI.encode("音乐")}/","/wikis/#{URI.encode("音乐")}/"] <<
-    ["/jap/#{word_jap}/","/m/#{word_jap}/","/jap/#{word_jap}/example/","/jap/#{word_jap}/example/media.html","/jap/#{word_jap}/example/auth.html","/wiki/#{word_jap}/","/wikis/#{word_jap}","/wiki/#{URI.encode("字_(计算机)")}/","/wikis/#{URI.encode("字_(计算机)")}/"] <<
-    ["/fr/#{word_fr}/","/m/#{word_fr}/","/fr/#{word_fr}/example/","/fr/#{word_fr}/example/media.html","/eng/#{word_fr}/example/auth.html","/wiki/#{word_fr}/","/wikis/#{word_fr}","/wiki/#{URI.encode("书")}/","/wikis/#{URI.encode("书")}/"] <<
-    %w(/eng/going/ /eng/go/) <<
-    %w(/eng/gone/ /eng/go/) <<
-    %w(/eng/went/ /eng/go/) <<
-    %w(/eng/goes/ /eng/go/) <<
-    %w(/eng/fern/ /eng/ferns/) <<
-    %w(/eng/ferns/ /eng/fern/)
-=end
     it_behaves_like "所有主机", meta
     
     baduri = 'http://dict.youdao.com/example/written/make_a_dash_through_the_smoke_and_fire/'
@@ -90,22 +35,6 @@ describe "一般单词页面" do
         word = 'go'
         meta[:uri] = "http://dict.youdao.com/eng/#{word}/"
         meta[:keywords] = [] << word
-=begin
-        meta[:necessary_links] = [] <<
-        ["/m/#{word}/",                     word,                               "#{word}的意思 手机版"] <<
-        ["/wiki/#{word}/",                  word,                               nil] <<
-        ["/wikis/#{word}/",                 "更多与\"word\"相关的百科词条 »",   nil] <<
-        ["http://fanyi.youdao.com/",        "翻译",                             nil] <<
-        ["/eng/#{word}/example/",           "更多双语例句",                     "#{word}的双语例句"] <<
-        ["/eng/#{word}/example/media.html", "更多原声例句",                     "#{word}的原声例句"] <<
-        ["/eng/#{word}/example/auth.html",  "更多权威例句",                     "#{word}的权威例句"] <<
-        ["/eng/went/",                      "went",                             "#{word}的过去式"] <<
-        ["/eng/going/",                     "going",                            "#{word}的现在分词"] <<
-        ["/eng/goes/",                      "goes",                             "#{word}的复数形式"] <<
-        ["/eng/gone/",                      "gone",                             "#{word}的过去分词"]
-=end
-
-        #meta[:page] = agent.get meta[:uri]
         it_behaves_like "所有页面", meta
 
         it '<div id="ads" class="ads"> 中不能有内容(需要用js显示)' do
@@ -116,7 +45,6 @@ end
 %w(écrire bon fleur).each do |word|
     meta = {}
     meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】什么意思_法语#{word}在线翻译成中文_有道词典"
     describe "法语#{word}单词页面" do
@@ -127,7 +55,6 @@ end
 %w(にほん ちゅうごく アメリカ合衆国).each do |word|
     meta = {}
     meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】什么意思_法语#{word}在线翻译成中文_有道词典"
     describe "法语#{word}单词页面" do
@@ -138,7 +65,6 @@ end
 %w(중국 한국 미국).each do |word|
     meta = {}
     meta[:uri] = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】什么意思_韩语#{word}在线翻译成中文_有道词典"
     describe "韩语页面:#{word}" do
@@ -149,7 +75,6 @@ end
 %w(china america world).each do |word|
     meta = {}
     meta[:uri] = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = []<< word
     meta[:title] = "【#{word}】什么意思_英语#{word}在线翻译_有道词典"
     describe "英语页面:#{word}" do
@@ -160,7 +85,6 @@ end
 %w(无 有 心理学).each do |word|
     meta = {}
     meta[:uri] = "http://dict.youdao.com/eng/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】英语怎么说_在线翻译_有道词典"
     describe "汉英页面:#{word}" do
@@ -168,7 +92,6 @@ end
     end
 
     meta[:uri] = "http://dict.youdao.com/fr/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】法语怎么说_#{word}在线翻译成法语_有道词典"
     describe "汉法页面:#{word}" do
@@ -176,7 +99,6 @@ end
     end
 
     meta[:uri] = "http://dict.youdao.com/ko/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】韩语怎么说_#{word}在线翻译成韩语_有道词典"
     describe "汉韩页面#{word}" do
@@ -184,7 +106,6 @@ end
     end
     
     meta[:uri] = "http://dict.youdao.com/jap/#{URI.encode(word)}/"
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:keywords] = [] << word
     meta[:title] = "【#{word}】日语怎么说_#{word}在线翻译成日语_有道词典"
     describe "汉日页面#{word}" do
@@ -196,11 +117,9 @@ end
 describe "首页" do
     meta = {}
     meta[:uri] = 'http://dict.youdao.com/'
-    meta[:page] = Mechanize.new.get meta[:uri]
     meta[:title] = '英语_汉语_法语_日语_韩语_有道多语言在线词典'
     meta[:keywords] = %w(词典)
     meta[:description] = '有道词典网页版,支持中文、英语、法语、日语、韩语五种语言,不仅提供常规的英汉、法汉、日汉、韩汉互译以及汉语词典的功能,还收录了各类词汇的网络释义、例句和百科知识。'
-    meta[:necessary_links] = [] << ['http://dict.youdao.com/map/index.html','站点地图',nil]
     
     it "应该包含到'/map/index.html'的链接,而且没被标nofollow" do
         meta[:page].link_with(:href => %r(/map/index\.html)).rel.should be_empty
