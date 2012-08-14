@@ -1,0 +1,6 @@
+source 'http://ruby.taobao.org/'
+gem 'mechanize'
+gem 'pismo'
+gem 'w3c_validators'
+gem 'rmmseg-cpp'
+gem 'webpage'
