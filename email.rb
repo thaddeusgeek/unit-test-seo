@@ -4,8 +4,8 @@ require "base64"
 require 'net/smtp'
 
 def send_email(to,body,opts={})
-    opts[:server]      ||= 'soda.rd.netease.com'
-    opts[:from]        ||= 'liuming@rd.netease.com'
+    opts[:server]      ||= ''
+    opts[:from]        ||= ''
     #opts[:from_alias]  ||= '刘明'
     opts[:subject]     ||= "错误报告"
 
@@ -24,4 +24,4 @@ Net::SMTP.start(opts[:server]) do |smtp|
     end
 end
 body = `rspec do.rb`
-send_email('lvbo@rd.netease.com',body)
+send_email('',body)

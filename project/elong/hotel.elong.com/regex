@@ -1,5 +1,5 @@
-^/city/\w+-[\w\d]{6}-hotels/$
-^/city/\w+-[\w_]+-[\w\d]{9}-hotels/$
-^/district/\w+-\w+-[\w\d]{11}-hotels/$
-^/business_district/\w+-\w+-[\w\d]{13}-hotels/$
-^/place/\w+-\w+-[\w\d]{14}-hotels/$
+^\/city\/\w+-[\w\d]{6}-hotels\/$
+^\/city\/\w+-[\w_]+-[\w\d]{9}-hotels\/$
+^\/district\/\w+-\w+-[\w\d]{11}-hotels\/$
+^\/business_district\/\w+-\w+-[\w\d]{13}-hotels\/$
+^\/place\/\w+-\w+-[\w\d]{14}-hotels\/$
