@@ -1,33 +1,33 @@
-^\/hotel\/$                                             http://m.elong.com/hotel/                                           酒店首页
-^\/hotel\/[a-z]+\/$                                     http://m.elong.com/hotel/beijing/                                   城市
-^\/hotel\/[a-z]+\/\d+\.html$                            http://m.elong.com/hotel/beijing/1.html                             城市+翻页
-^\/hotel\/[a-z]+\/sale/$                                http://m.elong.com/hotel/beijing/sale/                              城市特价
-^\/hotel\/[a-z]+\/sale/\d+\.html$                       http://m.elong.com/hotel/beijing/sale/1.html                        城市特价+翻页
-^\/hotel\/[a-z]+\/[a-z]/$                               http://m.elong.com/hotel/beijing/chongwen/                          城市+行政区
-^\/hotel\/[a-z]+\/[a-z]/\d+\.html$                      http://m.elong.com/hotel/beijing/chongwen/123.html                  城市+行政区+翻页
-^\/hotel\/[a-z]+\/metro/\d+/$                           http://m.elong.com/hotel/beijing/metro/123/                         城市+地铁线(不需要翻页)
-^\/hotel\/[a-z]+\/metro/\d+/\d+\/$                      http://m.elong.com/hotel/beijing/metro/123/123/                     城市+地铁线+地铁站
-^\/hotel\/[a-z]+\/metro/\d+/\d+\/\d+\/$                 http://m.elong.com/hotel/beijing/metro/123/123/123.html             城市+地铁线+地铁站+翻页
-^\/hotel\/[a-z]+\/center/$                              http://m.elong.com/hotel/beijing/center/                            城市商圈(不需要翻页)
-^\/hotel\/[a-z]+\/center/\d+/\$                         http://m.elong.com/hotel/beijing/center/123/                        城市+商圈
-^\/hotel\/[a-z]+\/center/\d+/\/\d+\.html$               http://m.elong.com/hotel/beijing/center/123/123.html                城市+商圈+翻页
-^\/hotel\/[a-z]+\/traffic\/$                            http://m.elong.com/hotel/beijing/traffic/                           城市机场火车站
-^\/hotel\/[a-z]+\/traffic/\d+\.html$                    http://m.elong.com/hotel/beijing/traffic/123.html                   城市+机场火车站
-^\/hotel\/[a-z]+\/traffic/\d+\/\d+\.html$               http://m.elong.com/hotel/beijing/traffic/\d+/\d+/\.123.html         城市+机场火车站+翻页
-^\/hotel\/[a-z]+\/tuan\/$                               http://m.elong.com/hotel/beijing/tuan/                              城市团购
-^\/hotel\/[a-z]+\/tuan\/\d+\.html$                      http://m.elong.com/hotel/beijing/tuan/\d+\.html                     城市团购+翻页
-^\/hotel\/[a-z]+\/tuan\/hot\.html$                      http://m.elong.com/hotel/beijing/tuan/hot.html                      城市热门团购
-^\/hotel\/[a-z]+\/tuan\/sale\.html$                     http://m.elong.com/hotel/beijing/tuan/sale.html                     城市特价酒店团购
-^\/hotel\/[a-z]+\/tuan\/top\.html$                      http://m.elong.com/hotel/beijing/tuan/top.html                      城市高档酒店团购
-^\/flight\/$                                            http://m.elong.com/flight/                                          机票首页
-^\/flight\/no/[a-z]+\d+\.html$                          http://m.elong.com/flight/no/ho1252.html                            航班号
-^\/flight\/[a-z]+-[a-z]+/$                              http://m.elong.com/flight/beijing-shanghai/                         城市到城市单程
-^\/flight\/[a-z]+-[a-z]+/\d+\.html$                     http://m.elong.com/flight/beijing-shanghai/1.html                   城市到城市单程+翻页
-^\/flight\/[a-z]+-[a-z]+/economy\.html$                 http://m.elong.com/flight/beijing-shanghai/economy.html             城市到城市单程经济舱
-^\/flight\/[a-z]+-[a-z]+/business\.html$                http://m.elong.com/flight/beijing-shanghai/business.html            城市到城市单程商务舱
-^\/flight\/[a-z]+-[a-z]+/first\.html$                   http://m.elong.com/flight/beijing-shanghai/first.html               城市到城市单程头等舱
-^\/flight\/[a-z]+-[a-z]+-round/$                        http://m.elong.com/flight/beijing-shanghai-round/                   城市到城市往返
-^\/flight\/[a-z]+-[a-z]+-round/\d+\.html$               http://m.elong.com/flight/beijing-shanghai-round/1.html             城市到城市往返+翻页
-^\/flight\/[a-z]+-[a-z]+-round/economy\.html$           http://m.elong.com/flight/beijing-shanghai-round/economy.html       城市到城市往返经济舱
-^\/flight\/[a-z]+-[a-z]+-round/business\.html$          http://m.elong.com/flight/beijing-shanghai-round/business.html      城市到城市往返商务舱
-^\/flight\/[a-z]+-[a-z]+-round/first\.html$             http://m.elong.com/flight/beijing-shanghai-round/first.html         城市到城市往返头等舱
+^\/$                                                    http://m.elong.com/                                                 无线艺龙首页                        酒店宾馆预订(预定)_机票查询_酒店团购_艺龙旅行网手机版_电话4009-333333
+^\/hotel\/$                                             http://m.elong.com/hotel/                                           酒店首页                            【酒店预订】宾馆预订(预定)_艺龙无线
+^\/hotel\/[a-z]+\/$                                     http://m.elong.com/hotel/beijing/                                   城市                                【北京酒店】宾馆预订(预定)_艺龙无线
+^\/hotel\/[a-z]+\/\d+\.html$                            http://m.elong.com/hotel/beijing/1.html                             城市+翻页                           【北京酒店】宾馆预订(预定)_100_艺龙无线
+^\/hotel\/[a-z]+\/sale/$                                http://m.elong.com/hotel/beijing/sale/                              城市特价(不需要翻页)                【北京特价酒店】特价宾馆_艺龙无线
+^\/hotel\/[a-z]+\/[a-z]/$                               http://m.elong.com/hotel/beijing/chongwen/                          城市+行政区                         【北京_朝阳区】酒店预订_宾馆预订(预定)_艺龙无线
+^\/hotel\/[a-z]+\/[a-z]/\d+\.html$                      http://m.elong.com/hotel/beijing/chongwen/123.html                  城市+行政区+翻页                    【北京_朝阳区】酒店预订_宾馆预订(预定)_100_艺龙无线
+^\/hotel\/[a-z]+\/metro/\d+/$                           http://m.elong.com/hotel/beijing/metro/123/                         城市+地铁线(不需要翻页)             【北京_13号线】附近的酒店_十三号线地铁沿线各站附近的酒店_艺龙无线
+^\/hotel\/[a-z]+\/metro/\d+/\d+\/$                      http://m.elong.com/hotel/beijing/metro/123/123/                     城市+地铁线+地铁站                  【北京_13号线霍营站】附近的酒店_北京十三号线霍营站附近的酒店_艺龙无线
+^\/hotel\/[a-z]+\/metro/\d+/\d+\/\d+\/$                 http://m.elong.com/hotel/beijing/metro/123/123/123.html             城市+地铁线+地铁站+翻页             【北京_13号线霍营站】附近的酒店_北京十三号线霍营站附近的酒店_100_艺龙无线
+^\/hotel\/[a-z]+\/center/$                              http://m.elong.com/hotel/beijing/center/                            城市商圈(不需要翻页)                【北京商业区酒店一览】艺龙无线
+^\/hotel\/[a-z]+\/center/\d+/\$                         http://m.elong.com/hotel/beijing/center/123/                        城市+商圈                           【北京_世贸天阶】附近的酒店_艺龙无线
+^\/hotel\/[a-z]+\/center/\d+/\/\d+\.html$               http://m.elong.com/hotel/beijing/center/123/123.html                城市+商圈+翻页                      【北京_世贸天阶】附近的酒店_100_艺龙无线
+^\/hotel\/[a-z]+\/traffic\/$                            http://m.elong.com/hotel/beijing/traffic/                           城市机场火车站                      【北京机场火车站酒店一览】艺龙无线
+^\/hotel\/[a-z]+\/traffic/\d+\.html$                    http://m.elong.com/hotel/beijing/traffic/123.html                   城市+机场火车站                     【北京_北京站】附近的酒店_艺龙无线
+^\/hotel\/[a-z]+\/traffic/\d+\/\d+\.html$               http://m.elong.com/hotel/beijing/traffic/\d+/\d+/\.123.html         城市+机场火车站+翻页                【北京_北京站】附近的酒店_100_艺龙无线
+^\/hotel\/[a-z]+\/tuan\/$                               http://m.elong.com/hotel/beijing/tuan/                              城市团购                            【北京酒店团购】艺龙无线
+^\/hotel\/[a-z]+\/tuan\/\d+\.html$                      http://m.elong.com/hotel/beijing/tuan/\d+\.html                     城市团购+翻页                       【北京酒店团购】100_艺龙无线
+^\/hotel\/[a-z]+\/tuan\/hot\.html$                      http://m.elong.com/hotel/beijing/tuan/hot.html                      城市热门团购                        【北京热门团购】艺龙无线
+^\/hotel\/[a-z]+\/tuan\/sale\.html$                     http://m.elong.com/hotel/beijing/tuan/sale.html                     城市特价酒店团购                    【北京特价酒店团购】艺龙无线
+^\/hotel\/[a-z]+\/tuan\/top\.html$                      http://m.elong.com/hotel/beijing/tuan/top.html                      城市高档酒店团购                    【北京高档酒店团购】艺龙无线
+^\/flight\/$                                            http://m.elong.com/flight/                                          机票首页                            特价机票_打折机票_机票预订_机票预定_机票价格查询_艺龙无线
+^\/flight\/no/[a-z]+\d+\.html$                          http://m.elong.com/flight/no/ho1252.html                            航班号                              【HO1252】吉祥航空_艺龙无线
+^\/flight\/[a-z]+-[a-z]+/$                              http://m.elong.com/flight/beijing-shanghai/                         城市到城市单程                      【北京到上海】机票预订_航班时刻表_航班号一览_艺龙无线
+^\/flight\/[a-z]+-[a-z]+/\d+\.html$                     http://m.elong.com/flight/beijing-shanghai/1.html                   城市到城市单程+翻页                 【北京到上海】机票预订_航班时刻表查询_航班号一览_100_艺龙无线
+^\/flight\/[a-z]+-[a-z]+/economy\.html$                 http://m.elong.com/flight/beijing-shanghai/economy.html             城市到城市单程经济舱                【北京到上海经济舱】机票预订_航班时刻表查询_航班号一览_100_艺龙无线
+^\/flight\/[a-z]+-[a-z]+/business\.html$                http://m.elong.com/flight/beijing-shanghai/business.html            城市到城市单程商务舱                【北京到上海商务舱】机票预订_航班时刻表查询_航班号一览_100_艺龙无线
+^\/flight\/[a-z]+-[a-z]+/first\.html$                   http://m.elong.com/flight/beijing-shanghai/first.html               城市到城市单程头等舱                【北京到上海头等舱】机票预订_航班时刻表查询_航班号一览_100_艺龙无线
+^\/flight\/[a-z]+-[a-z]+-round/$                        http://m.elong.com/flight/beijing-shanghai-round/                   城市到城市往返                      【北京到上海】往返机票预订_航班时刻表_航班号一览_艺龙无线
+^\/flight\/[a-z]+-[a-z]+-round/\d+\.html$               http://m.elong.com/flight/beijing-shanghai-round/1.html             城市到城市往返+翻页                 【北京到上海】往返机票预订_航班时刻表_航班号一览_100_艺龙无线
+^\/flight\/[a-z]+-[a-z]+-round/economy\.html$           http://m.elong.com/flight/beijing-shanghai-round/economy.html       城市到城市往返经济舱                【北京到上海经济舱】往返机票预订_航班时刻表_航班号一览_艺龙无线
+^\/flight\/[a-z]+-[a-z]+-round/business\.html$          http://m.elong.com/flight/beijing-shanghai-round/business.html      城市到城市往返商务舱                【北京到上海商务舱】往返机票预订_航班时刻表_航班号一览_艺龙无线
+^\/flight\/[a-z]+-[a-z]+-round/first\.html$             http://m.elong.com/flight/beijing-shanghai-round/first.html         城市到城市往返头等舱                【北京到上海头等舱】往返机票预订_航班时刻表_航班号一览_艺龙无线
