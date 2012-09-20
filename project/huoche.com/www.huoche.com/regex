@@ -1,0 +1,9 @@
+主页   									http://www.huoche.com/									^/$
+售票点大全   								http://www.huoche.com/piao/								^/piao/$
+铁路资讯   								http://www.huoche.com/teiluzixun/nanchang/				^/teiluzixun/[a-z]+/$
+机票   								    http://www.huoche.com/shanghaijipiao/					^/[a-z]+jipiao/$
+订票点   								http://www.huoche.com/dingpiao/shoupiao/3149/			^/dingpiao/shoupiao/\d+\/$
+全国公交线路查询   						http://www.huoche.com/bus/								^/bus\/$
+北京公交车列表   							http://www.huoche.com/t1/								^/t\d+/$
+北京101电车电车公交线路   					http://www.huoche.com/b74/								^/b\d+/$
+公交站点   								http://www.huoche.com/bs3969/							^/bs\d+/$

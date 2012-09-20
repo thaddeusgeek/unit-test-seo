@@ -1,0 +1,5 @@
+火车票预售期大全   						http://piao.huoche.com/presell.php	^/presell\.php$
+北京的预售期   							http://piao.huoche.com/presell/%E5%A4%AA%E5%8E%9F/	^/presell\/.*?\/$
+2012年全国各地代售点售票窗口火车票预售期   	http://piao.huoche.com/presell2012.php	^/presell2012\.php$
+帮助中心   								http://piao.huoche.com/help/	^/help\/$
+服务保证   								http://piao.huoche.com/help/?pay	改为 http://piao.huoche.com/help/pay/    新手指南 支付/退款 购票常识 配送方式 ^/help\/\w+/\$

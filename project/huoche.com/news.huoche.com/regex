@@ -1,0 +1,5 @@
+铁路资讯    								http://news.huoche.com/									^/$
+铁路资讯列表页   							http://news.huoche.com/huoche/ysqgonggao/				^/huoche/[a-z]+/$
+机票新闻									http://news.huoche.com/jipiao/  						^/jipiao/$
+铁路资讯列表   							http://news.huoche.com/teiluzixun/jiangsu.html 			^/huoche/teiluzixun/[a-z]+\.html$
+铁路资讯详细页   							http://news.huoche.com/newsinfo38723					^/newsinfo\d+$
