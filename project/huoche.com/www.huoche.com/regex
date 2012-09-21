@@ -7,3 +7,5 @@
 北京公交车列表   							http://www.huoche.com/t1/								^/t\d+/$
 北京101电车电车公交线路   					http://www.huoche.com/b74/								^/b\d+/$
 公交站点   								http://www.huoche.com/bs3969/							^/bs\d+/$
+										http://www.huoche.com/shanghai-guilinjipiao/
+										http://www.huoche.com/jipiao/
