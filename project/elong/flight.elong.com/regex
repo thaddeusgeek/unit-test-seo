@@ -1,0 +1,26 @@
+国内机票主页  									http://flight.elong.com/                                  /^\/$/
+城市到城市单程(次日,经济舱)							http://flight.elong.com/beijing-shanghai/
+城市到城市单程(次日,商务舱)							http://flight.elong.com/beijing-shanghai/top.html
+城市到城市时刻表									http://flight.elong.com/beijing-shanghai/timetable.html
+城市到城市特价机票									http://flight.elong.com/beijing-shanghai/sales.html
+城市到城市单程当天									http://flight.elong.com/beijing-shanghai/day1.html
+城市到城市单程第3天									http://flight.elong.com/beijing-shanghai/day3.html
+城市到城市往返（次日起程三天后返程，经济舱）		http://flight.elong.com/beijing-shanghai-round/
+城市到城市往返（次日起程三天后返程，商务舱）		http://flight.elong.com/beijing-shanghai-round/top.html
+特价机票											http://flight.elong.com/beijing-sales.html
+航空公司索引										http://flight.elong.com/airlines/
+xx航空公司											http://flight.elong.com/airlines/cz/
+航班号												http://flight.elong.com/airlines/cz/cz3280.html
+国内特惠机票										http://flight.elong.com/discount/
+国内特惠机票信息									http://flight.elong.com/discount/cz-1.html
+国际机票主页										http://flight.elong.com/international/
+城市到国际城市单程（三天后、经济舱）				http://flight.elong.com/international/beijing-toronto/
+城市到国际城市单程（三天后，商务舱）				http://flight.elong.com/international/beijing-toronto/top.html
+城市到国际城市单程当天								http://flight.elong.com/international/beijing-toronto/day1.html
+城市到国际城市往返（三天后起程六天后返程，经济舱）	http://flight.elong.com/international/beijing-toronto-round/
+城市到国际城市往返（三天后起程六天后返程、商务舱）	http://flight.elong.com/international/beijing-toronto-round/top.html
+国际特价机票										http://flight.elong.com/international/sales/
+国际特价机票+翻页									http://flight.elong.com/international/sales/123.html
+城市到国际城市特价机票								http://flight.elong.com/international/beijing-toronto/sales.html
+
+todo:与机票pm确定是否要/international/这层
