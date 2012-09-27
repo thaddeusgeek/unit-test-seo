@@ -1,5 +1,5 @@
-^\/city\/\w+-[\w\d]{6}-hotels\/$
-^\/city\/\w+-[\w_]+-[\w\d]{9}-hotels\/$
-^\/district\/\w+-\w+-[\w\d]{11}-hotels\/$
-^\/business_district\/\w+-\w+-[\w\d]{13}-hotels\/$
-^\/place\/\w+-\w+-[\w\d]{14}-hotels\/$
+主页  										http://hotel.elong.com/
+城市列表页										http://hotel.elong.com/beijing/
+城市+行政区										http://hotel.elong.com/beijing/chaoyang/
+城市+行政区+翻页								http://hotel.elong.com/beijing/chaoyang/p1.html
+产品详细页										http://hotel.elong.com/beijing/chaoyang/0036578/1.html
