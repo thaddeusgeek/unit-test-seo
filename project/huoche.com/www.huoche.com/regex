@@ -1,11 +1,39 @@
-主页   									http://www.huoche.com/									^/$
-售票点大全   								http://www.huoche.com/piao/								^/piao/$
-铁路资讯   								http://www.huoche.com/teiluzixun/nanchang/				^/teiluzixun/[a-z]+/$
-机票   								    http://www.huoche.com/shanghaijipiao/					^/[a-z]+jipiao/$
-订票点   								http://www.huoche.com/dingpiao/shoupiao/3149/			^/dingpiao/shoupiao/\d+\/$
-全国公交线路查询   						http://www.huoche.com/bus/								^/bus\/$
-北京公交车列表   							http://www.huoche.com/t1/								^/t\d+/$
-北京101电车电车公交线路   					http://www.huoche.com/b74/								^/b\d+/$
-公交站点   								http://www.huoche.com/bs3969/							^/bs\d+/$
-										http://www.huoche.com/shanghai-guilinjipiao/
-										http://www.huoche.com/jipiao/
+主页										http://www.huoche.com/
+订票首页									http://piao.huoche.com/
+城市到城市查询列表（默认四天后）			http://piao.huoche.com/beijing-shanghai/
+城市到城市查询列表次日						http://piao.huoche.com/beijing-shanghai/day2.html
+城市到城市查询列表第三天					http://piao.huoche.com/beijing-shanghai/day3.html
+火车票预售期大全							http://piao.huoche.com/presell.php
+北京预售期									http://piao.huoche.com/presell/北京/
+2012年全国各地代售点售票窗口火车票预售期  	http://piao.huoche.com/presell2012.php
+列车时刻表首页								http://lieche.huoche.com/										^/[a-z]\d{1,4}/$
+城市到城市时刻表列表						http://lieche.huoche.com/beijing-shanghai/Z63.html	
+铁路资讯首页								http://news.huoche.com/
+铁路资讯列表								http://news.huoche.com/teiluzixun/yunnan.html
+火车资讯列表								http://news.huoche.com/huoche/chengche.html
+机票资讯列表								http://news.huoche.com/jipaio.html
+资讯详情页									http://news.huoche.com/newsinfo38669.html
+打折机票首页								http://www.huoche.com/jipiao/
+城市到城市单程（次日）						http://www.huoche.com/jipiao/beijing-shanghai
+城市到城市单程（次日）+翻页					http://www.huoche.com/jipiao/beijing-shanghai/p1.html
+城市到城市单程当日							http://www.huoche.com/jipiao/beijing-shanghai/day1.html
+特价机票首页								http://www.huoche.com/jipiao/beijing.html
+旅游景点									http://trip.huoche.com/
+洲区域旅游索引								http://trip.huoche.com/asia.html
+国家旅游索引								http://trip.huoche.com/china.html
+城市旅游名区								http://trip.huoche.com/shanghai.html
+长途汽车查询								http://www.huoche.com/changtu/
+城市到城市时刻表                            http://www.huoche.com/changtu/beijing-shanghai/
+详细页										http://www.huoche.com/changtu/info/72917.html                            
+城市长途汽车站列表							http://www.huoche.com/changtu/guangzhou/
+城市长途汽车站详细页						http://www.huoche.com/changtu/z1.html
+全国公交线路查询   							http://www.huoche.com/bus/
+北京公交车列表   							http://www.huoche.com/t1/
+北京324路电车公交线路						http://www.huoche.com/b150/
+公交站点									http://www.huoche.com/bs3003.html
+售票点查询									http://www.huoche.com/dingpiao/
+城市售票点列表								http://www.huoche.com/dingpiao/beijing/
+城市售票点列表+翻页							http://www.huoche.com/dingpiao/beijing/P1.html
+城市+行政区售票点列表						http://www.huoche.com/dingpiao/beijing/area/97/
+城市+行政区售票点列表+翻页					http://www.huoche.com/dingpiao/beijing/area/97/P1.html
+售票点详细页								http://www.huoche.com/dingpiao/shoupiao/640.html
