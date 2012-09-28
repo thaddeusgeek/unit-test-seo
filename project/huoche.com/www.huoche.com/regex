@@ -7,7 +7,7 @@
 北京预售期									http://piao.huoche.com/presell/北京/
 2012年全国各地代售点售票窗口火车票预售期  	http://piao.huoche.com/presell2012.php
 列车时刻表首页								http://lieche.huoche.com/										^/[a-z]\d{1,4}/$
-城市到城市时刻表列表						http://lieche.huoche.com/beijing-shanghai/Z63.html	
+城市到城市时刻表列表						http://lieche.huoche.com/beijing-shanghai.html	
 铁路资讯首页								http://news.huoche.com/
 铁路资讯列表								http://news.huoche.com/teiluzixun/yunnan.html
 火车资讯列表								http://news.huoche.com/huoche/chengche.html
