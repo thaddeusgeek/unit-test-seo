@@ -1,5 +1,5 @@
 国际酒店主页 										http://globalhotel.elong.com/													^/$	
-洲区域酒店索引										http://globalhotel.elong.com/europe
+洲区域酒店索引										http://globalhotel.elong.com/europe.html
 国家酒店索引										http://globalhotel.elong.com/usa/ 												^/[a-z_-]+/$
 城市酒店索引(最受欢迎的酒店)						http://globalhotel.elong.com/usa/new_york/ 										^/[a-z_-]+/[a-z_-]+/$
 城市+最便宜的便宜酒店 								http://globalhotel.elong.com/usa/new_york/cheapeast.html 						^/[a-z_-]+/[a-z_-]+/cheapest\.html$
@@ -13,4 +13,4 @@
 城市+地标+促销酒店索引								http://globalhotel.elong.com/usa/new_york/times-square/sale.html 				^/[a-z_-]+/[a-z_-]+/[a-z_-]+/sale.html$
 城市+地标+口碑最好的酒店索引						http://globalhotel.elong.com/usa/new_york/times-square/rating.html 				^/[a-z_-]+/[a-z_-]+/[a-z_-]+/rating.html$
 城市+地标+星级			 							http://globalhotel.elong.com/usa/new_york/times-square/start-123.html 				^/[a-z_-]+/[a-z_-]+/start2\.html$
-酒店详情页											http://globalhotel.elong.com/usa/new_york/132479/1.html											^/\d+/$
+酒店详情页											http://globalhotel.elong.com/usa/new_york/132479.html									^/\d+/$
