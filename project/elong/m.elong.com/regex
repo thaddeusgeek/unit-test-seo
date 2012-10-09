@@ -16,6 +16,10 @@
 酒店城市机场火车站						http://m.elong.com/hotel/beijing/traffic/							^/hotel/[a-z]+/traffic/$							【北京机场火车站酒店一览】艺龙旅行网手机版													^【[^】]+机场火车站酒店一览】艺龙旅行网手机版$													北京,机场,火车站,酒店,宾馆												\1,机场,火车站,酒店,宾馆
 酒店城市+机场火车站					http://m.elong.com/hotel/beijing/traffic/123.html					^/hotel/[a-z]+/traffic/\d+\.html$					【北京北京站】附近的酒店_艺龙旅行网手机版													^【[^】_]+_[^】_]+站】附近的酒店_艺龙旅行网手机版$												北京,北京站,附近,酒店,宾馆												\1,\2站,附近,酒店,宾馆
 酒店城市+机场火车站+翻页				http://m.elong.com/hotel/beijing/traffic/\d+/\d+/\.123.html			^/hotel/[a-z]+/traffic/\d+/\d+\.html$				【北京_北京站】附近的酒店_100_艺龙旅行网手机版												^【[^】_]+_[^】_]+站】附近的酒店_100_艺龙旅行网手机版$											北京,北京站,附近,酒店,宾馆												\1,\2站,附近,酒店,宾馆
+酒店城市+品牌 							http://m.elong.com/hotel/beijing/chain/123/   
+酒店城市+品牌+翻页						http://m.elong.com/hotel/beijing/chain/123/123.html
+酒店城市+星级 							http://m.elong.com/hotel/beijing/stars/123/ 
+酒店城市+星级+翻页						http://m.elong.com/hotel/beijing/stars/123/123.html
 酒店城市团购							http://m.elong.com/hotel/beijing/tuan/								^/hotel/[a-z]+/tuan/$								【北京酒店团购】宾馆团购_艺龙旅行网手机版													^【[^】]+酒店团购】宾馆团购_艺龙旅行网手机版$													北京,酒店,宾馆,团购													\1,酒店,宾馆,团购
 酒店城市团购+翻页						http://m.elong.com/hotel/beijing/tuan/\d+\.html						^/hotel/[a-z]+/tuan/\d+\.html$						【北京酒店团购】宾馆团购_100_艺龙旅行网手机版												^【[^】]+酒店团购】宾馆团购_100_艺龙旅行网手机版$												北京,酒店,宾馆,团购													\1,酒店,宾馆,团购
 酒店城市热门团购						http://m.elong.com/hotel/beijing/tuan/hot.html						^/hotel/[a-z]+/tuan/hot\.html$						【北京热门酒店团购】艺龙旅行网手机版															^【[^】]+热门酒店团购】艺龙旅行网手机版$															北京,热门,酒店,宾馆,团购												\1,热门,酒店,宾馆,团购
