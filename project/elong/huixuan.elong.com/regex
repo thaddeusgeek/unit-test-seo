@@ -1,0 +1,6 @@
+主页							 http://huiyuan.elong.com/                                                 /^\/$/
+城市列表页 						 http://huiyuan.elong.com/beijing/                                         /^\/\w+\-\d+\/$/  
+城市+行政区						 http://huiyuan.elong.com/beijing/tongzhou/123.html   
+城市+商圈 						 http://huiyuan.elong.com/beijing/center/123.html
+城市+星级 						 http://huiyuan.elong.com/beijing/stars/123.html   
+产品详细页 						 http://huixuan.elong.com/beijing/wangfujing_1300-hotel.html                 /^\/\d+\-\d+/.*?_\d+\-hotel\/$/
