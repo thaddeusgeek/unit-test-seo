@@ -6,7 +6,7 @@
 国内游/出境游主页				http://trip.elong.com/guide/													^/guide/$	
 国内游							http://trip.elong.com/guide/china.html											\identical						
 洲区域旅游索引页				http://trip.elong.com/guide/africa.html											^/guide/(namerica|africa|europe|asia|oceania|samerica)\.html$
-出境游							http://trip.eloing.com/guide/overseas.html										\identical
+出境游							http://trip.elong.com/guide/overseas.html										\identical
 国内游地区名					http://trip.elong.com/heilongjiang/												^/[a-z]+/$							
 地名+简介						http://trip.elong.com/heilongjiang/jianjie/										^/[a-z]+/jianjie/$							
 地名+美食						http://trip.elong.com/heilongjiang/meishi/										^/[a-z]+/meishi/$							
@@ -16,7 +16,7 @@
 地名+历史文化					http://trip.elong.com/heilongjiang/lishi/										^/[a-z]+/lishi/$							
 地名+旅游特色					http://trip.elong.com/heilongjiang/tese/										^/[a-z]+/tese/$							
 地名+帮助信息					http://trip.elong.com/heilongjiang/bangzhu/										^/[a-z]+/bangzh/$							
-地名+旅游景点				http://trip.elong.com/heilongjiang/jingdian/									^/[a-z]+/jingdian/$							
+地名+旅游景点					http://trip.elong.com/heilongjiang/jingdian/									^/[a-z]+/jingdian/$							
 地名+图片地图					http://trip.elong.com/heilongjiang/tupian/										^/[a-z]+/tupian/$							
 地名+资讯专题					http://trip.elong.com/heilongjiang/zixun/										^/[a-z]+/zixun/$								
 地名+最佳旅游线					http://trip.elong.com/heilongjiang/xianlu/										^/[a-z]+/xianlu/$							
