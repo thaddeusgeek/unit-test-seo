@@ -1,9 +1,9 @@
 主页										http://www.huoche.com/
 打折机票首页								http://www.huoche.com/jipiao/
 城市到城市单程（次日）						http://www.huoche.com/jipiao/beijing-shanghai
-城市到城市单程（次日）+翻页					http://www.huoche.com/jipiao/beijing-shanghai/p1.html
+城市到城市单程（次日）-Pn					http://www.huoche.com/jipiao/beijing-shanghai/p1.html
 城市到城市单程当日							http://www.huoche.com/jipiao/beijing-shanghai/day1/
-城市到城市单程当日+翻页						http://www.huoche.com/jipiao/beijing-shanghai/day1/p1.html
+城市到城市单程当日-Pn						http://www.huoche.com/jipiao/beijing-shanghai/day1/p1.html
 特价机票首页								http://www.huoche.com/jipiao/beijing.html
 长途汽车查询								http://www.huoche.com/changtu/
 城市到城市时刻表                            http://www.huoche.com/changtu/beijing-shanghai/
@@ -16,7 +16,7 @@
 公交站点									http://www.huoche.com/bs3003.html
 售票点查询									http://www.huoche.com/dingpiao/
 城市售票点列表								http://www.huoche.com/dingpiao/beijing/
-城市售票点列表+翻页							http://www.huoche.com/dingpiao/beijing/P1.html
+城市售票点列表-Pn							http://www.huoche.com/dingpiao/beijing/P1.html
 城市+行政区售票点列表						http://www.huoche.com/dingpiao/beijing/area/97/
-城市+行政区售票点列表+翻页					http://www.huoche.com/dingpiao/beijing/area/97/P1.html
+城市+行政区售票点列表-Pn					http://www.huoche.com/dingpiao/beijing/area/97/P1.html
 售票点详细页								http://www.huoche.com/dingpiao/shoupiao/640.html
