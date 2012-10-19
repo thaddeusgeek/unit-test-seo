@@ -1,5 +1,8 @@
-列车时刻表首页								http://lieche.huoche.com/										^/[a-z]\d{1,4}/$
-城市到城市时刻表列表						http://lieche.huoche.com/beijing-shanghai.html
-c2001车次列表页								http://lieche.huoche.com/c2001.html
-车站列表页									http://lieche.huoche.com/z24/
-车站列表页-Pn								http://lieche.huoche.com/z24/P1.html	
+列车时刻表首页								http://lieche.huoche.com/				^/$
+城市到城市时刻表列表						http://lieche.huoche.com/zz-beijing-shanghai.html		^/zz-([a-zA-Z0-9]+)-([a-zA-Z0-9]+).html$
+c2001车次列表页								http://lieche.huoche.com/c2001.html			^/c(\d+).html$
+车站列表页									http://lieche.huoche.com/z24/			^/z(\d+)/$
+车站列表页+翻页								http://lieche.huoche.com/z55/2/				^/z(\d+)/(\d+)/$						
+
+
+省份列表页						http://lieche.huoche.com/sheng/beijing/    能否体现到时刻表主页上面
