@@ -58,15 +58,17 @@
 
 旅游资讯						http://trip.elong.com/news/														^/news/$							
 旅游资讯-Pn					http://trip.elong.com/news/p3/													^/news/p\d+/$							
+旅游资讯列表					http://trip.elong.com/news/														^/news/all/$							
 主题旅游资讯					http://trip.elong.com/news/zt-1/												^/news/zt-\d+/$							
-周边游旅游资讯				http://trip.elong.com/news/zb-1/												^/news/zb-\d+/$							
+周边游旅游资讯					http://trip.elong.com/news/zb-1/												^/news/zb-\d+/$							
 国内旅游攻略列表				http://trip.elong.com/news/internal/											^/news/internal/$							
 国内旅游攻略列表-Pn			http://trip.elong.com/news/internal/p3/											^/news/internal/p\d+/$							
 出境旅游攻略列表				http://trip.elong.com/news/external/											^/news/external/$							
 出境旅游攻略列表-Pn			http://trip.elong.com/news/external/p3/											^/news/external/p\d+/$							
-旅游资讯+详细页				http://trip.elong.com/news/n0123131.html										^/news/[a-z\d]+\.html$	
+旅游资讯+详细页					http://trip.elong.com/news/n0123131.html										^/news/[a-z\d]+\.html$	
 
 旅游专题						http://trip.elong.com/event/													^/event/$							
+旅游专题						http://trip.elong.com/event/all/												^/event/all/$							
 旅游专题+分页					http://trip.elong.com/event/p4/													^/event/all/p\d+/$							
 旅游专题+详细页					http://trip.elong.com/event/e00713d2.html										^/event/[a-z\d]+/$							
 友情链接						http://trip.elong.com/links.html												^/links.html$	
