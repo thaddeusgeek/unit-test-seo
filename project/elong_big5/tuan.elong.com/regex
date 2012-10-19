@@ -1,6 +1,0 @@
-主页								http://big5.elong.com/gate/big5/tuan.elong.com/												^/$
-城市列表页						    http://big5.elong.com/gate/big5/tuan.elong.com/beijing/										/^\/[a-z]+_\d+_jiudian_tuangou\/$/
-城市+行政区							http://big5.elong.com/gate/big5/tuan.elong.com/beijing/chaoyang/
-产品详细页						    http://big5.elong.com/gate/big5/tuan.elong.com/beijing/chaoyang/0036567/1.html				/^\/[a-z]+_jiudian_tuangou\-\d+\/$/
-城市+单一商圈						http://big5.elong.com/gate/big5/tuan.elong.com/beijing/center-123.html							/^\/[a-z]+_\d+_b\d+_jiudian_tuangou\/$/
-城市+星级							http://big5.elong.com/gate/big5/tuan.elong.com/beijing/star-123.html	                        /^\/sanya_2201_jiudian_tuangou\/$/
