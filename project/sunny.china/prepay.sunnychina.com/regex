@@ -1,5 +1,5 @@
-预付更便宜首页													http://prepay.sunnychina.com/
-城市预付更便宜													http://prepay.sunnychina.com/beijing/
-城市+地标酒店索引												http://prepay.sunnychina.com/beijing/chaoyang/
-城市+地标+价格													http://prepay.sunnychina.com/beijing/chaoyang/price-123.html
-酒店详情页														http://prepay.sunnychina.com/info_2707.html
+预付更便宜首页													http://prepay.sunnychina.com/																		^/$
+城市预付更便宜													http://prepay.sunnychina.com/beijing/														^/[a-z]+/$
+城市+地标酒店索引												http://prepay.sunnychina.com/beijing/chaoyang/									^/[a-z]+/[a-z]+/$
+城市+地标+价格													http://prepay.sunnychina.com/beijing/chaoyang/price-123.html		^/[a-z]+/[a-z]+/price-\d+\.html$
+酒店详情页														http://prepay.sunnychina.com/info_2707.html												^/info_\d+\.html$

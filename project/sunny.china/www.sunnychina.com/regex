@@ -1,6 +1,6 @@
-首页															htrp://www.sunnychina.com/
-全国城市街道地标首页											http://www.sunnychina.com/poi_city.html
-城市街道地标索引												http://www.sunnychina.com/hotel/poi_beijing_street/
-城市街道地标索引+翻页											http://www.sunnychina.com/hotel/poi_beijing_street/P3.html
-某大街附近酒店列表												http://www.sunnychina.com/hotel/poi_beijing_street/9214407/
-酒店详情页														http://www.sunnychina.com/hotel/hotel_19382.html
+首页															htrp://www.sunnychina.com/																						^/$
+全国城市街道地标首页											http://www.sunnychina.com/poi_city.html												^/poi_city\.html$
+城市街道地标索引												http://www.sunnychina.com/hotel/poi_beijing_street/							^/hotel/poi_[a-z]+_street/$
+城市街道地标索引+翻页											http://www.sunnychina.com/hotel/poi_beijing_street/p3.html		^/hotel/poi_[a-z]+_street/p\d+\.html$
+某大街附近酒店列表												http://www.sunnychina.com/hotel/poi_beijing_street/9214407/		^/hotel/poi_[a-z]+_street/\d+/$
+酒店详情页														http://www.sunnychina.com/hotel/hotel_19382.html									^/hotel/hotel_\d+\.html$
