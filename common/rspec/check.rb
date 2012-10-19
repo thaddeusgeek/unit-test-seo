@@ -32,7 +32,7 @@ end
 
 # puts Page.new('. http://www.elong.com/ . . . . . .').title
 File.new(regexp_path).each do |line|
-  describe "测试 #{line.split.first}" do
+  describe "测试 #{(line.split)[0..1]}" do
     before(:each) do
       @meta = Meta.new(line)
       @page = Page.new(line)
