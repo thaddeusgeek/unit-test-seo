@@ -1,6 +1,6 @@
 主页								http://tuan.elong.com/												^/$
-城市列表页						    http://tuan.elong.com/beijing/										/^\/[a-z]+_\d+_jiudian_tuangou\/$/
-城市+行政区							http://tuan.elong.com/beijing/chaoyang/
-产品详细页						    http://tuan.elong.com/beijing/chaoyang/0036567/1.html				/^\/[a-z]+_jiudian_tuangou\-\d+\/$/
-城市+单一商圈						http://tuan.elong.com/beijing/center-123.html							/^\/[a-z]+_\d+_b\d+_jiudian_tuangou\/$/
-城市+星级							http://tuan.elong.com/beijing/star-123.html	                        /^\/sanya_2201_jiudian_tuangou\/$/
+城市列表页						    http://tuan.elong.com/beijing/										^/[a-z]+/$
+城市+行政区							http://tuan.elong.com/beijing/chaoyang/							^/[a-z]+/[a-z]+/$
+产品详细页						    http://tuan.elong.com/beijing/chaoyang/0036567/1.html				^/[a-z]+/[a-z]+/\d+/\d+\.html$
+城市+单一商圈						http://tuan.elong.com/beijing/center-123.html							^/center-\d+\.html$
+城市+星级							http://tuan.elong.com/beijing/star-123.html	               ^/star-\d+\.html$
