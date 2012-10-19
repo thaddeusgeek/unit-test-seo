@@ -8,6 +8,7 @@
 洲区域旅游索引页				http://trip.elong.com/guide/africa.html											^/guide/(namerica|africa|europe|asia|oceania|samerica)\.html$
 出境游							http://trip.elong.com/guide/overseas.html										\identical
 国内游地区名					http://trip.elong.com/heilongjiang/												^/[a-z]+/$							
+
 地名+简介						http://trip.elong.com/heilongjiang/jianjie/										^/[a-z]+/jianjie/$							
 地名+美食						http://trip.elong.com/heilongjiang/meishi/										^/[a-z]+/meishi/$							
 地名+购物						http://trip.elong.com/heilongjiang/gouwu/										^/[a-z]+/gouwu/$							
@@ -23,43 +24,49 @@
 老北京胡同两日游				http://trip.elong.com/beijing/xianlu/38558.html									^/[a-z]+/xianlu/\d+\.html$							
 地名+机票交通					http://trip.elong.com/heilongjiang/jiaotong/									^/[a-z]+/jiaotong/$							
 地名+酒店住宿					http://trip.elong.com/heilongjiang/zhusu/										^/[a-z]+/zhusu/$	
+
 旅游搜索首页					http://trip.elong.com/so/
-旅游综合搜索					http://trip.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/all/(%[0-9A-F]{2})+/$
-旅游综合搜索+翻页				http://trip.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/all/(%[0-9A-F]{2})+/p\d+$
+旅游综合搜索-P1				http://trip.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/(all|mengpiao|xianlu|jiaotong|meishi|gouwu|yule|jieqing|qianzheng|dest|pic|article|ask)/(%[0-9A-F]{2})+/$
+旅游综合搜索-Pn				http://trip.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/p2.html				^/so/all/(%[0-9A-F]{2})+/$
+
+旅游综合搜索					http://trip.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/(all|mengpiao|xianlu|jiaotong|meishi|gouwu|yule|jieqing|qianzheng|dest|pic|article|ask)/(%[0-9A-F]{2})+/$
+旅游综合搜索-Pn				http://trip.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/all/(%[0-9A-F]{2})+/p\d+$
 旅游门票搜索					http://trip.elong.com/so/menpiao/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/menpiao/(%[0-9A-F]{2})+/$							
-旅游门票搜索+翻页				http://trip.elong.com/so/menpiao/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/menpiao/(%[0-9A-F]{2})+/p\d+$							
+旅游门票搜索-Pn				http://trip.elong.com/so/menpiao/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/menpiao/(%[0-9A-F]{2})+/p\d+$							
 旅游线路搜索					http://trip.elong.com/so/xianlu/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/xianlu/(%[0-9A-F]{2})+/$
-旅游线路搜索+翻页				http://trip.elong.com/so/xianlu/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/xianlu/(%[0-9A-F]{2})+/p\d+$
+旅游线路搜索-Pn				http://trip.elong.com/so/xianlu/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/xianlu/(%[0-9A-F]{2})+/p\d+$
 旅游交通搜索					http://trip.elong.com/so/jiaotong/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/jiaotong/(%[0-9A-F]{2})+/$							
-旅游交通搜索+翻页				http://trip.elong.com/so/jiaotong/%E9%BB%91%E9%BE%99%E6%B1%9F/p2				^/so/jiaotong/(%[0-9A-F]{2})+/p\d+$							
+旅游交通搜索-Pn				http://trip.elong.com/so/jiaotong/%E9%BB%91%E9%BE%99%E6%B1%9F/p2				^/so/jiaotong/(%[0-9A-F]{2})+/p\d+$							
 旅游美食搜索					http://trip.elong.com/so/meishi/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/meishi/(%[0-9A-F]{2})+/$							
-旅游美食搜索+翻页				http://trip.elong.com/so/meishi/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/meishi/(%[0-9A-F]{2})+/p\d+$							
+旅游美食搜索-Pn				http://trip.elong.com/so/meishi/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/meishi/(%[0-9A-F]{2})+/p\d+$							
 旅游购物搜索					http://trip.elong.com/so/gouwu/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/gouwu/(%[0-9A-F]{2})+/$							
-旅游购物搜索+翻页				http://trip.elong.com/so/gouwu/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/gouwu/(%[0-9A-F]{2})+/p\d+$							
+旅游购物搜索-Pn				http://trip.elong.com/so/gouwu/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/gouwu/(%[0-9A-F]{2})+/p\d+$							
 旅游娱乐搜索					http://trip.elong.com/so/yule/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/yule/(%[0-9A-F]{2})+/$							
-旅游娱乐搜索+翻页				http://trip.elong.com/so/yule/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/yule/(%[0-9A-F]{2})+/p\d+$							
+旅游娱乐搜索-Pn				http://trip.elong.com/so/yule/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/yule/(%[0-9A-F]{2})+/p\d+$							
 旅游节庆搜索					http://trip.elong.com/so/jieqing/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/jieqing/(%[0-9A-F]{2})+/$							
-旅游节庆搜索+翻页				http://trip.elong.com/so/jieqing/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/jieqing/(%[0-9A-F]{2})+/p\d+$							
+旅游节庆搜索-Pn				http://trip.elong.com/so/jieqing/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/jieqing/(%[0-9A-F]{2})+/p\d+$							
 旅游签证搜索					http://trip.elong.com/so/qianzheng/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/qianzheng/(%[0-9A-F]{2})+/$							
-旅游签证搜索+翻页				http://trip.elong.com/so/qianzheng/%E9%BB%91%E9%BE%99%E6%B1%9F/p2				^/so/qianzheng/(%[0-9A-F]{2})+/p\d+$							
+旅游签证搜索-Pn				http://trip.elong.com/so/qianzheng/%E9%BB%91%E9%BE%99%E6%B1%9F/p2				^/so/qianzheng/(%[0-9A-F]{2})+/p\d+$							
 旅游景点搜索					http://trip.elong.com/so/dest/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/dest/(%[0-9A-F]{2})+/$							
-旅游景点搜索+翻页				http://trip.elong.com/so/dest/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/dest/(%[0-9A-F]{2})+/p\d+$							
+旅游景点搜索-Pn				http://trip.elong.com/so/dest/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/dest/(%[0-9A-F]{2})+/p\d+$							
 旅游图片搜索					http://trip.elong.com/so/pic/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/pic/(%[0-9A-F]{2})+/$							
-旅游图片搜索+翻页				http://trip.elong.com/so/pic/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/pic/(%[0-9A-F]{2})+/p\d+$							
+旅游图片搜索-Pn				http://trip.elong.com/so/pic/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/pic/(%[0-9A-F]{2})+/p\d+$							
 旅游攻略搜索					http://trip.elong.com/so/article/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/article/(%[0-9A-F]{2})+/$							
-旅游攻略搜索+翻页				http://trip.elong.com/so/article/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/article/(%[0-9A-F]{2})+/p\d+$							
+旅游攻略搜索-Pn				http://trip.elong.com/so/article/%E9%BB%91%E9%BE%99%E6%B1%9F/p2					^/so/article/(%[0-9A-F]{2})+/p\d+$							
 旅游问答搜索					http://trip.elong.com/so/ask/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/ask/[A-H0-9]+/$							
-旅游问答搜索+翻页				http://trip.elong.com/so/ask/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/ask/[A-H0-9]+/p\d+$							
+旅游问答搜索-Pn				http://trip.elong.com/so/ask/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/ask/[A-H0-9]+/p\d+$							
+
 旅游资讯						http://trip.elong.com/news/														^/news/$							
-旅游资讯+翻页					http://trip.elong.com/news/p3/													^/news/p\d+/$							
+旅游资讯-Pn					http://trip.elong.com/news/p3/													^/news/p\d+/$							
 旅游资讯列表					http://trip.elong.com/news/														^/news/all/$							
 主题旅游资讯					http://trip.elong.com/news/zt-1/												^/news/zt-\d+/$							
 周边游旅游资讯					http://trip.elong.com/news/zb-1/												^/news/zb-\d+/$							
 国内旅游攻略列表				http://trip.elong.com/news/internal/											^/news/internal/$							
-国内旅游攻略列表+翻页			http://trip.elong.com/news/internal/p3/											^/news/internal/p\d+/$							
+国内旅游攻略列表-Pn			http://trip.elong.com/news/internal/p3/											^/news/internal/p\d+/$							
 出境旅游攻略列表				http://trip.elong.com/news/external/											^/news/external/$							
-出境旅游攻略列表+翻页			http://trip.elong.com/news/external/p3/											^/news/external/p\d+/$							
+出境旅游攻略列表-Pn			http://trip.elong.com/news/external/p3/											^/news/external/p\d+/$							
 旅游资讯+详细页					http://trip.elong.com/news/n0123131.html										^/news/[a-z\d]+\.html$	
+
 旅游专题						http://trip.elong.com/event/													^/event/$							
 旅游专题						http://trip.elong.com/event/all/												^/event/all/$							
 旅游专题+分页					http://trip.elong.com/event/p4/													^/event/all/p\d+/$							

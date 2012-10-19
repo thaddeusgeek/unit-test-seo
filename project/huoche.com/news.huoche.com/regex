@@ -1,6 +1,5 @@
-铁路资讯首页								http://news.huoche.com/
-城市铁路资讯列表							http://news.huoche.com/teiluzixun/yunnan/
-城市铁路资讯列表+翻页						http://news.huoche.com/teiluzixun/yunnan/p2.html
-火车资讯列表								http://news.huoche.com/huoche/chengche.html
-机票资讯列表								http://news.huoche.com/jipaio.html
-资讯详情页									http://news.huoche.com/newsinfo38669.html
+铁路资讯    								http://news.huoche.com/									^/$
+铁路资讯列表页   							http://news.huoche.com/huoche/ysqgonggao/				^/huoche/[a-z]+/$
+机票新闻									http://news.huoche.com/jipiao/  			^/jipiao/$
+铁路资讯列表   							http://news.huoche.com/teiluzixun/jiangsu.html 			^/huoche/teiluzixun/[a-z]+\.html$
+铁路资讯详细页   							http://news.huoche.com/newsinfo38723					^/newsinfo\d+$

@@ -1,5 +1,7 @@
-旅游景点									http://trip.huoche.com/
-洲区域旅游索引								http://trip.huoche.com/asia.html
-国家旅游索引								http://trip.huoche.com/china.html
-城市旅游名区								http://trip.huoche.com/shanghai.html
+旅游景点									http://trip.huoche.com/			^/$
+洲区域旅游索引								http://trip.huoche.com/asia.html			^/asia.html$
+国家旅游索引								http://trip.huoche.com/china.html			^/china.html$
+城市旅游名区								http://trip.huoche.com/shanghai.html			
 
+
+详细页面   接  trip.elong.com的

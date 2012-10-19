@@ -1,7 +1,8 @@
-首页												http://wap.huoche.com/						^/$
-新闻列表页											http://wap.huoche.com/news/					^/news/$
-新闻详情页											http://wap.huoche.com/news38717					^/news(\d+)$
-火车站列车时刻表										http://wap.huoche.com/zhan/%E5%8C%97%E4%BA%AC%E5%8D%97/		^/zhan/([^/]+)/$
-车次信息页											http://wap.huoche.com/checi/G101/				^/zhan/([^/]+)/$			
-车次首页											http://wap.huoche.com/checi/					
-站站搜索结果											http://wap.huoche.com/zz-shanghai-suzhou/						
+手机火车网										http://wap.huoche.com/		^/$
+城市到城市站站查询火车列表						http://wap.huoche.com/zz-shanghai-beijing.html		^/zz-([a-zA-Z0-9]+)-([a-zA-Z0-9]+).html$
+城市到城市返程站站查询火车列表					http://wap.huoche.com/zz-shanghai-beijing.html		^/zz-([a-zA-Z0-9]+)-([a-zA-Z0-9]+).html$
+铁路资讯										http://wap.huoche.com/news/		^/news\/$
+资讯详细页										http://wap.huoche.com/news38725.html ^/news(\d+).html$
+车次查询										http://wap.huoche.com/checi/		^/checi\/$
+车次列表页										http://wap.huoche.com/checi/T7.html ^/checi\/([a-zA-Z0-9]+).html$
+城市车站时刻表									http://wap.huoche.com/zhan/beijing.html			^/zhan\/([a-zA-Z0-9]+).html$					

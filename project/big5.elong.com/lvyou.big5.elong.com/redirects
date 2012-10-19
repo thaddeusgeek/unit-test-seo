@@ -1,0 +1,5 @@
+http://big5.elong.com/gate/big5/lvyou.elong.com/878/all ==> 			http://http://lvyou.big5.elong.com/878/	
+
+^/tour/list-(.*)-1.html$   #											http://http://lvyou.big5.elong.com/tour/
+^/pictoral/list-(.*)-1.html$   #										http://http://lvyou.big5.elong.com/pictoral/
+^/ask/list-(.*)-1.html$   #												http://http://lvyou.big5.elong.com/ask/

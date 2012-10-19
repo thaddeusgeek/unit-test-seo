@@ -1,16 +1,16 @@
-国际酒店主页 										http://globalhotel.elong.com/													^/$	
-洲区域酒店索引										http://globalhotel.elong.com/europe.html
-国家酒店索引										http://globalhotel.elong.com/usa/ 												^/[a-z_-]+/$
-城市酒店索引(最受欢迎的酒店)						http://globalhotel.elong.com/usa/new_york/ 										^/[a-z_-]+/[a-z_-]+/$
-城市+最便宜的便宜酒店 								http://globalhotel.elong.com/usa/new_york/cheapeast.html 						^/[a-z_-]+/[a-z_-]+/cheapest\.html$
-城市+最豪华的酒店 									http://globalhotel.elong.com/usa/new_york/best.html 						^/[a-z_-]+/[a-z_-]+/popuplar\.html$
-城市+打折的酒店 									http://globalhotel.elong.com/usa/new_york/sale.html 							^/[a-z_-]+/[a-z_-]+/sale\.html$
-城市+口碑最好的酒店 								http://globalhotel.elong.com/usa/new_york/rating.html 							^/[a-z_-]+/[a-z_-]+/rating\.html$
-城市+星级 											http://globalhotel.elong.com/usa/new_york/start-123.html 							^/[a-z_-]+/[a-z_-]+/start2\.html$							
-城市+地标酒店索引									http://globalhotel.elong.com/usa/new_york/times-square/ 						^/[a-z_-]+/[a-z_-]+/[a-z_-]+/$
-城市+地标+最便宜酒店索引							http://globalhotel.elong.com/usa/new_york/times-square/cheapest.html 			^/[a-z_-]+/[a-z_-]+/[a-z_-]+/cheapest.html$
-城市+地标+最豪华酒店索引							http://globalhotel.elong.com/usa/new_york/times-square/best.html 			^/[a-z_-]+/[a-z_-]+/[a-z_-]+/popuplar.html$
-城市+地标+促销酒店索引								http://globalhotel.elong.com/usa/new_york/times-square/sale.html 				^/[a-z_-]+/[a-z_-]+/[a-z_-]+/sale.html$
-城市+地标+口碑最好的酒店索引						http://globalhotel.elong.com/usa/new_york/times-square/rating.html 				^/[a-z_-]+/[a-z_-]+/[a-z_-]+/rating.html$
-城市+地标+星级			 							http://globalhotel.elong.com/usa/new_york/times-square/start-123.html 				^/[a-z_-]+/[a-z_-]+/start2\.html$
+国际酒店主页 										http://globalhotel.elong.com/													^/$																		【国际酒店预订】打折价格查询_海外酒店预订_宾馆旅馆住宿信息_艺龙旅行网													\identical
+洲区域酒店索引										http://globalhotel.elong.com/europe.html									^/(asia|europe|oceania|africa|north_america|south_america)\.html$		【欧洲酒店预订】打折价格查询_宾馆旅馆住宿信息_艺龙旅行网															(亚洲|欧洲|大洋洲|非洲|北美洲|南美洲)酒店预订(预定)_艺龙旅行网								\1,酒店,预定
+国家酒店索引										http://globalhotel.elong.com/usa/ 												^/[a-z_-]+/$ 															【美国酒店预订】打折价格查询_宾馆旅馆住宿信息_艺龙旅行网															(亚洲|欧洲|大洋洲|非洲|北美洲|南美洲)酒店预订(预定)_艺龙旅行网								\1,酒店,预定
+城市酒店索引(最受欢迎的酒店)						http://globalhotel.elong.com/usa/new_york/ 										^/[a-z_-]+/[a-z_-]+/$													【纽约酒店预订】预订价格查询_艺龙旅行网
+城市+最便宜的便宜酒店 								http://globalhotel.elong.com/usa/new_york/cheapeast.html 						^/[a-z_-]+/[a-z_-]+/cheapest\.html$ 									【纽约最便宜的酒店】艺龙旅行网
+城市+最豪华的酒店 									http://globalhotel.elong.com/usa/new_york/best.html 						^/[a-z_-]+/[a-z_-]+/best\.html$ 										【纽约最好的酒店】艺龙旅行网
+城市+打折的酒店 									http://globalhotel.elong.com/usa/new_york/sale.html 							^/[a-z_-]+/[a-z_-]+/sale\.html$											【纽约促销打折的酒店】艺龙旅行网
+城市+口碑最好的酒店 								http://globalhotel.elong.com/usa/new_york/rating.html 							^/[a-z_-]+/[a-z_-]+/rating\.html$										【纽约口碑最好的酒店】艺龙旅行网
+城市+星级 											http://globalhotel.elong.com/usa/new_york/start-3.html 							^/[a-z_-]+/[a-z_-]+/start[1-5]\.html$								【纽约三星级酒店】预订价格查询_艺龙旅行网
+城市+地标酒店索引									http://globalhotel.elong.com/usa/new_york/times-square/ 						^/[a-z_-]+/[a-z_-]+/[a-z_-]+/$ 											【纽约时代广场】附近的酒店预订_价格查询_艺龙旅行网
+城市+地标+最便宜酒店索引							http://globalhotel.elong.com/usa/new_york/times-square/cheapest.html 			^/[a-z_-]+/[a-z_-]+/[a-z_-]+/cheapest\.html$							
+城市+地标+最豪华酒店索引							http://globalhotel.elong.com/usa/new_york/times-square/best.html 			^/[a-z_-]+/[a-z_-]+/[a-z_-]+/best\.html$
+城市+地标+促销酒店索引								http://globalhotel.elong.com/usa/new_york/times-square/sale.html 				^/[a-z_-]+/[a-z_-]+/[a-z_-]+/sale\.html$
+城市+地标+口碑最好的酒店索引						http://globalhotel.elong.com/usa/new_york/times-square/rating.html 				^/[a-z_-]+/[a-z_-]+/[a-z_-]+/rating\.html$
+城市+地标+星级			 							http://globalhotel.elong.com/usa/new_york/times-square/start-123.html 				^/[a-z_-]+/[a-z_-]+/start[1-5]\.html$
 酒店详情页											http://globalhotel.elong.com/usa/new_york/132479.html									^/\d+/$

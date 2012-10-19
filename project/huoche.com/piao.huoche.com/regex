@@ -1,7 +1,14 @@
-订票首页									http://piao.huoche.com/
-城市到城市查询列表（默认四天后）			http://piao.huoche.com/beijing-shanghai/
-城市到城市查询列表次日						http://piao.huoche.com/beijing-shanghai/day2.html
-城市到城市查询列表第三天					http://piao.huoche.com/beijing-shanghai/day3.html
-火车票预售期大全							http://piao.huoche.com/presell.php
-北京预售期									http://piao.huoche.com/presell/北京/
-2012年全国各地代售点售票窗口火车票预售期  	http://piao.huoche.com/presell2012.php
+订票首页									http://piao.huoche.com/		^/$
+城市到城市查询列表（默认四天后）			http://piao.huoche.com/beijing-shanghai/			^/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)\/$
+城市到城市查询列表次日						http://piao.huoche.com/beijing-shanghai/day2.html		^/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)\/day2.html$
+城市到城市查询列表第三天					http://piao.huoche.com/beijing-shanghai/day3.html		^/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)\/day3.html$
+火车票预售期大全							http://piao.huoche.com/presell.php			^/press.php$
+北京预售期									http://piao.huoche.com/presell/北京/			^/presell/([^\/]+)/$
+2012年全国各地代售点售票窗口火车票预售期  	http://piao.huoche.com/presell2012.php		^/press2012.php$
+
+
+
+
+帮助中心   								http://piao.huoche.com/help/	^/help/$
+服务保证   								http://piao.huoche.com/help/?pay	改为 http://piao.huoche.com/help/pay/    
+新手指南 支付/退款 购票常识 配送方式 ^/help\/\w+/\$

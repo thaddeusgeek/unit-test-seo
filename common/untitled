@@ -1,2 +1,0 @@
-reg = /(.)(.)/.match("abc")
-p reg.size

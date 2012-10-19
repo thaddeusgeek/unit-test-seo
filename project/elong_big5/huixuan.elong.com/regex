@@ -1,6 +1,0 @@
-主页							 http://big5.elong.com/gate/big5/huiyuan.elong.com/                                                 /^\/$/
-城市列表页 						 http://big5.elong.com/gate/big5/huiyuan.elong.com/beijing/                                         /^\/\w+\-\d+\/$/  
-城市+行政区						 http://big5.elong.com/gate/big5/huiyuan.elong.com/beijing/tongzhou/123.html   
-城市+商圈 						 http://big5.elong.com/gate/big5/huiyuan.elong.com/beijing/center/123.html
-城市+星级 						 http://big5.elong.com/gate/big5/huiyuan.elong.com/beijing/stars/123.html   
-产品详细页 						 http://big5.elong.com/gate/big5/huixuan.elong.com/beijing/wangfujing_1300-hotel.html                 /^\/\d+\-\d+/.*?_\d+\-hotel\/$/

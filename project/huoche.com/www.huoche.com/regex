@@ -1,22 +1,25 @@
-主页										http://www.huoche.com/
-打折机票首页								http://www.huoche.com/jipiao/
-城市到城市单程（次日）						http://www.huoche.com/jipiao/beijing-shanghai
-城市到城市单程（次日）+翻页					http://www.huoche.com/jipiao/beijing-shanghai/p1.html
-城市到城市单程当日							http://www.huoche.com/jipiao/beijing-shanghai/day1/
-城市到城市单程当日+翻页						http://www.huoche.com/jipiao/beijing-shanghai/day1/p1.html
-特价机票首页								http://www.huoche.com/jipiao/beijing.html
-长途汽车查询								http://www.huoche.com/changtu/
-城市到城市时刻表                            http://www.huoche.com/changtu/beijing-shanghai/
-详细页										http://www.huoche.com/changtu/info/72917.html                            
-城市长途汽车站列表							http://www.huoche.com/changtu/guangzhou/
-城市长途汽车站详细页						http://www.huoche.com/changtu/z1.html
-全国公交线路查询   							http://www.huoche.com/bus/
-北京公交车列表   							http://www.huoche.com/t1/
-北京324路电车公交线路						http://www.huoche.com/b150/
-公交站点									http://www.huoche.com/bs3003.html
-售票点查询									http://www.huoche.com/dingpiao/
-城市售票点列表								http://www.huoche.com/dingpiao/beijing/
-城市售票点列表+翻页							http://www.huoche.com/dingpiao/beijing/P1.html
-城市+行政区售票点列表						http://www.huoche.com/dingpiao/beijing/area/97/
-城市+行政区售票点列表+翻页					http://www.huoche.com/dingpiao/beijing/area/97/P1.html
-售票点详细页								http://www.huoche.com/dingpiao/shoupiao/640.html
+主页										http://www.huoche.com/			^/$
+打折机票首页								http://www.huoche.com/jipiao/			^/jipiao/$
+城市到城市单程（次日）						http://www.huoche.com/jipiao/beijing-shanghai			^/jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)$
+城市到城市单程（次日）+翻页					http://www.huoche.com/jipiao/beijing-shanghai/p1.html			^/jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/p\d+.html
+城市到城市单程当日							http://www.huoche.com/jipiao/beijing-shanghai/day1/		^/jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/day\d+/$
+城市到城市单程当日+翻页						http://www.huoche.com/jipiao/beijing-shanghai/day1/p1.html			^jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/day1/p\d+.html
+特价机票首页								http://www.huoche.com/jipiao/beijing.html			^/([a-zA-Z0-9]+).html$
+长途汽车查询								http://www.huoche.com/changtu/			^/changtu/$
+广东省长途汽车时刻表					http://www.huoche.com/changtu/guangdong				^/changtu/sheng/([a-z]+)$
+城市到城市时刻表                            http://www.huoche.com/changtu/beijing-shanghai/			^changtu/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/$
+详细页										http://www.huoche.com/changtu/info/72917.html                            ^/changtu/info/\d+.html$
+城市长途汽车站列表							http://www.huoche.com/changtu/guangzhou/			^/changtu/([a-zA-Z0-9]+)/$
+北京市长途汽车站								http://www.huoche.com/beijingqichezhan/				^/([a-zA-Z0-9]+)qichezhan/$
+城市长途汽车站详细页						http://www.huoche.com/changtu/z1.html			^/changtu/([a-zA-Z0-9]+).html/$
+全国公交线路查询   							http://www.huoche.com/bus/			^/bus/$
+北京公交车列表   							http://www.huoche.com/t1/			^/t\d+/$
+北京324路电车公交线路						http://www.huoche.com/b150/		^/b\d+/
+公交站点									http://www.huoche.com/bs3003.html			^/bs\d+.html$
+售票点查询									http://www.huoche.com/dingpiao/			^/dingpiao/$
+河北省售票点列表								http://www.huoche.com/dingpiao/sheng/hebei				^/dingpiao/sheng/([a-z]+)$
+城市售票点列表								http://www.huoche.com/dingpiao/beijing/		^/dingpiao/([a-zA-Z0-9]+)/$
+城市售票点列表+翻页							http://www.huoche.com/dingpiao/beijing/P1.html			^/dingpiao/([a-zA-Z0-9]+)/p\d+.html$
+城市+行政区售票点列表						http://www.huoche.com/dingpiao/beijing/area/97/			^/dingpiao/([a-zA-Z0-9]+)/area/\d+/$
+城市+行政区售票点列表+翻页					http://www.huoche.com/dingpiao/beijing/area/97/P1.html			^/dingpiao/([a-zA-Z0-9]+)/area/\d+/P\d+.html$
+售票点详细页								http://www.huoche.com/dingpiao/shoupiao/640.html			^/shoupiao/\d+.html$
