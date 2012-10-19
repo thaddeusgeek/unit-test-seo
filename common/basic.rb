@@ -9,6 +9,7 @@ shared_examples "基本页面" do |meta|
     keywords = meta[:keywords] || []
     it "'#{this_uri}'的title应 == #{meta[:title]} " do
         this_page.title.should == meta[:title] unless meta[:title].nil?
+        thititles_page.should =~ meta[:title] unless meta[:title].nil?
     end
 
     if webpage['canonical'].empty?
