@@ -1,14 +1,18 @@
-#coding:UTF-8
+# coding: UTF-8
+
+require 'webpage'
+require 'mechanize'
+
 shared_examples "基本页面" do |meta|
-    %(:uri :content :keywords :title :description).each do |key|
-      abort "key '#{key}' missing" unless meta.has_key? key
-    end
+    # %(:uri :content :keywords :title :description).each do |key|
+    #   abort "key '#{key}' missing" unless meta.has_key? key
+    # end
     this_uri = meta[:uri]
-    this_page = Mechanize.new.get this_uri
-    webpage = Webpage.new(meta[:content])
+    agent = Mechanize.new
+    webpage = Webpage.new(agent.get(this_uri).body)
     keywords = meta[:keywords] || []
     it "'#{this_uri}'的title应 == #{meta[:title]} " do
-        thititles_page.should =~ meta[:title] unless meta[:title].nil?
+        webpage.title.should =~ meta[:title] unless meta[:title].nil?
     end
 
     if webpage['canonical'].empty?
