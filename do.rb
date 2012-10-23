@@ -20,11 +20,11 @@ Dir.new(project).each do |domain|
 			next if line[4].nil? || line[6].nil?
 			# meta[:content] = $agent.get meta[:uri]
 			# meta[:keywords] = Regexp.new line[6]
-			meta[:keywords] = line[5]
+			meta[:keywords] = line[5].split(',') # 返回一个 keywords 的数组
 			meta[:keywords] = line[5] if line[6] == '\identical' #\identical标记表示和举例的一致
 			meta[:title] = Regexp.new line[4]
 			meta[:title] = line[3] if line[4] == '\identical' #\identical标记表示和举例的一致
-			meta[:description] = %r(.)
+			meta[:description] = line[7] if !line[7].nil?
 			describe "#{meta[:uri]}" do
 				it_behaves_like "基本页面", meta
 			end
