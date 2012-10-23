@@ -4,9 +4,9 @@ require 'webpage'
 require 'mechanize'
 
 shared_examples "基本页面" do |meta|
-    # %(:uri :content :keywords :title :description).each do |key|
-    #   abort "key '#{key}' missing" unless meta.has_key? key
-    # end
+    %w(:uri :content :keywords :title :description).each do |key|
+      warn "key '#{key}' missing" unless meta.has_key? key
+    end
     this_uri = meta[:uri]
     agent = Mechanize.new
     webpage = Webpage.new(agent.get(this_uri).body)
