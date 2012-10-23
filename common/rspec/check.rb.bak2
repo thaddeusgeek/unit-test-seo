@@ -1,0 +1,66 @@
+# coding: utf-8
+
+require 'uri'
+require 'mechanize'
+require './basic.rb'
+
+regexp_path = ARGV[0] || './regexp';
+
+class Meta
+  attr_accessor :title, :keywords, :description
+	 
+  def initialize(line)
+	  items = line.split
+		@title       = items[2]
+		@keywords    = items[5]
+	  @description = items[7]
+  end
+end
+
+class Page
+  attr_accessor :title, :keywords, :description
+	 
+  def initialize(line)
+	  url = line.split.first
+		agent = Mechanize.new
+		agent.get(url)
+		@title       = agent.page.title                                                             items[2]
+		@keywords    = agent.page.search("meta[name='keywords']")[0].attributes['content'].value    items[5]
+	  @description = agent.page.search("meta[name='description']")[0].attributes['content'].value items[7]
+  end
+end
+
+
+File.new(regexp_path).each do |line|
+  meta = {}
+  items = line.split
+  # url = URI.parse(URI.encode(items[1].strip)) 
+  url = items[1]
+	
+  meta[:title]       = items[2]
+  meta[:keywords]    = items[5]
+  meta[:description] = items[7]
+
+  agent = Mechanize.new
+#  begin
+#    agent.get(url)
+#  rescue Mechanize::ResponseCodeError => ex
+#    puts ex.response_code
+#  end
+  agent.get('http://www.elong.com/')
+
+  page = {}
+  page[:title]       = agent.page.title
+  page[:keywords]    = agent.page.search("meta[name='keywords']")[0].attributes['content'].value
+  page[:description] = agent.page.search("meta[name='description']")[0].attributes['content'].value
+  
+  describe "#{items[0]}" do
+    before(:each) do
+      @meta = meta
+      @page = page
+    end
+
+    it_behaves_like "BASIC"
+  end
+end
+
