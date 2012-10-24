@@ -1,4 +1,4 @@
-旅游景点								http://trip.huoche.com.cn/
-洲区域旅游索引							http://trip.huoche.com.cn/asia.html
-国家旅游索引							http://trip.huoche.com.cn/china.html
-城市旅游名区							http://trip.huoche.com.cn/shanghai.html
+旅游景点								http://trip.huoche.com.cn/							^/$
+洲区域旅游索引							http://trip.huoche.com.cn/asia.html	^/[a-z]+\.html$
+国家旅游索引							http://trip.huoche.com.cn/china.html	^/[a-z]+\.html$
+城市旅游名区							http://trip.huoche.com.cn/shanghai.html	^/[a-z]+\.html$
