@@ -1,63 +1,57 @@
 # coding: UTF-8
 
-require 'webpage'
-require 'mechanize'
-
-shared_examples "基本页面" do |meta|
+shared_examples "基本页面" do |meta, page|
     %w(:uri :content :keywords :title :description).each do |key|
       warn "key '#{key}' missing" unless meta.has_key? key
     end
-    this_uri = meta[:uri]
-    agent = Mechanize.new
-    webpage = Webpage.new(agent.get(this_uri).body)
-    keywords = meta[:keywords] || []
-    it "'#{this_uri}'的title应 =~ #{meta[:title]} " do
-        webpage.title.should =~ meta[:title] unless meta[:title].nil?
+
+    it "'#{meta[:uri]}'的title应 =~ #{meta[:title]} " do
+        page.title.should =~ meta[:title] unless meta[:title].nil?
     end
 
-    if webpage['canonical'].empty?
+    if page['canonical'].empty?
         # it "应在<head>标签中包含<link rel=\"canonical\">" do
-        #     webpage['canonical'].should_not be_empty
+        #     page['canonical'].should_not be_empty
         # end
     else
         it "应在<head>中包含唯一的canonical标签" do
-            webpage['canonical'].size.should == 1
+            page['canonical'].size.should == 1
         end
         it "应在<head>标签中包含<link rel=\"canonical\" href=\"#{this_uri}\"\>" do
-            webpage['canonical'].first['href'].should == meta[:uri]
+            page['canonical'].first['href'].should == meta[:uri]
         end
     end
 
-    if webpage['keywords'].empty?
+    if page['keywords'].empty?
         it "应包含一个meta keywords标签" do
-            webpage['keywords'].should_not be_empty
+            page['keywords'].should_not be_empty
         end
     else
         it "应只包含一个meta keywords标签" do
-            webpage['keywords'].size.should == 1
+            page['keywords'].size.should == 1
         end
         it "应包含与配置一致的keywords" do
 						# meta_keys = meta[:keywords].split(',')
-						# page_keys = webpage['keywords'][0].attributes['content'].value.split(',')
-            # webpage['keywords'].should == meta[:keywords]
-						webpage.keywords.sort.should == meta[:keywords].sort
+						# page_keys = page['keywords'][0].attributes['content'].value.split(',')
+            # page['keywords'].should == meta[:keywords]
+						page.keywords.sort.should == meta[:keywords].sort
         end
     end
 
-    if webpage['description'].empty?
+    if page['description'].empty?
         it "应包含一个meta description标签" do
-            webpage['description'].should_not be_empty
+            page['description'].should_not be_empty
         end
     else
         it "应只包含一个meta description标签" do
-            webpage['description'].size.should == 1
+            page['description'].size.should == 1
         end
         it "应包含与配置一致的description" do
-						# page_description = webpage['description'][0].attributes['content'].value
-            webpage.description.should == meta[:description]
+						# page_description = page['description'][0].attributes['content'].value
+            page.description.should == meta[:description]
         end
         it "description不能是keywords堆砌" do
-						description_online = webpage.description
+						description_online = page.description
             meta[:keywords].each { |keyword| description_online.delete(keyword) }
             description_online.size.should > 50
         end

@@ -1,23 +1,23 @@
-国内机票主页										http://flight.big5.elong.com/                             
-城市到城市单程(次日,经济舱)							http://flight.big5.elong.com/beijing-shanghai/
-城市到城市单程(次日,商务舱)							http://flight.big5.elong.com/beijing-shanghai/business.html
-城市到城市时刻表									http://flight.big5.elong.com/beijing-shanghai/timetable.html
-城市到城市特价机票									http://flight.big5.elong.com/beijing-shanghai/sale.html
-城市到城市单程当天									http://flight.big5.elong.com/beijing-shanghai/day1.html
-城市到城市单程第3天									http://flight.big5.elong.com/beijing-shanghai/day3.html
-城市到城市往返（次日起程三天后返程，经济舱）		http://flight.big5.elong.com/beijing-shanghai-round/
-城市到城市往返（次日起程三天后返程，商务舱）		http://flight.big5.elong.com/beijing-shanghai-round/business.html
-特价机票											http://flight.big5.elong.com/beijing-sale.html
-航空公司索引										http://flight.big5.elong.com/airlines/
-xx航空公司											http://flight.big5.elong.com/airlines/cz/
-航班号												http://flight.big5.elong.com/airlines/cz/cz3280.html
-国内特惠机票										http://flight.big5.elong.com/discount/
-国内特惠机票信息									http://flight.big5.elong.com/discount/cz-1.html
-城市到国际城市单程（三天后、经济舱）				http://iflight.big5.elong.com/beijing-toronto/
-城市到国际城市单程（三天后，商务舱）				http://iflight.big5.elong.com/beijing-toronto/top.html
-城市到国际城市单程当天								http://iflight.big5.elong.com/beijing-toronto/day1.html
-城市到国际城市往返（三天后起程六天后返程，经济舱）	http://iflight.big5.elong.com/beijing-toronto-round/
-城市到国际城市往返（三天后起程六天后返程、商务舱）	http://iflight.big5.elong.com/beijing-toronto-round/top.html
-国际特价机票										http://iflight.big5.elong.com/sale/
-国际特价机票+翻页									http://iflight.big5.elong.com/sale/123.html
-城市到国际城市特价机票								http://iflight.big5.elong.com/beijing-toronto/sale.html
+国内机票主页			http://flight.big5.elong.com/			^/$
+城市到城市单程(次日,经济舱)			http://flight.big5.elong.com/beijing-shanghai/			^/[a-z]+-[a-z]+/$
+城市到城市单程(次日,商务舱)			http://flight.big5.elong.com/beijing-shanghai/business.html			^/[a-z]+-[a-z]+/business\.html$
+城市到城市时刻表			http://flight.big5.elong.com/beijing-shanghai/timetable.html			^/[a-z]+-[a-z]+/timeable\.html$
+城市到城市特价机票			http://flight.big5.elong.com/beijing-shanghai/sale.html			^/[a-z]+-[a-z]+/sale\.html$
+城市到城市单程当天			http://flight.big5.elong.com/beijing-shanghai/day1.html			^/[a-z]+-[a-z]+/day1\.html$
+城市到城市单程第3天			http://flight.big5.elong.com/beijing-shanghai/day3.html			^/[a-z]+-[a-z]+/day3\.html$
+城市到城市往返（次日起程三天后返程，经济舱）			http://flight.big5.elong.com/beijing-shanghai-round/			^/[a-z]+-[a-z]+-round/$
+城市到城市往返（次日起程三天后返程，商务舱）			http://flight.big5.elong.com/beijing-shanghai-round/business.html			^/[a-z]+-[a-z]+-round/business\.html$
+特价机票			http://flight.big5.elong.com/beijing-sale.html			^/[a-z]+-sale\.html$
+航空公司索引			http://flight.big5.elong.com/airlines/			^/airlines/$
+xx航空公司			http://flight.big5.elong.com/airlines/cz/			^/airlines/[a-z]+/$
+航班号			http://flight.big5.elong.com/airlines/cz/cz3280.html			^/airlines/([a-z]+)/\1\d+\.html$
+国内特惠机票			http://flight.big5.elong.com/discount/			^/discount/$
+国内特惠机票信息			http://flight.big5.elong.com/discount/cz-1.html			^/discount/[a-z]+-\d+\.html$
+城市到国际城市单程（三天后、经济舱）			http://iflight.big5.elong.com/beijing-toronto/			^/[a-z]+-[a-z]+/$
+城市到国际城市单程（三天后，商务舱）			http://iflight.big5.elong.com/beijing-toronto/top.html			^/[a-z]+-[a-z]+/top\.html$
+城市到国际城市单程当天			http://iflight.big5.elong.com/beijing-toronto/day1.html			^/[a-z]+-[a-z]+/day1\.html$
+城市到国际城市往返（三天后起程六天后返程，经济舱）			http://iflight.big5.elong.com/beijing-toronto-round/			^/[a-z]+-[a-z]+-round/$
+城市到国际城市往返（三天后起程六天后返程、商务舱）			http://iflight.big5.elong.com/beijing-toronto-round/top.html			^/[a-z]+-[a-z]+-round/top\.html$
+国际特价机票			http://iflight.big5.elong.com/sale/			^/sale/$
+国际特价机票+翻页			http://iflight.big5.elong.com/sale/123.html			
+城市到国际城市特价机票			http://iflight.big5.elong.com/beijing-toronto/sale.html			^/[a-z]+-[a-z]+/sale\.html$
