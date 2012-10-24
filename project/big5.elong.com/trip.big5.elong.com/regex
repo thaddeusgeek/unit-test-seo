@@ -23,7 +23,7 @@
 老北京胡同两日游				http://trip.big5.elong.com/beijing/xianlu/38558.html									^/[a-z]+/xianlu/\d+\.html$							
 地名+机票交通					http://trip.big5.elong.com/beijing/jiaotong/									^/[a-z]+/jiaotong/$							
 地名+酒店住宿					http://trip.big5.elong.com/beijing/zhusu/										^/[a-z]+/zhusu/$				
-旅游搜索首页					http://trip.big5.elong.com/so/
+旅游搜索首页			http://trip.big5.elong.com/so/			
 旅游综合搜索					http://trip.big5.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/						^/so/all/(%[0-9A-F]{2})+/$
 旅游综合搜索+翻页				http://trip.big5.elong.com/so/all/%E9%BB%91%E9%BE%99%E6%B1%9F/p2						^/so/all/(%[0-9A-F]{2})+/p\d+$
 旅游门票搜索					http://trip.big5.elong.com/so/menpiao/%E9%BB%91%E9%BE%99%E6%B1%9F/					^/so/menpiao/(%[0-9A-F]{2})+/$							
