@@ -1,12 +1,12 @@
 旅游社区							http://lvyou.big5.elong.com/														^/$
 旅游社区-某主题论坛					http://lvyou.big5.elong.com/bbs/lvxing/all/										^/bbs/[a-z]+/all/$
-某主题论坛+翻页						http://lvyou.big5.elong.com/bbs/lvxing/all/123.html
+某主题论坛+翻页			http://lvyou.big5.elong.com/bbs/lvxing/all/p2.html			^/bbs/[a-z]+/all/p\d+\.html$
 旅游社区-某主题游记					http://lvyou.big5.elong.com/bbs/lvxing/tour/										^/bbs/[a-z]+/tour/$
-某主题游记+翻页						http://lvyou.big5.elong.com/bbs/lvxing/tour/123.html
+某主题游记+翻页			http://lvyou.big5.elong.com/bbs/lvxing/tour/p2.html			^/bbs/[a-z]+/tour/p\d+\.html$
 旅游社区-某主题画报					http://lvyou.big5.elong.com/bbs/lvxing/pictorial/								^/bbs/[a-z]+/pictorial/$
-某主题画报+翻页						http://lvyou.big5.elong.com/bbs/lvxing/pictorial/123.html
+某主题画报+翻页			http://lvyou.big5.elong.com/bbs/lvxing/pictorial/p2.html			^/bbs/[a-z]+/pictorial/p\d+\.html$
 旅游社区-某主题问答					http://lvyou.big5.elong.com/bbs/lvxing/ask/										^/bbs/[a-z]+/ask/$
-某主题问答+翻页						http://lvyou.big5.elong.com/bbs/lvxing/ask/123.html
+某主题问答+翻页			http://lvyou.big5.elong.com/bbs/lvxing/ask/p2.html			^/bbs/[a-z]+/ask/p\d+\.html$
 会员BLOG主页						http://lvyou.big5.elong.com/878/													^/\d+/$	
 游记索引							http://lvyou.big5.elong.com/878/tour/											^/\d+/tour/$	
 游记								http://lvyou.big5.elong.com/878/tour/a1hblnp9.html								^/\d+/tour/[\w\d]+\.html$	

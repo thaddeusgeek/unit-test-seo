@@ -1,8 +1,13 @@
 # coding: UTF-8
 
-# path = File.dirname(__FILE__)
+require 'webpage'
+require 'mechanize'
+
 require './common/basic.rb'
+require './common/link.rb'
+
 project = './project'
+# path = File.dirname(__FILE__)
 # project = ARGV[0] unless ARGV[0].nil?
 
 Dir.new(project).each do |domain|
@@ -25,8 +30,12 @@ Dir.new(project).each do |domain|
 			meta[:title] = Regexp.new line[4]
 			meta[:title] = line[3] if line[4] == '\identical' #\identical标记表示和举例的一致
 			meta[:description] = line[7] if !line[7].nil?
+
+			agent = Mechanize.new
+			page = Webpage.new(agent.get(meta[:uri]).body)
+
 			describe "#{meta[:uri]}" do
-				it_behaves_like "基本页面", meta
+				it_behaves_like "基本页面", meta, page
 			end
 		end
 	end
