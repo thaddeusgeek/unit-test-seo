@@ -6,23 +6,23 @@
 酒店城市特价(不需要翻页)				http://m.elong.com/hotel/beijing/sale/								^/hotel/[a-z]+/sale/$								【北京特价酒店】特价宾馆_艺龙旅行网手机版													^【[^】]+特价酒店】特价宾馆_艺龙旅行网手机版$													北京,特价,酒店,宾馆													\1,特价,酒店,宾馆												
 酒店城市高档(不需要翻页)				http://m.elong.com/hotel/beijing/top/								^/hotel/[a-z]+/top/$								【北京高档酒店】五星级宾馆_艺龙旅行网手机版													^【[^】]+高档酒店】五星级宾馆_艺龙旅行网手机版$													北京,高档,五星级,酒店,宾馆												\1,特价,酒店,宾馆												
 酒店城市+行政区							http://m.elong.com/hotel/beijing/chongwen/							^/hotel/[a-z]+/[a-z]/$								【北京_朝阳区】酒店预订_宾馆预订(预定)_艺龙旅行网手机版										^【[^】_]+_[^】_]+】酒店预订_宾馆预订(预定)_艺龙旅行网手机版$										北京,朝阳区,酒店,宾馆,预订,预定											\1,[^,]区,酒店,宾馆,预订,预定						
-酒店城市+行政区-Pn					http://m.elong.com/hotel/beijing/chongwen/123.html					^/hotel/[a-z]+/[a-z]/\d+\.html$						【北京_朝阳区】酒店预订_宾馆预订(预定)_100_艺龙旅行网手机版									^【[^】_]+_[^】_]+】酒店预订_宾馆预订(预定)_\d+艺龙旅行网手机版$									北京,朝阳区,酒店,宾馆,预订,预定											\1,[^,]区,酒店,宾馆,预订,预定						
-酒店城市+地铁线							http://m.elong.com/hotel/beijing/metroline/123/						^/hotel/[a-z]+/metro/\d+/$							【北京_13号线】附近的酒店_十三号线地铁沿线各站附近的酒店_艺龙旅行网手机版						^【[^】_]+_[^】_]+线】附近的酒店_[^_]+线地铁沿线各站附近的酒店_艺龙旅行网手机版$					北京,地铁,13号线,沿线,酒店,宾馆										\1,地铁,\2线,酒店,宾馆
-酒店城市+地铁线-Pn					http://m.elong.com/hotel/beijing/metroline/123/123.html				^/hotel/[a-z]+/metro/\d+/\d+/$						【北京_13号线霍营站】附近的酒店_十三号线霍营站附近的酒店_艺龙旅行网手机版						^【[^】_]+_[^】_]+线[^】_]+站】附近的酒店_[^_]+线[^_]+站附近的酒店_艺龙旅行网手机版$				北京,地铁,13号线,西二旗站,酒店,宾馆										\1,地铁,\2线,\3站,酒店,宾馆
-酒店城市+地铁站							http://m.elong.com/hotel/beijing/metro/123/							^/hotel/[a-z]+/metro/\d+/\d+/\d+/$					【北京_13号线霍营站】附近的酒店_十三号线霍营站附近的酒店_100_艺龙旅行网手机版					^【[^】_]+_[^】_]+线[^】_]+站】附近的酒店_[^_]+线[^_]+站附近的酒店_\d+_艺龙旅行网手机版$			北京,地铁,13号线,十三号线,西二旗站,酒店,宾馆								\1,地铁,\2线,\3+站,酒店,宾馆
-酒店城市+地铁站-Pn					http://m.elong.com/hotel/beijing/metro/123/123.html
+酒店城市+行政区-Pn						http://m.elong.com/hotel/beijing/chongwen/123.html					^/hotel/[a-z]+/[a-z]/\d+\.html$						【北京_朝阳区】酒店预订_宾馆预订(预定)_100_艺龙旅行网手机版									^【[^】_]+_[^】_]+】酒店预订_宾馆预订(预定)_\d+艺龙旅行网手机版$									北京,朝阳区,酒店,宾馆,预订,预定											\1,[^,]区,酒店,宾馆,预订,预定						
+酒店城市+地铁线							http://m.elong.com/hotel/beijing/metroline/123/						^/hotel/[a-z]+/metroline/\d+/$						【北京_地铁地铁线】附近的酒店_十三号线地铁沿线各站附近的酒店_艺龙旅行网手机版						^【[^】_]+_[^】_]+线】附近的酒店_[^_]+线地铁沿线各站附近的酒店_艺龙旅行网手机版$					北京,地铁,13号线,沿线,酒店,宾馆										\1,地铁,\2线,酒店,宾馆
+酒店城市+地铁线-Pn						http://m.elong.com/hotel/beijing/metroline/123/123.html				^/hotel/[a-z]+/metroline/\d+/\d+\.html$				【北京_地铁地铁线】附近的酒店_十三号线地铁沿线各站附近的酒店_100_艺龙旅行网手机版						^【[^】_]+_[^】_]+线[^】_]+站】附近的酒店_[^_]+线[^_]+站附近的酒店_艺龙旅行网手机版$				北京,地铁,13号线,西二旗站,酒店,宾馆										\1,地铁,\2线,\3站,酒店,宾馆
+酒店城市+地铁站							http://m.elong.com/hotel/beijing/metro/123/							^/hotel/[a-z]+/metro/\d+/$							【北京_地铁地铁站】附近的酒店_霍营站附近的酒店_艺龙旅行网手机版					^【[^】_]+_[^】_]+线[^】_]+站】附近的酒店_[^_]+线[^_]+站附近的酒店_\d+_艺龙旅行网手机版$			北京,地铁,13号线,十三号线,西二旗站,酒店,宾馆								\1,地铁,\2线,\3+站,酒店,宾馆
+酒店城市+地铁站-Pn						http://m.elong.com/hotel/beijing/metro/123/123.html					^/hotel/[a-z]+/metro/\d+/\d+\.html$					【北京_地铁地铁站】附近的酒店_霍营站附近的酒店_100_艺龙旅行网手机版	
 酒店城市商圈(不需要翻页)				http://m.elong.com/hotel/beijing/center/							^/hotel/[a-z]+/center/$								【北京商业区酒店一览】艺龙旅行网手机版														^【[^】_]+商业区酒店一览】艺龙旅行网手机版$														北京,商业区,商圈,酒店,宾馆												\1,商业区,商圈,酒店,宾馆
 酒店城市+商圈							http://m.elong.com/hotel/beijing/center/123/						^/hotel/[a-z]+/center/\d+/\$						【北京_世贸天阶】附近的酒店_艺龙旅行网手机版													^【[^】_]+_[^】_]+】附近的酒店_艺龙旅行网手机版$													北京,世贸天阶,附近,酒店,宾馆											\1,\2,附近,酒店,宾馆
 酒店城市+商圈-Pn						http://m.elong.com/hotel/beijing/center/123/123.html				^/hotel/[a-z]+/center/\d+//\d+\.html$				【北京_世贸天阶】附近的酒店_100_艺龙旅行网手机版												^【[^】_]+_[^】_]+】附近的酒店_100_艺龙旅行网手机版$												北京,世贸天阶,附近,酒店,宾馆											\1,\2,附近,酒店,宾馆
 酒店城市机场火车站						http://m.elong.com/hotel/beijing/traffic/							^/hotel/[a-z]+/traffic/$							【北京机场火车站酒店一览】艺龙旅行网手机版													^【[^】]+机场火车站酒店一览】艺龙旅行网手机版$													北京,机场,火车站,酒店,宾馆												\1,机场,火车站,酒店,宾馆
 酒店城市+机场火车站						http://m.elong.com/hotel/beijing/traffic/123.html					^/hotel/[a-z]+/traffic/\d+\.html$					【北京北京站】附近的酒店_艺龙旅行网手机版													^【[^】_]+_[^】_]+站】附近的酒店_艺龙旅行网手机版$												北京,北京站,附近,酒店,宾馆												\1,\2站,附近,酒店,宾馆
-酒店城市+机场火车站-Pn				http://m.elong.com/hotel/beijing/traffic/\d+/\d+/\.123.html			^/hotel/[a-z]+/traffic/\d+/\d+\.html$				【北京_北京站】附近的酒店_100_艺龙旅行网手机版												^【[^】_]+_[^】_]+站】附近的酒店_100_艺龙旅行网手机版$											北京,北京站,附近,酒店,宾馆												\1,\2站,附近,酒店,宾馆
-酒店城市+品牌 							http://m.elong.com/hotel/beijing/chain/123/   
-酒店城市+品牌-Pn						http://m.elong.com/hotel/beijing/chain/123/123.html
-酒店城市+星级 							http://m.elong.com/hotel/beijing/stars/123/ 
-酒店城市+星级-Pn						http://m.elong.com/hotel/beijing/stars/123/123.html
+酒店城市+机场火车站-Pn					http://m.elong.com/hotel/beijing/traffic/\d+/\d+/\.123.html			^/hotel/[a-z]+/traffic/\d+/\d+\.html$				【北京_北京站】附近的酒店_100_艺龙旅行网手机版												^【[^】_]+_[^】_]+站】附近的酒店_100_艺龙旅行网手机版$											北京,北京站,附近,酒店,宾馆												\1,\2站,附近,酒店,宾馆
+酒店城市+品牌 							http://m.elong.com/hotel/beijing/chain/123/   						^/hotel/[a-z]+/chain/\d+/$							【北京_莫泰】酒店预订（预定）_艺龙旅行网手机版
+酒店城市+品牌-Pn						http://m.elong.com/hotel/beijing/chain/123/123.html					^/hotel/[a-z]+/chain/\d+/\d+\.html$					【北京_莫泰】酒店预订（预定）_100_艺龙旅行网手机版
+酒店城市+星级 							http://m.elong.com/hotel/beijing/stars/123/ 						^/hotel/[a-z]+/stars/\d+/$							【北京_四星级】酒店预订（预定）_艺龙旅行网手机版
+酒店城市+星级-Pn						http://m.elong.com/hotel/beijing/stars/123/123.html					^/hotel/[a-z]+/stars/\d+/\d+\.html$					【北京_四星级】酒店预订（预定）_100_艺龙旅行网手机版
 酒店城市团购							http://m.elong.com/hotel/beijing/tuan/								^/hotel/[a-z]+/tuan/$								【北京酒店团购】宾馆团购_艺龙旅行网手机版													^【[^】]+酒店团购】宾馆团购_艺龙旅行网手机版$													北京,酒店,宾馆,团购													\1,酒店,宾馆,团购
-酒店城市团购-Pn						http://m.elong.com/hotel/beijing/tuan/\d+\.html						^/hotel/[a-z]+/tuan/\d+\.html$						【北京酒店团购】宾馆团购_100_艺龙旅行网手机版												^【[^】]+酒店团购】宾馆团购_100_艺龙旅行网手机版$												北京,酒店,宾馆,团购													\1,酒店,宾馆,团购
+酒店城市团购-Pn						http://m.elong.com/hotel/beijing/tuan/\d+\.html							^/hotel/[a-z]+/tuan/\d+\.html$						【北京酒店团购】宾馆团购_100_艺龙旅行网手机版												^【[^】]+酒店团购】宾馆团购_100_艺龙旅行网手机版$												北京,酒店,宾馆,团购													\1,酒店,宾馆,团购
 酒店城市热门团购						http://m.elong.com/hotel/beijing/tuan/hot.html						^/hotel/[a-z]+/tuan/hot\.html$						【北京热门酒店团购】艺龙旅行网手机版															^【[^】]+热门酒店团购】艺龙旅行网手机版$															北京,热门,酒店,宾馆,团购												\1,热门,酒店,宾馆,团购
 酒店城市特价酒店团购					http://m.elong.com/hotel/beijing/tuan/sale.html						^/hotel/[a-z]+/tuan/sale\.html$						【北京特价酒店团购】艺龙旅行网手机版															^【[^】]+特价酒店团购】艺龙旅行网手机版$															北京,热门,酒店,宾馆,团购												\1,热门,酒店,宾馆,团购
 酒店城市高档酒店团购					http://m.elong.com/hotel/beijing/tuan/top.html						^/hotel/[a-z]+/tuan/top\.html$						【北京高档酒店团购】艺龙旅行网手机版															^【[^】]+高档酒店团购】艺龙旅行网手机版$															北京,热门,酒店,宾馆,团购												\1,热门,酒店,宾馆,团购

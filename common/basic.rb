@@ -58,7 +58,7 @@ shared_examples "基本页面" do |meta|
         end
         it "description不能是keywords堆砌" do
 						description_online = webpage.description
-            meta[:keywords].each { |keyword| description_online.delete keyword }
+            meta[:keywords].each { |keyword| description_online.delete(keyword) }
             description_online.size.should > 50
         end
     end
