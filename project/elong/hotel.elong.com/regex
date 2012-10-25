@@ -1,7 +1,7 @@
 主页										http://hotel.elong.com/																	^/$															【酒店预订】宾馆预订_艺龙旅行网
 品牌大全首页								http://hotel.elong.com/brand/															^/brand/$													酒店品牌大全_艺龙旅行网
 某品牌首页									http://hotel.elong.com/brand/homeinns/													^/brand/[a-z]+$												【如家快捷酒店】预订_价格查询_艺龙旅行网城市品牌酒店列表-P1							http://hotel.elong.com/beijing/brand_123/											^/[a-z]+/brand/\d+/$										【北京 如家快捷酒店】预订_住宿价格查询_艺龙旅行网
-城市品牌酒店列表-P1							http://hotel.elong.com/beijing/brand_123/												^/[a-z]+/brand_123/$										【北京_如家快捷酒店】预订_住宿价格查询_2_艺龙旅行网
+城市品牌酒店列表-P1							http://hotel.elong.com/beijing/brand_123/												^/[a-z]+/brand_123/$										【北京_如家快捷酒店】预订_住宿价格查询_艺龙旅行网
 城市品牌酒店列表-Pn							http://hotel.elong.com/beijing/brand_123/p1.html										^/[a-z]+/brand_123/p\d+\.html/$								【北京_如家快捷酒店】预订_住宿价格查询_2_艺龙旅行网
 城市酒店列表-P1								http://hotel.elong.com/beijing/															^/[a-z]+/$													【北京_酒店预订】宾馆预订_住宿价格查询_艺龙旅行网
 城市酒店列表-Pn								http://hotel.elong.com/beijing/p2.html													^/[a-z]+/p\d+$												【北京_酒店预订】宾馆预订_住宿价格查询_2_艺龙旅行网
