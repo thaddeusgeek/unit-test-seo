@@ -8,18 +8,18 @@ shared_examples "链接页面" do |meta, page|
 
   %w(src href).each do |attr|
     page.nodes_with(attr).each do |node|
-			begin
-				link_uri = URI.parse(node.value).normalize
-			rescue URI::InvalidURIError
-				link_uri = URI.parse(URI.encode(node.value)).normalize
-				it "#{node.value} URI应作URI_ENCODE,URI中只能包含这些字符A-Za-z0-9._~:/?#[]@!$&%'()*+,;=-" do
-					# expect{URI(link['href'])}.not_to raise_error(URI::InvalidURIError)
-					node.value.should == link_uri.to_s
-				end
-				next
-			end
+      begin
+        link_uri = URI.parse(node.value).normalize
+      rescue URI::InvalidURIError
+        link_uri = URI.parse(URI.encode(node.value)).normalize
+        it "#{node.value} URI应作URI_ENCODE,URI中只能包含这些字符A-Za-z0-9._~:/?#[]@!$&%'()*+,;=-" do
+          # expect{URI(link['href'])}.not_to raise_error(URI::InvalidURIError)
+          node.value.should == link_uri.to_s
+        end
+        next
+      end
       link_uri = URI.parse(node.value)
-			next if link_uri.query
+      next if link_uri.query
       it "应该使用绝对路径或根路径: #{node}" do
         link_uri.to_s.should match(%r{^/}) if !link_uri.absolute?
       end
@@ -71,7 +71,7 @@ shared_examples "链接页面" do |meta, page|
       link_host = link_uri.host
       if link['href'] =~ /^javascript:/
         it "#{link} 禁止使用<a>当按钮" do 
-				#todo: 分析href协议,不是http, https则 错误, 
+        #todo: 分析href协议,不是http, https则 错误, 
         #分析link_uri 和 fragment , link_uri 是本页,而且fragment空的 错误. 考虑href="http://本页地址#"
           link['href'].should_not =~ /^javascript:/
         end
@@ -81,14 +81,14 @@ shared_examples "链接页面" do |meta, page|
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     ##开始检测到本页的链接，fragment不在所有inpage_anchors内的
-		if link_uri.host == URI.parse(meta[:uri]).host && link_uri.path == URI.parse(meta[:uri]).path # 同一页面
+    if link_uri.host == URI.parse(meta[:uri]).host && link_uri.path == URI.parse(meta[:uri]).path # 同一页面
       it "#{link} 禁止使用<a>当按钮=================" do 
-		  #todo: 分析href协议,不是http, https则 错误, 
+      #todo: 分析href协议,不是http, https则 错误, 
       #分析link_uri 和 fragment , link_uri 是本页,而且fragment空的 错误. 考虑href="http://本页地址#"
         inpage_anchors.should include link_uri.fragment if !link_uri.fragment.nil?
-	  		#buttons = page.links_with(:href=>'#') + page.links_with(:href=>'#?') + page.links_with(:href=>nil) + page.links_with(:href=>/^javascript:/)
+        #buttons = page.links_with(:href=>'#') + page.links_with(:href=>'#?') + page.links_with(:href=>nil) + page.links_with(:href=>/^javascript:/)
       end# if link['href'].start_with?'#'
-		end
+    end
     ####################以下都不是把<a>当按钮用#########################
     next if link['rel'].to_s.include? 'nofollow'#忽略nofollow,@todo 错加nofollow的情况
     link_path = link_uri.path #假定所有link_uri都已静态化
@@ -111,11 +111,11 @@ shared_examples "链接页面" do |meta, page|
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     # queries = link_uri.query || ""
-		if link_uri.query.nil?
-			next
-		else
-			queries = link_uri.query
-		end
+    if link_uri.query.nil?
+      next
+    else
+      queries = link_uri.query
+    end
     queries.split('&').each do |query|
       it "#{link['href']}中的参数#{query}无意义,需删除.若为统计用,请试用其他方式." do
         agent = Mechanize.new.get URI.join("http://#{link_host}","#{link_path}?#{query}")
