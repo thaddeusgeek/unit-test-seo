@@ -1,9 +1,9 @@
-团购主页											http://tuan.sunnychina.com/
-城市列表页											http://tuan.sunnychina.com/beijing/
-城市+行政区											http://tuan.sunnychina.com/beijing/chaoyang/
-产品详细页											http://tuan.sunnychina.com/beijing/chaoyang/15662/1.html
-城市+单一商圈										http://tuan.sunnychina.com/beijing/center-123.html
-城市+星级											http://tuan.sunnychina.com/beijing/star-123.html
-往期团购											http://tuan.sunnychina.com/dealgroup.html
-如何团购											http://tuan.sunnychina.com/howbuy.html
-常见问题											http://tuan.sunnychina.com/faq.html
+团购主页											http://tuan.sunnychina.com/																		^/$
+城市列表页											http://tuan.sunnychina.com/beijing/													^/[a-z]+/$
+城市+行政区											http://tuan.sunnychina.com/beijing/chaoyang/								^/[a-z]+/[a-z]+/$
+产品详细页											http://tuan.sunnychina.com/beijing/chaoyang/15662/1.html		^/[a-z]+/[a-z]+/\d+/\d+\.html$
+城市+单一商圈										http://tuan.sunnychina.com/beijing/center-123.html					^/[a-z]+/center-\d+\.html$
+城市+星级											http://tuan.sunnychina.com/beijing/star-123.html							^/[a-z]+/star-\d+\.html$
+往期团购											http://tuan.sunnychina.com/dealgroup.html											^/dealgroup\.html$
+如何团购											http://tuan.sunnychina.com/howbuy.html												^/howbuy\.html$
+常见问题											http://tuan.sunnychina.com/faq.html														^/faq\.html$
