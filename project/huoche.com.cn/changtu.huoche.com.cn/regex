@@ -1,4 +1,0 @@
-长途汽车查询							http://changtu.huoche.com.cn/											^/$
-城市目的地索引						http://changtu.huoche.com.cn/beijing/							^/[a-z]+/$
-城市到城市长途时刻表			http://changtu.huoche.com.cn/beijing-shanghai/		^/[a-z]+-[a-z]+/$
-详细页                    http://changtu.huoche.com.cn/cc/7030.html					^/cc/\d+\.html$
