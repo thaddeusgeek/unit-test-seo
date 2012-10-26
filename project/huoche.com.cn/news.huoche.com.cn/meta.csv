@@ -1,5 +1,5 @@
-é“è·¯æ–°é—»é¦–é¡µ,http://news.huoche.com.cn/,^/$
-åŸå¸‚é“è·¯æ–°é—»åˆ—è¡¨,http://news.huoche.com.cn/beijing/,^/[a-z]+/$
-æ–°é—»è¯¦ç»†é¡µ,http://news.huoche.com.cn/128411.html,^/\d+\.html$
-èˆªç©ºèµ„è®¯,http://news.huoche.com.cn/air.html,^/air\.html$
-å­¦ç”Ÿç¥¨é“è·¯æ–°é—»,http://news.huoche.com.cn/student.html,^/student\.html$
+ÌúÂ·ĞÂÎÅÊ×Ò³,http://news.huoche.com.cn/,^/$,¡¾ÌúÂ·ĞÂÎÅ¡¿È«¹ú×îĞÂÌúÂ·ĞÂÎÅ_ÌúÂ·×ÊÑ¶_»ğ³µÍø
+³ÇÊĞÌúÂ·ĞÂÎÅÁĞ±í,http://news.huoche.com.cn/beijing/,^/[a-z]+/$,¡¾±±¾©ÌúÂ·ĞÂÎÅ¡¿×îĞÂÌúÂ·×ÊÑ¶_»ğ³µÍø
+ĞÂÎÅÏêÏ¸Ò³,http://news.huoche.com.cn/128411.html,^/\d+\.html$,¡¾½ø¾©ÁĞ³µ100ÊµÃûÑéÆ±¡¿ÌúÂ·ĞÂÎÅ_»ğ³µÍø
+º½¿Õ×ÊÑ¶,http://news.huoche.com.cn/air.html,^/air\.html$,¡¾º½¿Õ×ÊÑ¶¡¿·É»úÆ±ÌúÂ·×ÊÑ¶_ĞÂÎÅ_»ğ³µÍø
+Ñ§ÉúÆ±ÌúÂ·ĞÂÎÅ,http://news.huoche.com.cn/student.html,^/student\.html$,¡¾Ñ§ÉúÆ±ÌúÂ·ĞÂÎÅ¡¿Ñ§ÉúÆ±ÌúÂ·×ÊÑ¶_»ğ³µÍø
