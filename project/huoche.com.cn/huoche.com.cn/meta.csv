@@ -1,11 +1,17 @@
-ä¸»é¡µ,http://www.huoche.com.cn/,^/$,ç«è½¦ç¥¨æŸ¥è¯¢_é¢„è®¢_ç«è½¦æ—¶åˆ»è¡¨_åˆ—è½¦æ—¶åˆ»è¡¨_ç«è½¦ç½‘
-ç«è½¦æ—¶åˆ»/ç¥¨ä»·é¦–é¡µ,http://www.huoche.com.cn/sheng/,^/sheng/$,ã€ç«è½¦æ—¶åˆ»ç¥¨ä»·æŸ¥è¯¢ã€‘æœ€æ–°å…¨å›½åˆ—è½¦æ—¶åˆ»è¡¨æŸ¥è¯¢_ç¥¨ä»·æŸ¥è¯¢_ç«è½¦ç½‘
-åŸå¸‚æ—¶åˆ»ç´¢å¼•,http://www.huoche.com.cn/s7/,^/s\d+/$,
-åŸå¸‚æ—¶åˆ»è¡¨åˆ—è¡¨                          http://www.huoche.com.cn/z2132830216.html,   ,^/z\d+\.html$
-åŸå¸‚åˆ°åŸå¸‚æ—¶åˆ»è¡¨/ç¥¨ä»·åˆ—è¡¨,http://www.huoche.com.cn/beijing-shanghai.html,^/[a-z]+-[a-z]+\.html$
-å…¨å›½ç«è½¦è®¢ç¥¨ç‚¹/ç”µè¯å¤§å…¨,http://www.huoche.com.cn/dingpiao/,^/dingpiao/$
-åŸå¸‚è®¢ç¥¨ç‚¹/ç”µè¯åˆ—è¡¨,http://www.huoche.com.cn/dingpiao/beijing/,^/dingpiao/[a-z]+/$
-åŸå¸‚è®¢ç¥¨/ç”µè¯åˆ—è¡¨-Pn,http://www.huoche.com.cn/dingpiao/beijing/p2.html,^/dingpiao/[a-z]+/p\d+
-åŸå¸‚+è¡Œæ”¿åŒºè®¢ç¥¨ç‚¹/ç”µè¯åˆ—è¡¨,http://www.huoche.com.cn/dingpiao/beijing/area/57/,^/dingpiao/[a-z]+/area/\d+/$
-åŸå¸‚+è¡Œæ”¿åŒºåˆ—è¡¨-Pn,http://www.huoche.com.cn/dingpiao/beijing/area/57/p2.html,^/dingpiao/[a-z]+/area/\d+/p\d+\.html$
-è®¢ç¥¨ç‚¹è¯¦ç»†é¡µ,http://www.huoche.com.cn/dingpiao/shoupiao/3493.html,^/dingpiao/shoupiao/\d+\.html$
+Ö÷Ò³,http://www.huoche.com.cn/,^/$,»ğ³µÆ±²éÑ¯_Ô¤¶©_»ğ³µÊ±¿Ì±í_ÁĞ³µÊ±¿Ì±í_»ğ³µÍø
+»ğ³µÊ±¿Ì/Æ±¼ÛÊ×Ò³,http://www.huoche.com.cn/sheng/,^/sheng/$,¡¾»ğ³µÊ±¿ÌÆ±¼Û²éÑ¯¡¿×îĞÂÈ«¹úÁĞ³µÊ±¿Ì±í²éÑ¯_Æ±¼Û²éÑ¯_»ğ³µÍø
+³ÇÊĞÊ±¿ÌË÷Òı,http://www.huoche.com.cn/s7/,^/s\d+/$,¡¾¹ãÎ÷ÁĞ³µÊ±¿Ì±í¡¿¹ãÎ÷³µÕ¾´óÈ«_»ğ³µÊ±¿Ì±í²éÑ¯_»ğ³µÍø
+³ÇÊĞÊ±¿Ì±íÁĞ±í                          http://www.huoche.com.cn/z2132830216.html,http://www.huoche.com.cn/z2132830216.html,^/z\d+\.html$,¡¾°ÙÉ«ÁĞ³µÊ±¿Ì±í¡¿»ğ³µÊ±¿Ì±í_»ğ³µÕ¾Ê±¿Ì±í_³µ´ÎÒ»ÀÀ_»ğ³µÍø
+³ÇÊĞµ½³ÇÊĞÊ±¿Ì±í/Æ±¼ÛÁĞ±í,http://www.huoche.com.cn/beijing-shanghai.html,^/[a-z]+-[a-z]+\.html$,¡¾±±¾©µ½ÉÏº£ÁĞ³µÊ±¿Ì±í¡¿»ğ³µÊ±¿Ì±í_Æ±¼Û_³µ´ÎÒ»ÀÀ_Ô¤¶©_»ğ³µÍø
+È«¹ú»ğ³µ¶©Æ±µã/µç»°´óÈ«,http://www.huoche.com.cn/dingpiao/,^/dingpiao/$,¡¾È«¹ú»ğ³µ¶©Æ±µãµç»°´óÈ«¡¿È«¹ú»ğ³µÆ±ÊÛÆ±µã_´úÊÛµã_ÊÛÆ±´¦_¶©Æ±µç»°´óÈ«_»ğ³µÍø
+³ÇÊĞ¶©Æ±µã/µç»°ÁĞ±í,http://www.huoche.com.cn/dingpiao/beijing/,^/dingpiao/[a-z]+/$,¡¾±±¾©¶©Æ±µãµç»°´óÈ«¡¿±±¾©»ğ³µÆ±ÊÛÆ±µã_´úÊÛµã_ÊÛÆ±´¦_¶©Æ±µç»°´óÈ«_»ğ³µÍø
+³ÇÊĞ¶©Æ±/µç»°ÁĞ±í-Pn,http://www.huoche.com.cn/dingpiao/beijing/p2.html,^/dingpiao/[a-z]+/p\d+,¡¾±±¾©¶©Æ±µãµç»°´óÈ«¡¿±±¾©»ğ³µÆ±ÊÛÆ±µã_´úÊÛµã_ÊÛÆ±´¦_¶©Æ±µç»°´óÈ«_100_»ğ³µÍø
+³ÇÊĞ+ĞĞÕşÇø¶©Æ±µã/µç»°ÁĞ±í,http://www.huoche.com.cn/dingpiao/beijing/area/57/,^/dingpiao/[a-z]+/area/\d+/$,¡¾±±¾©_³¯ÑôÇø_¶©Æ±µãµç»°´óÈ«¡¿ÊÛÆ±µã_´úÊÛµã_ÊÛÆ±´¦_¶©Æ±µç»°´óÈ«_»ğ³µÍø
+³ÇÊĞ+ĞĞÕşÇøÁĞ±í-Pn,http://www.huoche.com.cn/dingpiao/beijing/area/57/p2.html,^/dingpiao/[a-z]+/area/\d+/p\d+\.html$,¡¾±±¾©_³¯ÑôÇø_¶©Æ±µãµç»°´óÈ«¡¿ÊÛÆ±µã_´úÊÛµã_ÊÛÆ±´¦_¶©Æ±µç»°´óÈ«_100_»ğ³µÍø
+¶©Æ±µãÏêÏ¸Ò³,http://www.huoche.com.cn/dingpiao/shoupiao/3493.html,^/dingpiao/shoupiao/\d+\.html$,¡¾ÍâÆóº½¿Õ·şÎñ¹«Ë¾»ğ³µÊÛÆ±´¦¡¿µØÖ·_µç»°_»ğ³µÍø
+
+
+
+,,,
+,"¡¡¡¡
+",,
