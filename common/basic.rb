@@ -1,7 +1,7 @@
 # coding: UTF-8
 
 shared_examples "基本页面" do |meta, page|
-    %w(:uri :content :keywords :title :description).each do |key|
+    [:uri, :content, :keywords, :title, :description].each do |key|
       warn "key '#{key}' missing" unless meta.has_key? key
     end
 
