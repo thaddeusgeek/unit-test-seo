@@ -1,4 +1,4 @@
-detect 404 uris from the target uri
+自动检测所有href,src,保证其返回码是200或301
 利用Baiduspider useragent查询，应该得到200
 面包屑样式识别
 url 动态检测,"?"
