@@ -1,0 +1,4 @@
+目的地指南首页,http://travelguide.sunnychina.com/,^/$,【目的地指南】国内旅游景点导航_旅游目的地指南_阳光旅行网
+城市目的地索引,http://travelguide.sunnychina.com/beijing/,^/[a-z]+/$,【北京旅游目的地】北京旅游指南_旅游攻略_景点大全_阳光旅行网
+城市行政区景点列表,http://travelguide.sunnychina.com/beijing/chaoyang/,            ^/[a-z]+/[a-z]+/$,【北京_朝阳区旅游】旅游攻略_景点大全_阳光旅行网
+景点详情页,http://travelguide.sunnychina.com/travel_intro_2473.html,        ^/travel_intro_\d+\.html$,【日坛公园】旅游攻略_门票_地址_图片_简介_阳光旅行网

@@ -1,0 +1,5 @@
+铁路新闻首页,http://news.huoche.com.cn/,^/$
+城市铁路新闻列表,http://news.huoche.com.cn/beijing/,^/[a-z]+/$
+新闻详细页,http://news.huoche.com.cn/128411.html,^/\d+\.html$
+航空资讯,http://news.huoche.com.cn/air.html,^/air\.html$
+学生票铁路新闻,http://news.huoche.com.cn/student.html,^/student\.html$

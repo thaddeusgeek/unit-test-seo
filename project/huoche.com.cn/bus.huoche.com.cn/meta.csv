@@ -1,0 +1,4 @@
+全国公交线路查询   ,http://bus.huoche.com.cn/,^/$
+城市公交车列表   ,http://bus.huoche.com.cn/beijing/,^/[a-z]+/$
+北京324路电车公交线路,http://bus.huoche.com.cn/beijing/402.html,^/[a-z]+/[a-z\d]+\.html$
+公交站点查询,http://bus.huoche.com.cn/bs3003.html,^/[a-z\d]+\.html$
