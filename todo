@@ -1,3 +1,5 @@
 detect 404 uris from the target uri
 利用Baiduspider useragent查询，应该得到200
 面包屑样式识别
+url 动态检测,"?"
+页面内容里不允许出现'...',防止截断,可先考虑<a> 锚文本
