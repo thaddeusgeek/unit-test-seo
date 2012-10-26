@@ -1,0 +1,9 @@
+国际酒店主页,http://globalhotels.big5.sunnychina.com/,^/$
+洲区域酒店索引,http://globalhotels.big5.sunnychina.com/europe.html,^/[a-z]+\.html$
+国家酒店索引,http://globalhotels.big5.sunnychina.com/usa.html,^/[a-z]+/$
+城市酒店索引（阳光推荐）,http://globalhotels.big5.sunnychina.com/usa/new_york/,^/[a-z]+/[a-z_]+/$
+城市+打折的酒店,http://globalhotels.big5.sunnychina.com/usa/new_york/sale.html,^/[a-z]+/[a-z_]+/sale\.html$
+城市+最便宜的酒店,http://globalhotels.big5.sunnychina.com/usa/new_york/cheapeast.html,^/[a-z]+/[a-z_]+/cheapest\.html$
+城市酒店详情页,http://globalhotels.big5.sunnychina.com/361504/,^/\d+/$
+酒店图片,http://globalhotels.big5.sunnychina.com/361504/image.html,^/\d+/image\.html$
+交通地图,http://globalhotels.big5.sunnychina.com/361504/map.html,^/\d+/map\.html$

@@ -1,0 +1,23 @@
+国内机票主页  ,http://flight.elong.net/                                ,  ^/$
+城市到城市单程(次日,经济舱),http://flight.elong.net/beijing-shanghai/,^/[a-z]+-[a-z]+/$
+城市到城市单程(次日,商务舱),http://flight.elong.net/beijing-shanghai/business.html,^/[a-z]+-[a-z]+/business\.html$
+城市到城市时刻表,http://flight.elong.net/beijing-shanghai/timetable.html,^/[a-z]+-[a-z]+/timeable\.html$
+城市到城市特价机票,http://flight.elong.net/beijing-shanghai/sale.html,^/[a-z]+-[a-z]+/sale\.html$
+城市到城市单程当天,http://flight.elong.net/beijing-shanghai/day1.html,^/[a-z]+-[a-z]+/day1\.html$
+城市到城市单程第3天,http://flight.elong.net/beijing-shanghai/day3.html,^/[a-z]+-[a-z]+/day3\.html$
+城市到城市往返（次日起程三天后返程，经济舱）,http://flight.elong.net/beijing-shanghai-round/,^/[a-z]+-[a-z]+-round/$
+城市到城市往返（次日起程三天后返程，商务舱）,http://flight.elong.net/beijing-shanghai-round/business.html,^/[a-z]+-[a-z]+-round/business\.html$
+特价机票,http://flight.elong.net/beijing-sale.html,^/[a-z]+-sale\.html$
+航空公司索引,http://flight.elong.net/airlines/,^/airlines/$
+xx航空公司,http://flight.elong.net/airlines/cz/,^/airlines/[a-z]+/$
+航班号,http://flight.elong.net/airlines/cz/cz3280.html,^/airlines/([a-z]+)/\1\d+\.html$
+国内特惠机票,http://flight.elong.net/discount/,^/discount/$
+国内特惠机票信息,http://flight.elong.net/discount/cz-1.html,^/discount/[a-z]+-\d+\.html$
+城市到国际城市单程（三天后、经济舱）,http://iflight.elong.net/beijing-toronto/,^/[a-z]+-[a-z]+/$
+城市到国际城市单程（三天后，商务舱）,http://iflight.elong.net/beijing-toronto/top.html,^/[a-z]+-[a-z]+/top\.html$
+城市到国际城市单程当天,http://iflight.elong.net/beijing-toronto/day1.html,^/[a-z]+-[a-z]+/day1\.html$
+城市到国际城市往返（三天后起程六天后返程，经济舱）,http://iflight.elong.net/beijing-toronto-round/,^/[a-z]+-[a-z]+-round/$
+城市到国际城市往返（三天后起程六天后返程、商务舱）,http://iflight.elong.net/beijing-toronto-round/top.html,^/[a-z]+-[a-z]+-round/top\.html$
+国际特价机票,http://iflight.elong.net/sale/,^/sale/$
+国际特价机票-Pn,http://iflight.elong.net/sale/123.html,^/sale/\d+\.html$
+城市到国际城市特价机票,http://iflight.elong.net/beijing-toronto/sale.html,^/[a-z]+-[a-z]+/sale\.html$

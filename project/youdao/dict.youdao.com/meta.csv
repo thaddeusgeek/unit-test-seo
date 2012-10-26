@@ -1,0 +1,5 @@
+---
+- ^/$
+- ^/(eng|fr|ko|jap|wiki|wikis)/[^/]+/$
+- ^/(eng|fr|ko|jap)/[^/]+/example/$
+- ^/(eng|fr|ko|jap)/[^/]+/example/(media|video|audio|auth|paper|oral|written)\.html$

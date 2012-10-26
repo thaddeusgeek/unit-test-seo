@@ -1,0 +1,5 @@
+中国旅游首页,http://chinatours.elong.net/chinatours/,  ^/chinatours/$
+城市旅游列表（多城市旅游）,http://chinatours.elong.net/chinatours/beijing_hangzhou/,^/chinatours/[a-z]+-[a-z]+/$
+城市旅游列表（多城市旅游）-Pn,http://chinatours.elong.net/chinatours/beijing_hangzhou/p2.html,^/chinatours/[a-z]+_[a-z]+/p\d+\.html$
+单一城市旅游列表,http://chinatours.elong.net/chinatours/beijing/,^/chinatours/[a-z]+/$
+产品详细页,http://chinatours.elong.net/chinatours/CT1256-10-days-Luxury-Journey-of-China.html,^/chinatours/([^-]+-)+[^-]+\.html$
