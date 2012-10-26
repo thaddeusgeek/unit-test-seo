@@ -21,15 +21,15 @@ Dir.new(project).each do |domain|
     next if !File.exists? File.join(project,domain,host,'meta.csv') #不存在meta.csv文件 跳过
     meta_csv = File.join(project,domain,host,'meta.csv') 
 
-		begin
-		  CSV.open(meta_csv).each { |row| }
-		rescue CSV::MalformedCSVError
+    begin
+      CSV.open(meta_csv).each { |row| }
+    rescue CSV::MalformedCSVError
       puts "!!!!!#{meta_csv} is malformed"
-			next
-		end
+      next
+    end
 
     CSV.open(meta_csv).each do |row|
-			items = row
+      items = row
       next if items[4].nil? || items[6].nil?
 
       meta = {}

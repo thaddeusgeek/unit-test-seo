@@ -31,10 +31,10 @@ shared_examples "基本页面" do |meta, page|
             page['keywords'].size.should == 1
         end
         it "应包含与配置一致的keywords" do
-						# meta_keys = meta[:keywords].split(',')
-						# page_keys = page['keywords'][0].attributes['content'].value.split(',')
+            # meta_keys = meta[:keywords].split(',')
+            # page_keys = page['keywords'][0].attributes['content'].value.split(',')
             # page['keywords'].should == meta[:keywords]
-						page.keywords.sort.should == meta[:keywords].sort
+            page.keywords.sort.should == meta[:keywords].sort
         end
     end
 
@@ -47,11 +47,11 @@ shared_examples "基本页面" do |meta, page|
             page['description'].size.should == 1
         end
         it "应包含与配置一致的description" do
-						# page_description = page['description'][0].attributes['content'].value
+            # page_description = page['description'][0].attributes['content'].value
             page.description.should == meta[:description]
         end
         it "description不能是keywords堆砌" do
-						description_online = page.description
+            description_online = page.description
             meta[:keywords].each { |keyword| description_online.delete(keyword) }
             description_online.size.should > 50
         end
