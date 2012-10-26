@@ -1,5 +1,5 @@
-æœºç¥¨é¦–é¡µ,http://jipiao.huoche.com.cn/,^/$
-åŸå¸‚åˆ°åŸå¸‚æŸ¥è¯¢åˆ—è¡¨ï¼ˆç¬¬ä¸‰å¤©ï¼‰,http://jipiao.huoche.com.cn/beijing-shanghai/,^/[a-z]+-[a-z]+/$
-åŸå¸‚åˆ°åŸå¸‚æŸ¥è¯¢åˆ—è¡¨å½“å¤©,http://jipiao.huoche.com.cn/beijing-shanghai/day1.html,^/[a-z]+-[a-z]+/day\d\.html$
-å…¨å›½å„åŸå¸‚ç‰¹ä»·æœºç¥¨ç´¢å¼•,http://jipiao.huoche.com.cn/sitemap/,^/sitemap/$
-åŒ—äº¬å‡ºå‘ç‰¹ä»·æœºç¥¨,http://jipiao.huoche.com.cn/city/beijing.html,^/city/[a-z]+\.html$
+»úÆ±Ê×Ò³,http://jipiao.huoche.com.cn/,^/$,¡¾»úÆ±¡¿ÌØ¼Û´òÕÛ»úÆ±Ô¤¶©_»úÆ±¼Û¸ñ²éÑ¯_»ğ³µÍø
+³ÇÊĞµ½³ÇÊĞ²éÑ¯ÁĞ±í£¨µÚÈıÌì£©,http://jipiao.huoche.com.cn/beijing-shanghai/,^/[a-z]+-[a-z]+/$,¡¾±±¾©µ½ÉÏº£ÌØ¼Û»úÆ±¡¿´òÕÛ»úÆ±_Ô¤¶©_¼Û¸ñ_º½°àÒ»ÀÀ_»ğ³µÍø
+³ÇÊĞµ½³ÇÊĞ²éÑ¯ÁĞ±íµ±Ìì,http://jipiao.huoche.com.cn/beijing-shanghai/day1.html,^/[a-z]+-[a-z]+/day\d\.html$,¡¾±±¾©µ½ÉÏº£ÌØ¼Û»úÆ±¡¿µ±Ìì´òÕÛ»úÆ±_Ô¤¶©_¼Û¸ñ_º½°àÒ»ÀÀ_»ğ³µÍø
+È«¹ú¸÷³ÇÊĞÌØ¼Û»úÆ±Ë÷Òı,http://jipiao.huoche.com.cn/sitemap/,^/sitemap/$,¡¾È«¹úÌØ¼Û»úÆ±¡¿È«¹ú´òÕÛ»úÆ±_»ğ³µÍø
+±±¾©³ö·¢ÌØ¼Û»úÆ±,http://jipiao.huoche.com.cn/city/beijing.html,^/city/[a-z]+\.html$,¡¾±±¾©ÌØ¼Û»úÆ±¡¿´òÕÛ»úÆ±_¼Û¸ñ²éÑ¯_»ğ³µÍø
