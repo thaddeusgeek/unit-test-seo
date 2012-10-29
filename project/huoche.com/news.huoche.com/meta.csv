@@ -2,4 +2,4 @@
 铁路预售期   ,http://news.huoche.com/huoche/ysqgonggao/,^/huoche/[a-z]+/$,【预售期公告】全国预售期大全_火车网
 机票新闻,http://news.huoche.com/jipiao/  ,^/jipiao/$,【机票新闻】机票新闻信息大全_火车网
 城市铁路资讯列表   ,http://news.huoche.com/teiluzixun/jiangsu.html ,^/huoche/teiluzixun/[a-z]+\.html$,【江苏车票务】铁路资讯_火车资讯_票务资讯_新闻大全_火车网
-铁路资讯详细页   ,http://news.huoche.com/newsinfo38723,^/newsinfo\d+$,【会员制不如解决买票难】火车网,
+铁路资讯详细页   ,http://news.huoche.com/newsinfo38723,^/newsinfo\d+$,【会员制不如解决买票难】火车网

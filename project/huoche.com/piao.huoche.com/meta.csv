@@ -5,9 +5,5 @@
 火车票预售期大全,http://piao.huoche.com/presell.php,^/press.php$,【火车票预售期】全国火车票预售期大全_查询_火车网
 北京预售期,http://piao.huoche.com/presell/北京/,^/presell/([^\/]+)/$,【北京火车票预售期】最新火车票预售期_火车网
 2012年全国各地代售点售票窗口火车票预售期  ,http://piao.huoche.com/presell2012.php,^/press2012.php$,【2012全国代售点预售期】最新火车票预售期_火车网,
-,
-
-
-
 帮助中心   ,http://piao.huoche.com/help/,^/help/$,【帮助中心】火车网
 服务保证   ,http://piao.huoche.com/help/pay/    ,^/help/pay/$,【服务保证】火车网

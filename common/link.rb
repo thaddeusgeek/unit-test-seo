@@ -4,7 +4,7 @@ shared_examples "链接页面" do |meta, page|
 
   inpage_anchors = (page.nodes_with('id')+page.nodes_with('name')).map{|node|node.value}
 
-  it_behaves_like "基本页面", meta, page 
+  # it_behaves_like "基本页面", meta, page 
 
   %w(src href).each do |attr|
     page.nodes_with(attr).each do |node|
