@@ -6,7 +6,12 @@ require 'webpage'
 require 'mechanize'
 
 require './common/basic.rb'
+require './common/coding.rb'
+require './common/content.rb'
+require './common/front.rb'
+require './common/host.rb'
 require './common/link.rb'
+#require './common/strict.rb'
 
 project = './project'
 # path = File.dirname(__FILE__)
@@ -44,7 +49,7 @@ Dir.new(project).each do |domain|
       page = Webpage.new(agent.get(meta[:uri]).body)
 
       describe "#{meta[:uri]}" do
-        it_behaves_like "链接页面", meta, page
+        it_behaves_like "页面内容", meta, page
       end
     end
   end
