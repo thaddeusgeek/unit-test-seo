@@ -5,13 +5,12 @@ require 'uri'
 require 'webpage'
 require 'mechanize'
 
-require './common/basic.rb'
-require './common/coding.rb' # ?
-require './common/content.rb'
-require './common/front.rb'
-require './common/host.rb' # 未完成
-require './common/link.rb'
-require './common/strict.rb'
+require './common/basic.rb'   # 基本页面
+require './common/content.rb' # 页面内容
+require './common/front.rb'   # 前端规范
+require './common/host.rb'    # ！！！！未完成
+require './common/link.rb'    # 链接页面 
+require './common/strict.rb'  # 增强页面
 
 project = './project'
 # path = File.dirname(__FILE__)

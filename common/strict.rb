@@ -30,8 +30,8 @@ shared_examples "增强页面" do |meta, page|
       pismo_text_size.should > 0
     end
   end
-  ##开始检测W3C规范 it "不符合w3c规定的错误数应为0" do
-  it "!!!!!!" do
+  ##开始检测W3C规范 
+	it "不符合w3c规定的错误数应为0" do
     validator = MarkupValidator.new
     validator.set_doctype!(:html32)
     errors = validator.validate_text(meta[:content]).errors
