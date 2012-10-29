@@ -1,7 +1,0 @@
-主页								http://tuan.elong.com/											^/$															【酒店团购大全】全国精品酒店宾馆团购_艺龙旅行网
-城市列表页						    http://tuan.elong.com/beijing/									^/[a-z]+/$													【北京酒店团购】精品低价酒店宾馆团购_艺龙旅行网
-城市+行政区							http://tuan.elong.com/beijing/chaoyang/							^/[a-z]+/[a-z]+/$											【北京_朝阳区_酒店团购】精品低价酒店宾馆团购_艺龙旅行网
-产品详细页						    http://tuan.elong.com/beijing/chaoyang/0036567/1.html			^/[a-z]+/[a-z]+/\d+/\d+\.html$								【北京德全酒店】团购_地址_艺龙旅行网
-城市+单一商圈						http://tuan.elong.com/beijing/center-123.html					^/[a-z]+/center-\d+\.html$									【北京_西单】附近精品低价酒店宾馆团购_艺龙旅行网
-城市+经济型酒店						http://tuan.elong.com/beijing/inn.html							^/[a-z]+/inn\.html$											【北京_快捷酒店】经济型精品低价酒店团购_艺龙旅行网
-城市+三/四/五星级酒店				http://tuan.elong.com/beijing/star-3.html	              		^/[a-z]+/star-\d+\.html$									【北京_三星级酒店】精品低价团购_艺龙旅行网

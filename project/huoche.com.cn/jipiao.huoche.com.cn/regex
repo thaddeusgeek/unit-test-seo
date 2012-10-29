@@ -1,5 +1,0 @@
-机票首页								http://jipiao.huoche.com.cn/							^/$
-城市到城市查询列表（第三天）			http://jipiao.huoche.com.cn/beijing-shanghai/					^/[a-z]+-[a-z]+/$
-城市到城市查询列表当天					http://jipiao.huoche.com.cn/beijing-shanghai/day1.html	^/[a-z]+-[a-z]+/day\d\.html$
-全国各城市特价机票索引					http://jipiao.huoche.com.cn/sitemap/										^/sitemap/$
-北京出发特价机票						http://jipiao.huoche.com.cn/city/beijing.html								^/city/[a-z]+\.html$

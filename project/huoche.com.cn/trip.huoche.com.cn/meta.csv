@@ -1,4 +1,4 @@
-旅游景点,http://trip.huoche.com.cn/,^/$
-洲区域旅游索引,http://trip.huoche.com.cn/asia.html,^/[a-z]+\.html$
-国家旅游索引,http://trip.huoche.com.cn/china.html,^/[a-z]+\.html$
-城市旅游名区,http://trip.huoche.com.cn/shanghai.html,^/[a-z]+\.html$
+"旅游景点","http://trip.huoche.com.cn/","^/$","【旅游】旅游度假_国内游_出境游_旅游攻略_线路_火车网"
+"洲区域旅游索引","http://trip.huoche.com.cn/asia.html","^/[a-z]+\.html$","【亚洲旅游】亚洲旅游景点大全_旅游线路推荐_火车网"
+"国家旅游索引","http://trip.huoche.com.cn/china.html","^/[a-z]+\.html$","【中国旅游】中国旅游景点大全_旅游线路推荐_火车网"
+"城市旅游名区","http://trip.huoche.com.cn/shanghai.html","^/[a-z]+\.html$","【上海旅游】上海旅游指南_旅游景点_线路推荐_火车网"
