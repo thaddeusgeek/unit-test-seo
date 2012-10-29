@@ -1,8 +1,8 @@
 #coding:UTF-8
 shared_examples "页面内容" do |meta, page|
-    [:uri, :content, :keywords].each do |key|
-      warn "key '#{key}' missing" unless meta.has_key? key
-    end
+    # [:uri, :content, :keywords].each do |key|
+    #   warn "key '#{key}' missing" unless meta.has_key? key
+    # end
     
     ##开始检测页面尺寸
     it "页面尺寸应小于100kb" do
