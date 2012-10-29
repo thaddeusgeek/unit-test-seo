@@ -18,12 +18,9 @@ project = './project'
 # project = ARGV[0] unless ARGV[0].nil?
 
 Dir.new(project).each do |domain|
-#  begin
-  domain.encode!('utf-8', replace: nil)
   next if domain == '.' or domain == '..'
   next if File.exists? File.join(project,domain,'skip') #若包含skip文件,则跳过整个文件夹不处理
   Dir.new(File.join(project,domain)).each do |host|
-    host.encode!('utf-8', replace: nil)
     next if host == '.' or host == '..'
     next if File.exists? File.join(project,domain,host,'skip') #若包含skip文件,则跳过整个文件夹不处理
     next if !File.exists? File.join(project,domain,host,'meta.csv') #不存在meta.csv文件 跳过
@@ -61,9 +58,4 @@ Dir.new(project).each do |domain|
     end
   end
 
-#  rescue ArgumentError => ex
-  # /usr/lib/ruby/1.9.1/csv.rb:2058:in `=~': invalid byte sequence in UTF-8 (ArgumentError)
-  # !!!!!ERROR: invalid byte sequence in UTF-8 in DOMAIN huoche.com.cn!!!!!
-#    puts "!!!!!ERROR: #{ex.message} in DOMAIN #{host}!!!!!"
-#  end
 end
