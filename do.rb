@@ -2,16 +2,16 @@
 
 require 'csv'
 require 'uri'
+#require 'iconv'
 require 'webpage'
 require 'mechanize'
 
-require './common/basic.rb'
-require './common/coding.rb'
-require './common/content.rb'
-require './common/front.rb'
-require './common/host.rb'
-require './common/link.rb'
-#require './common/strict.rb'
+require './common/basic.rb'   # 基本页面
+require './common/content.rb' # 页面内容
+require './common/front.rb'   # 前端规范
+require './common/host.rb'    # ！！！！未完成
+require './common/link.rb'    # 链接页面 
+require './common/strict.rb'  # 增强页面
 
 project = './project'
 # path = File.dirname(__FILE__)
@@ -49,8 +49,13 @@ Dir.new(project).each do |domain|
       page = Webpage.new(agent.get(meta[:uri]).body)
 
       describe "#{meta[:uri]}" do
+        it_behaves_like "基本页面", meta, page
         it_behaves_like "页面内容", meta, page
+        it_behaves_like "前端规范", meta, page
+        it_behaves_like "链接页面", meta, page
+        it_behaves_like "增强页面", meta, page
       end
     end
   end
+
 end
