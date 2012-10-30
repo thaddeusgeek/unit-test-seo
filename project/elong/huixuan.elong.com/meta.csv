@@ -1,16 +1,16 @@
 "节点","url","Url正则","title","Title正则","keywords"
 "主页","http://huiyuan.elong.com/                                       "," ^/$","【惠选特价酒店预订】艺龙旅行网",,"惠选,特价,惠选酒店预订(预定)"
-"城市酒店列表页 ","http://huiyuan.elong.com/beijing/                            ","   ^/[a-z]+/$","【北京_惠选酒店预订】价格查询_艺龙旅行网",,
-"城市行政区酒店列表","http://huiyuan.elong.com/beijing/tongzhou/","^/[a-z]+/[a-z]+/$","【北京_朝阳区_惠选酒店预订】价格查询_艺龙旅行网",,
-"城市行政区经济型酒店列表","http://huiyuan.elong.com/beijing/tongzhou/inn.html","^/[a-z]+/[a-z]+/inn\.html$","【北京_朝阳区_快捷酒店】经济型惠选酒店预订_价格查询_艺龙旅行网",,
-"城市行政区三星级酒店列表","http://huiyuan.elong.com/beijing/tongzhou/star3.html","^/[a-z]+/[a-z]+/star3\.html$","【北京_朝阳区_三星级】惠选酒店预订_价格查询_艺龙旅行网",,
-"城市行政区四星级酒店列表","http://huiyuan.elong.com/beijing/tongzhou/star4.html","^/[a-z]+/[a-z]+/star4\.html$","【北京_朝阳区_四星级】惠选酒店预订_价格查询_艺龙旅行网",,
-"城市行政区五星级酒店列表","http://huiyuan.elong.com/beijing/tongzhou/star5.html","^/[a-z]+/[a-z]+/star5\.html$","【北京_朝阳区_五星级】惠选酒店预订_价格查询_艺龙旅行网",,
-"城市+行政区酒店列表-Pn","http://huiyuan.elong.com/beijing/tongzhou/p2.html","^/[a-z]+/[a-z]+/p\d+\.html$","【北京_朝阳区_惠选酒店预订】价格查询_2_艺龙旅行网",,
-"城市商圈酒店列表 ","http://huiyuan.elong.com/beijing/center-123/","^/[a-z]+/center-\d+/","【北京_西单_惠选酒店预订】价格查询_艺龙旅行网",,
-"城市商圈经济型酒店列表","http://huiyuan.elong.com/beijing/center-123/inn.html","^/[a-z]+/center-\d+/inn\.html$","【北京_西单_快捷酒店】经济型惠选酒店预订_价格查询_艺龙旅行网",,
-"城市商圈三星级酒店列表","http://huiyuan.elong.com/beijing/center-123/star3.html","^/[a-z]+/center-\d+/star3\.html$","【北京_西单_三星级】惠选酒店预订_价格查询_艺龙旅行网",,
-"城市商圈四星级酒店列表","http://huiyuan.elong.com/beijing/center-123/star4.html","^/[a-z]+/center-\d+/star4\.html$","【北京_西单_四星级】惠选酒店预订_价格查询_艺龙旅行网",,
-"城市商圈五星级酒店列表","http://huiyuan.elong.com/beijing/center-123/star5.html","^/[a-z]+/center-\d+/star5\.html$","【北京_西单_五星级】惠选酒店预订_价格查询_艺龙旅行网",,
-"城市商圈酒店列表-Pn","http://huiyuan.elong.com/beijing/center-123/p2.html","^/[a-z]+/center-\d+/p\d+\.html$","【北京_西单_惠选酒店预订】价格查询_2_艺龙旅行网",,
-"产品详细页 ","http://huixuan.elong.com/beijing/wangfujing_1300-hotel.html        "," ^/[a-z]+/[a-z]+_\d+-hotel\.html$","【西单商业区四星级酒店】预订_地址_价格查询_艺龙旅行网",,
+"城市酒店列表页 ","http://huiyuan.elong.com/beijing/                            ","   ^/[a-z]+/$","【北京_惠选酒店预订】价格查询_艺龙旅行网",,"北京,惠选酒店预订(预定),特价"
+"城市行政区酒店列表","http://huiyuan.elong.com/beijing/tongzhou/","^/[a-z]+/[a-z]+/$","【北京_朝阳区_惠选酒店预订】价格查询_艺龙旅行网",,"北京,朝阳区,北京朝阳区,惠选酒店预订(预定),特价"
+"城市行政区经济型酒店列表","http://huiyuan.elong.com/beijing/tongzhou/inn.html","^/[a-z]+/[a-z]+/inn\.html$","【北京_朝阳区_快捷酒店】经济型惠选酒店预订_价格查询_艺龙旅行网",,"北京,朝阳区,北京朝阳区,快捷酒店,经济型,惠选酒店预订(预定),特价"
+"城市行政区三星级酒店列表","http://huiyuan.elong.com/beijing/tongzhou/star3.html","^/[a-z]+/[a-z]+/star3\.html$","【北京_朝阳区_三星级】惠选酒店预订_价格查询_艺龙旅行网",,"北京,朝阳区,北京朝阳区,三星级,惠选酒店预订(预定),特价"
+"城市行政区四星级酒店列表","http://huiyuan.elong.com/beijing/tongzhou/star4.html","^/[a-z]+/[a-z]+/star4\.html$","【北京_朝阳区_四星级】惠选酒店预订_价格查询_艺龙旅行网",,"北京,朝阳区,北京朝阳区,四星级,惠选酒店预订(预定),特价"
+"城市行政区五星级酒店列表","http://huiyuan.elong.com/beijing/tongzhou/star5.html","^/[a-z]+/[a-z]+/star5\.html$","【北京_朝阳区_五星级】惠选酒店预订_价格查询_艺龙旅行网",,"北京,朝阳区,北京朝阳区,五星级,惠选酒店预订(预定),特价"
+"城市+行政区酒店列表-Pn","http://huiyuan.elong.com/beijing/tongzhou/p2.html","^/[a-z]+/[a-z]+/p\d+\.html$","【北京_朝阳区_惠选酒店预订】价格查询_2_艺龙旅行网",,"北京,朝阳区,北京朝阳区,惠选酒店预订(预定),特价"
+"城市商圈酒店列表 ","http://huiyuan.elong.com/beijing/center-123/","^/[a-z]+/center-\d+/","【北京_西单_惠选酒店预订】价格查询_艺龙旅行网",,"北京,西单,北京西单,惠选酒店预订(预定),特价"
+"城市商圈经济型酒店列表","http://huiyuan.elong.com/beijing/center-123/inn.html","^/[a-z]+/center-\d+/inn\.html$","【北京_西单_快捷酒店】经济型惠选酒店预订_价格查询_艺龙旅行网",,"北京,西单,北京西单,快捷酒店,经济型,惠选酒店预订(预定)"
+"城市商圈三星级酒店列表","http://huiyuan.elong.com/beijing/center-123/star3.html","^/[a-z]+/center-\d+/star3\.html$","【北京_西单_三星级】惠选酒店预订_价格查询_艺龙旅行网",,"北京,西单,北京西单,三星级,惠选酒店预订(预定)"
+"城市商圈四星级酒店列表","http://huiyuan.elong.com/beijing/center-123/star4.html","^/[a-z]+/center-\d+/star4\.html$","【北京_西单_四星级】惠选酒店预订_价格查询_艺龙旅行网",,"北京,西单,北京西单,四星级,惠选酒店预订(预定)"
+"城市商圈五星级酒店列表","http://huiyuan.elong.com/beijing/center-123/star5.html","^/[a-z]+/center-\d+/star5\.html$","【北京_西单_五星级】惠选酒店预订_价格查询_艺龙旅行网",,"北京,西单,北京西单,五星级,惠选酒店预订(预定)"
+"城市商圈酒店列表-Pn","http://huiyuan.elong.com/beijing/center-123/p2.html","^/[a-z]+/center-\d+/p\d+\.html$","【北京_西单_惠选酒店预订】价格查询_2_艺龙旅行网",,"北京,西单,北京西单,惠选酒店预订(预定),特价"
+"产品详细页 ","http://huixuan.elong.com/beijing/wangfujing_1300-hotel.html        "," ^/[a-z]+/[a-z]+_\d+-hotel\.html$","【西单商业区四星级酒店】预订_地址_价格查询_艺龙旅行网",,"西单商业区四星级酒店预订(预定),特价"
