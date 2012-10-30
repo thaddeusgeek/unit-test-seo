@@ -2,7 +2,6 @@
 
 require 'csv'
 require 'uri'
-#require 'iconv'
 require 'webpage'
 require 'mechanize'
 
@@ -57,5 +56,4 @@ Dir.new(project).each do |domain|
       end
     end
   end
-
 end
