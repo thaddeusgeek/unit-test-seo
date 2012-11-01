@@ -20,7 +20,7 @@ Dir.new(proj_path).each do |domain|
     begin
       CSV.open(meta_csv).each { |row| }
     rescue CSV::MalformedCSVError
-      puts "!!!#{meta_csv} bad csv!!!
+      puts "!!!#{meta_csv} bad csv!!!"
       next
     end
     CSV.open(meta_csv).each do |row|
