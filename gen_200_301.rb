@@ -19,8 +19,8 @@ Dir.new(proj_path).each do |domain|
     meta_csv = "#{proj_path}/#{domain}/#{host}/meta.csv"
     begin
       CSV.open(meta_csv).each { |row| }
-    rescue CSV::MalformedCSVError
-      puts "!!!#{meta_csv} bad csv!!!"
+    rescue CSV::MalformedCSVError => ex
+      puts "!!!#{meta_csv} bad csv!!!\n#{ex.message}"
       next
     end
     CSV.open(meta_csv).each do |row|
