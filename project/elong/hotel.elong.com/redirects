@@ -1,40 +1,32 @@
-/index_cn_0101.html                                 http://hotel.elong.com/city/Beijing-0C0101-hotels/
-/index_cn_0201.html
-/index_cn_2001.html
-/index_cn_2003.html
-/index_cn_1201.html
-/index_cn_1101.html
-/index_cn_2301.html
-/index_cn_1801.html
-/index_cn_2201.html
-http://hotel.elong.com/search/list_cn_2321.html?ListType=Common  与 http://hotel.elong.com/city/Panzhihua-0C2321-Hotels/ 不统一
-http://hotel.elong.com/search/51819001-hotel/							http://hotel.elong.comm/detail_cn_51819001.html
-http://hotel.elong.com/search/list_cn_0101.html?ListType=common&isbig5=true										http://hotel.elong.com/beijing/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2								http://hotel.elong.com/beijing/chaoyang/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2								http://hotel.elong.com/beijing/chaoyang/inn.html	
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2								http://hotel.elong.com/beijing/chaoyang/star3.html	
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2								http://hotel.elong.com/beijing/chaoyang/star4.html	
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2								http://hotel.elong.com/beijing/chaoyang/star5.html	
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2								http://hotel.elong.com/beijing/chaoyang/brand1.html
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1							http://hotel.elong.com/beijing/center_123/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 							http://hotel.elong.com/beijing/center_123/inn.html	
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 							http://hotel.elong.com/beijing/center_123/star3.html
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 							http://hotel.elong.com/beijing/center_123/star4.html
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 							http://hotel.elong.com/beijing/center_123/star5.html
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 							http://hotel.elong.com/beijing/center_123/brand1.html
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5549026										http://hotel.elong.com/beijing/hospital_123/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5675095										http://hotel.elong.com/beijing/college_123/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5459374										http://hotel.elong.com/beijing/scenic_123/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5714537										http://hotel.elong.com/beijing/airport_123/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=6305976										http://hotel.elong.com/beijing/train_123/
-http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=6305559										http://hotel.elong.com/beijing/metro_123/
-http://hotel.elong.com/search/50101469-hotel/?isbig5=true														http://hotel.elong.com/detail_cn_50101002.html	
-http://hotel.elong.com/search/50101469-reviews/#iTop?isbig5=true												http://hotel.elong.com/review_cn_50101002.html	
-http://hotel.elong.com/detailaddress_cn_00101590.html
-http://hotel.elong.com/sitemap_cn.html
-http://hotel.elong.com/sitemap_cn_c1614_i1.html
-http://hotel.elong.com/detail360_cn_50101002.html 
-http://hotel.elong.com/detailmap_cn_50101002.html 
-http://hotel.elong.com/detailcms_cn_50101002.html 
+/index_cn_0101.html             ^/index_cn_\d+\.html$                    http://hotel.elong.com/city/Beijing-0C0101-hotels/
+http://hotel.elong.com/search/list_cn_2321.html?ListType=Common  ^/search/list_cn_\d+\.html\?ListType=Common  http://hotel.elong.com/city/Panzhihua-0C2321-Hotels/ 不统一
+http://hotel.elong.com/search/51819001-hotel/			^/search/\d+-hotel/$				http://hotel.elong.comm/detail_cn_51819001.html
+http://hotel.elong.com/search/list_cn_0101.html?ListType=common&isbig5=true			^/search/list_cn_\d+\.html\?							http://hotel.elong.com/beijing/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2					.			http://hotel.elong.com/beijing/chaoyang/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2					.			http://hotel.elong.com/beijing/chaoyang/inn.html	
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2					.			http://hotel.elong.com/beijing/chaoyang/star3.html	
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2					.			http://hotel.elong.com/beijing/chaoyang/star4.html	
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2					.			http://hotel.elong.com/beijing/chaoyang/star5.html	
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=0003&AreaType=2					.			http://hotel.elong.com/beijing/chaoyang/brand1.html
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1				.			http://hotel.elong.com/beijing/center_123/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 				.			http://hotel.elong.com/beijing/center_123/inn.html	
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 				.			http://hotel.elong.com/beijing/center_123/star3.html
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 				.			http://hotel.elong.com/beijing/center_123/star4.html
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 				.			http://hotel.elong.com/beijing/center_123/star5.html
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&AreaId=010109&AreaType=1 				.			http://hotel.elong.com/beijing/center_123/brand1.html
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5549026								.		http://hotel.elong.com/beijing/hospital_123/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5675095								.		http://hotel.elong.com/beijing/college_123/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5459374								.		http://hotel.elong.com/beijing/scenic_123/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=5714537								.		http://hotel.elong.com/beijing/airport_123/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=6305976								.		http://hotel.elong.com/beijing/train_123/
+http://hotel.elong.com/search/list_cn_0101.html?isbig5=true&PoiId=6305559								.		http://hotel.elong.com/beijing/metro_123/
+http://hotel.elong.com/search/50101469-hotel/?isbig5=true				^/search/\d+-hotel										http://hotel.elong.com/detail_cn_50101002.html	
+http://hotel.elong.com/search/50101469-reviews/#iTop?isbig5=true		^/search/\d+-reviews/										http://hotel.elong.com/review_cn_50101002.html	
+http://hotel.elong.com/detailaddress_cn_00101590.html					^/detailaddress_cn_\d+\.html$
+http://hotel.elong.com/sitemap_cn.html												^/sitemap_cn\.html$
+http://hotel.elong.com/sitemap_cn_c1614_i1.html								^/sitemap_cn_[a-z\d]+_i\d+\.html$
+http://hotel.elong.com/detail360_cn_50101002.html 						^/detail360_cn_\d+\.html$
+http://hotel.elong.com/detailmap_cn_50101002.html 						^/detailmap_cn_\d+\.html$
+http://hotel.elong.com/detailcms_cn_50101002.html 						^/detailcms_cn_\d+\.html$
 
-http://hotel.elong.com/city/Beijing-0C0101-hotels-15/
+http://hotel.elong.com/city/Beijing-0C0101-hotels-15/ 				.				#链接已坏
