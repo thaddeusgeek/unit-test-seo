@@ -1,12 +1,12 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1348203768513" ID="ID_83962023" MODIFIED="1348417908873" STYLE="bubble" TEXT="globalhotel.elong.com">
-<node CREATED="1348203897182" HGAP="12" ID="ID_1765132553" MODIFIED="1352257073594" POSITION="right" TEXT="&#x4e9a;&#x6d32; &#x5357;&#x7f8e;&#x6d32; &#x975e;&#x6d32; &#x5927;&#x6d0b;&#x6d32; &#x5317;&#x7f8e;&#x6d32; &#x6b27;&#x6d32; " VSHIFT="-4">
+<node CREATED="1348203897182" HGAP="12" ID="ID_1765132553" MODIFIED="1352259778351" POSITION="right" TEXT="&#x4e9a;&#x6d32; &#x5357;&#x7f8e;&#x6d32; &#x975e;&#x6d32; &#x5927;&#x6d0b;&#x6d32; &#x5317;&#x7f8e;&#x6d32; &#x6b27;&#x6d32; " VSHIFT="-4">
 <arrowlink DESTINATION="ID_1665744800" ENDARROW="Default" ENDINCLINATION="-60;-177;" ID="Arrow_ID_1367061288" STARTARROW="None" STARTINCLINATION="-37;-85;"/>
 <arrowlink COLOR="#66ff66" DESTINATION="ID_382665195" ENDARROW="Default" ENDINCLINATION="-50;95;" ID="Arrow_ID_109155060" STARTARROW="None" STARTINCLINATION="24;110;"/>
 <icon BUILTIN="button_cancel"/>
 </node>
-<node CREATED="1348204277808" HGAP="46" ID="ID_382665195" MODIFIED="1352257080213" POSITION="left" STYLE="bubble" TEXT="&#x67d0;&#x56fd;&#x5bb6;" VSHIFT="1">
+<node CREATED="1348204277808" HGAP="46" ID="ID_382665195" MODIFIED="1352259778351" POSITION="left" STYLE="bubble" TEXT="&#x67d0;&#x56fd;&#x5bb6;" VSHIFT="1">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1348204425694" HGAP="17" ID="ID_1665744800" MODIFIED="1352257140885" TEXT="&#x5251;&#x6865;" VSHIFT="-25">
 <node CREATED="1348204575948" ID="ID_252575466" MODIFIED="1348417889285" TEXT="&#x6700;&#x53d7;&#x6b22;&#x8fce;&#x7684;&#x9152;&#x5e97;&#x7d22;&#x5f15;(&#x9ed8;&#x8ba4;&#x5217;&#x8868;)">
