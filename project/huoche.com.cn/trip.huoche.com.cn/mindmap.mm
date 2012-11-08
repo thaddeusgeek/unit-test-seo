@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1352194133823" ID="ID_1852140159" MODIFIED="1352194154000" TEXT="&#x65c5;&#x6e38;">
+<node CREATED="1352194133823" ID="ID_1852140159" MODIFIED="1352340487762" TEXT="trip.huoche.com.cn">
 <node CREATED="1352194154000" HGAP="25" ID="ID_344246480" MODIFIED="1352194194354" POSITION="right" TEXT="&#x4e9a;&#x6d32;" VSHIFT="-53">
 <node CREATED="1352194168102" ID="ID_636683141" MODIFIED="1352194169742" TEXT="&#x4e2d;&#x56fd;">
 <node CREATED="1352194174849" ID="ID_3788176" MODIFIED="1352194176176" TEXT="&#x5317;&#x4eac;"/>

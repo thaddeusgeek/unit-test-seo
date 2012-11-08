@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1347242849994" ID="ID_1216828191" MODIFIED="1352187898845" STYLE="bubble" TEXT="&#x65c5;&#x6e38;&#x6307;&#x5357;">
+<node CREATED="1347242849994" ID="ID_1216828191" MODIFIED="1352340229308" STYLE="bubble" TEXT="trip.elong.com">
 <node CREATED="1347242886518" ID="ID_587770153" MODIFIED="1352187893863" POSITION="right" TEXT="&#x9891;&#x9053;">
 <node CREATED="1347243057962" ID="ID_1265182879" MODIFIED="1352187978237" TEXT="&#x65c5;&#x6e38;&#x6307;&#x5357;&#x9996;&#x9875;"/>
 <node CREATED="1347243062546" ID="ID_1134995705" MODIFIED="1352187893863" TEXT="&#x56fd;&#x5185;&#x6e38;">
