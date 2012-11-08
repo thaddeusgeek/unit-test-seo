@@ -11,7 +11,7 @@
 "城市行政区酒店列表-Pn","http://hotel.elong.com/beijing/chaoyang/p2.html","^/[a-z]+/[a-z]+/p\d+\.html$","【北京_朝阳区_酒店预订】宾馆预订(预定)_住宿价格查询_2_艺龙旅行网",,"北京,朝阳,酒店,预订（预定）,价格"
 "城市行政区经济型酒店列表","http://hotel.elong.com/beijing/chaoyang/inn.html","^/[a-z]+/[a-z]+/inn\.html$","【北京_朝阳区_快捷酒店】经济型酒店预订(预定)_价格查询_艺龙旅行网",,"北京,朝阳,快捷酒店,经济型,,预订(预定)"
 "城市行政区三/四/五星级酒店列表","http://hotel.elong.com/beijing/chaoyang/star_3.html","^/[a-z]+/[a-z]+/star_[3-5].html$","【北京_朝阳区_三星级】酒店宾馆预订(预定)_住宿价格查询_艺龙旅行网",,"北京,朝阳,三星级,酒店,宾馆,预订(预定)"
-"城市行政区某品牌酒店列表","http://hotel.elong.com/beijing/chaoyang/.html","^/[a-z]+/\.[a-z]+html/$","【北京_朝阳区_莫泰】酒店预订(预定)_住宿价格查询_艺龙旅行网",,"北京,朝阳,莫泰,酒店预订(预定)"
+"城市行政区某品牌酒店列表","http://hotel.elong.com/beijing/chaoyang/brand_123.html","^/[a-z]+/\.[a-z]+html/$","【北京_朝阳区_莫泰】酒店预订(预定)_住宿价格查询_艺龙旅行网",,"北京,朝阳,莫泰,酒店预订(预定)"
 ,,,,,
 "城市商圈酒店列表-P1","http://hotel.elong.com/beijing/center_123/","^/[a-z]+/center_\d+/$","【北京_三里屯_酒店预订】宾馆预订(预定)_住宿价格查询_艺龙旅行网",,"北京,三里屯,酒店,预订（预定）,价格"
 "城市商圈酒店列表-Pn","http://hotel.elong.com/beijing/center_123/p2.html","^/[a-z]+/center_\d+/p\d+\.html$","【北京_三里屯_酒店预订】宾馆预订(预定)_住宿价格查询_2_艺龙旅行网",,"北京,三里屯,酒店,预订（预定）,价格"
