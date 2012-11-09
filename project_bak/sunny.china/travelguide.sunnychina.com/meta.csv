@@ -1,0 +1,5 @@
+"节点","url","Url正则","title","Title正则","keywords"
+"目的地指南首页","http://travelguide.sunnychina.com/","^/$","【目的地指南】国内旅游景点导航_旅游目的地指南_阳光旅行网",,"目的地指南,国内,旅游景点导航,旅游目的地指南"
+"城市目的地索引","http://travelguide.sunnychina.com/beijing/","^/[a-z]+/$","【北京旅游目的地】北京旅游指南_旅游攻略_景点大全_阳光旅行网",,"北京旅游攻略,北京门票,图片,简介,北京在哪里"
+"城市行政区景点列表","http://travelguide.sunnychina.com/beijing/chaoyang/","            ^/[a-z]+/[a-z]+/$","【北京_朝阳区旅游】旅游攻略_景点大全_阳光旅行网",,"北京,朝阳区,北京朝阳区旅游攻略,朝阳门票,简介,图片,朝阳在哪里"
+"景点详情页","http://travelguide.sunnychina.com/travel_intro_2473.html","        ^/travel_intro_\d+\.html$","【日坛公园】旅游攻略_门票_地址_图片_简介_阳光旅行网",,"日坛公园旅游攻略,日坛公园门票,简介,图片,日坛公园在哪里"

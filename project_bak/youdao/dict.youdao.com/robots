@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /jsonresult?
+Disallow: /fsearch?
+Disallow: /search.php?
+Disallow: /s.php?
+Disallow: /dic.php?
+Disallow: /searchtb?
+Disallow: /ctlog?
+Disallow: /poptiprecord?
+Disallow: /wordbook/
+Disallow: /search?

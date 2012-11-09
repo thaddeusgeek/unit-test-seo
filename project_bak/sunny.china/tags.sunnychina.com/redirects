@@ -1,0 +1,2 @@
+http://tags.sunnychina.com/list_8_0101/			^/list_\d+_\d+/$										http://tags.sunnychina.com/list_8_beijing/
+http://tags.sunnychina.com/78251_7_0101/		^/\d+_\d+_\d+/$										http://tags.sunnychina.com/78251_7_beijing/

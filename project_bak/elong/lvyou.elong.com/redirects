@@ -1,0 +1,5 @@
+http://lvyou.elong.com/878/all	^/\d+/all$	http://lvyou.elong.com/878/	
+
+- ^/tour/list-(.*)-1\.html$   #http://lvyou.elong.com/tour/
+- ^/pictoral/list-(.*)-1\.html$   #http://lvyou.elong.com/pictoral/
+- ^/ask/list-(.*)-1\.html$   #http://lvyou.elong.com/ask/

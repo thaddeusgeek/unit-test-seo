@@ -1,0 +1,2 @@
+http://news.huoche.com.cn/City/21							^/City/\d+$											http://news.huoche.com.cn/beijing/
+http://news.huoche.com.cn/Province/33					^/Province/\d+$									http://news.huoche.com.cn/air.html	

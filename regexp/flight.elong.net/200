@@ -1,0 +1,23 @@
+  ^/$
+http://flight.elong.net/beijing-shanghai/
+http://flight.elong.net/beijing-shanghai/business.html
+^/[a-z]+-[a-z]+/timeable\.html$
+^/[a-z]+-[a-z]+/sale\.html$
+^/[a-z]+-[a-z]+/day1\.html$
+^/[a-z]+-[a-z]+/day3\.html$
+^/[a-z]+-[a-z]+-round/$
+^/[a-z]+-[a-z]+-round/business\.html$
+^/[a-z]+-sale\.html$
+^/airlines/$
+^/airlines/[a-z]+/$
+^/airlines/([a-z]+)/\1\d+\.html$
+^/discount/$
+^/discount/[a-z]+-\d+\.html$
+^/[a-z]+-[a-z]+/$
+^/[a-z]+-[a-z]+/top\.html$
+^/[a-z]+-[a-z]+/day1\.html$
+^/[a-z]+-[a-z]+-round/$
+^/[a-z]+-[a-z]+-round/top\.html$
+^/sale/$
+^/sale/\d+\.html$
+^/[a-z]+-[a-z]+/sale\.html$

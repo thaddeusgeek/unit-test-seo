@@ -1,0 +1,5 @@
+http://www.elong.com/package/    			   ^/package/$             http://www.elong.com/
+http://www.elong.com/square/store.asp    ^/square/store\.asp$    http://www.elong.com/square/cn/
+http://www.elong.com/flights/            ^/flights/$    		     http://flight.elong.com
+http://www.elong.com/globalhotels/       ^/globalhotels/$        globalhotels.elong.com
+http://www.elong.com/hotels/             ^/hotels/$			         hotel.elong.com

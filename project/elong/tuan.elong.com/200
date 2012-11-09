@@ -1,0 +1,6 @@
+^/$           #http://tuan.elong.com/
+^/[a-z]+/$           #http://tuan.elong.com/beijing/
+^/[a-z]+/[a-z]+/$           #http://tuan.elong.com/beijing/chaoyang/
+^/[a-z]+/[a-z]+/\d+/\d+\.html$           #http://tuan.elong.com/beijing/chaoyang/0036567/1.html
+^/center-\d+\.html$           #http://tuan.elong.com/beijing/center-123.html
+^/star-\d+\.html$           #http://tuan.elong.com/beijing/star-123.html

@@ -1,0 +1,5 @@
+http://globalhotels.sunnychina.com/globalcity_NewxxYork_US_2.html		^/globalcity_[A-Za-z]+_[A-Za-z]+_\d+\.html$						http://globalhotels.sunnychina.com/usa/new_york/
+http://globalhotels.sunnychina.com/globalcity_NewxxYork_US_3.html		^/globalcity_[A-Za-z]+_[A-Za-z]+_\d+\.html$						http://globalhotels.sunnychina.com/usa/new_york/cheapeast.html
+http://globalhotels.sunnychina.com/hotelinfo_361504.html		^/hotelinfo_\d+\.html$								http://globalhotels.sunnychina.com/361504/
+http://globalhotels.sunnychina.com/hotelimage_375346.html		^/hotelimage_\d+\.html$								http://globalhotels.sunnychina.com/361504/image.html
+http://globalhotels.sunnychina.com/hotelmap_375346.html			^/hotelmap_\d+\.html$								http://globalhotels.sunnychina.com/361504/map.html

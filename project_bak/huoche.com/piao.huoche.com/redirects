@@ -1,0 +1,4 @@
+http://piao.huoche.com/search.php?from=%E5%8C%97%E4%BA%AC&to=%E4%B8%8A%E6%B5%B7&departureDate=2012-10-01&trainName=						^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+		http://piao.huoche.com/beijing-shanghai/
+http://piao.huoche.com/search.php?from=%E5%8C%97%E4%BA%AC&to=%E4%B8%8A%E6%B5%B7&departureDate=2012-09-29&trainName=						^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+		http://piao.huoche.com/beijing-shanghai/day2.html
+http://piao.huoche.com/search.php?from=%E5%8C%97%E4%BA%AC&to=%E4%B8%8A%E6%B5%B7&departureDate=2012-09-30&trainName=						^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+		http://piao.huoche.com/beijing-shanghai/day3.html
+http://piao.huoche.com/help/?pay								^/help/\?pay$										http://piao.huoche.com/help/pay/ 

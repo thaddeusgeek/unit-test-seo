@@ -1,0 +1,11 @@
+^/hotel/poi_street_\d+_\d+_\d+\.html$
+^/hotel/poi_hotel_street(_\d+)+\.html$
+^/hotel/city_\d+\.html$
+^/hotel/hotel_\d+\.html$
+^/hotel/more_image_\d+\.html$
+^/hotel/hotelReview_\d+\.html$
+^/hotel/hotel_map_\d+\.html$
+^/hotel/hotel_poi_\d+\.html$
+行政区和商圈
+^/hotel/chain_\d+_\d+_\d+\.html$
+^/hotel/hotel_\d+\.html$

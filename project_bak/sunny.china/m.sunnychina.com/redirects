@@ -1,0 +1,7 @@
+http://m.sunnychina.com/list.asp?city=%E5%8C%97%E4%BA%AC&CheckInDate=20121012&Poordate=1&key=&pri=0&star=0	^/list\.asp\?city=			http://m.sunnychina.com/hotel/beijing/
+http://m.sunnychina.com/list.asp?city=%E5%8C%97%E4%BA%AC&star=0&key=&sort=3&area=&page=1							^/list\.asp\?city=		http://m.sunnychina.com/hotel/beijing/cheapeast.html
+http://m.sunnychina.com/list.asp?city=%E5%8C%97%E4%BA%AC&star=0&key=&sort=2&area=&page=1							^/list\.asp\?city=		http://m.sunnychina.com/hotel/beijing/popular.html
+http://m.sunnychina.com/info.asp?id=3592				^/info\.asp\?id=\d+																	http://m.sunnychina.com/hotel/beijing/3592/
+http://m.sunnychina.com/photo.asp?id=3592				^/photo\.asp\?id=\d+																	http://m.sunnychina.com/hotel/beijing/3592/image.html
+http://m.sunnychina.com/review.asp?id=3592			^/review\.asp\?id=\d+																		http://m.sunnychina.com/hotel/beijing/3592/review.html
+http://m.sunnychina.com/map.asp?id=3592					^/map\.asp\?id=\d+																	http://m.sunnychina.com/hotel/beijing/3592/map.html

@@ -1,0 +1,2 @@
+http://travelguide.sunnychina.com/travel_intro_1/					^/travel_intro_\d+/$									http://travelguide.sunnychina.com/beijing/
+http://travelguide.sunnychina.com/travel_intro_561/				^/travel_intro_\d+/$										http://travelguide.sunnychina.com/beijing/chaoyang/

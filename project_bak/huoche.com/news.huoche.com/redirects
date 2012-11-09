@@ -1,0 +1,3 @@
+http://news.huoche.com/huoche/teiluzixun . !!!!!!--------->tieluzixun
+http://news.huoche.com/tieluzixun/yunnan.html?page=1			^/tieluzixun/[a-z]+\.html\?page=1$				http://news.huoche.com/tieluzixun/yunnan/
+http://news.huoche.com/tieluzixun/yunnan.html?page=2			^/tieluzixun/[a-z]+\.html?page=\d+$				http://news.huoche.com/tieluzixun/yunnan/p2.html

@@ -1,0 +1,6 @@
+Url正则
+^/$
+^/[a-z]+-[a-z]+/$
+^/[a-z]+-[a-z]+/day\d\.html$
+^/sitemap/$
+^/city/[a-z]+\.html$

@@ -1,0 +1,3 @@
+http://prepay.sunnychina.com/list_0101_0_0_0_0_0_0_0_0_0_1.html		^/list_\d+(_\d+)+\.html$				http://prepay.sunnychina.com/beijing/
+http://prepay.sunnychina.com/list_0101_0_0_0_0_0_0_0_0_0_1.html		^/list_\d+(_\d+)+\.html$				http://prepay.sunnychina.com/beijing/chaoyang/
+http://prepay.sunnychina.com/list_0101_0_0_0_0_0_0_0_0_0_1.html		^/list_\d+(_\d+)+\.html$				http://prepay.sunnychina.com/beijing/chaoyang/price-123.html

@@ -1,0 +1,15 @@
+http://www.sunnychina.com/hotel/poi_street_0_0101_1.html		^/hotel/poi_street_\d+_\d+_\d+\.html$								http://www.sunnychina.com/hotel/poi_beijing_street/
+http://www.sunnychina.com/hotel/poi_hotel_street_9214407_0101_0_0_0_0_9_1.html	^/hotel/poi_hotel_street(_\d+)+\.html$				http://www.sunnychina.com/hotel/poi_beijing_street/9214407/
+
+http://www.sunnychina.com/hotel/city_0101.html				^/hotel/city_\d+\.html$										http://www.sunnychina.com/hotel/beijing/
+http://www.sunnychina.com/hotel/hotel_6969.html				^/hotel/hotel_\d+\.html$										http://www.sunnychina.com/hotel/6205/
+http://www.sunnychina.com/hotel/more_image_6969.html	^/hotel/more_image_\d+\.html$											http://www.sunnychina.com/hotel/6205/image.html
+http://www.sunnychina.com/hotel/hotelReview_6969.html	^/hotel/hotelReview_\d+\.html$											http://www.sunnychina.com/hotel/6205/review.html
+http://www.sunnychina.com/hotel/hotel_map_6969.html		^/hotel/hotel_map_\d+\.html$											http://www.sunnychina.com/hotel/6205/map.html
+http://www.sunnychina.com/hotel/hotel_poi_6969.html		^/hotel/hotel_poi_\d+\.html$											http://www.sunnychina.com/hotel/6205/poi.html
+
+
+地标里包括  行政区和商圈
+
+http://www.sunnychina.com/hotel/chain_0101_1_1.html							^/hotel/chain_\d+_\d+_\d+\.html$										http://www.sunnychina.com/hotel/chain_1/beijing/
+http://www.sunnychina.com/hotel/hotel_7208.html									^/hotel/hotel_\d+\.html$									http://www.sunnychina.com/hotel/28674/

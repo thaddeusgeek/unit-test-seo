@@ -1,0 +1,12 @@
+url 正则
+^/$
+^/sheng/$
+^/s\d+/$
+^/z\d+\.html$
+^/[a-z]+-[a-z]+\.html$
+^/dingpiao/$
+^/dingpiao/[a-z]+/$
+^/dingpiao/[a-z]+/p\d+
+^/dingpiao/[a-z]+/area/\d+/$
+^/dingpiao/[a-z]+/area/\d+/p\d+\.html$
+^/dingpiao/shoupiao/\d+\.html$

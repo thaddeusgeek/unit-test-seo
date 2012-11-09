@@ -1,0 +1,20 @@
+旅游社区							http://lvyou.big5.elong.com/														^/$
+旅游社区-某主题论坛					http://lvyou.big5.elong.com/bbs/lvxing/all/										^/bbs/[a-z]+/all/$
+某主题论坛+翻页						http://lvyou.big5.elong.com/bbs/lvxing/all/123.html
+旅游社区-某主题游记					http://lvyou.big5.elong.com/bbs/lvxing/tour/										^/bbs/[a-z]+/tour/$
+某主题游记+翻页						http://lvyou.big5.elong.com/bbs/lvxing/tour/123.html
+旅游社区-某主题画报					http://lvyou.big5.elong.com/bbs/lvxing/pictorial/								^/bbs/[a-z]+/pictorial/$
+某主题画报+翻页						http://lvyou.big5.elong.com/bbs/lvxing/pictorial/123.html
+旅游社区-某主题问答					http://lvyou.big5.elong.com/bbs/lvxing/ask/										^/bbs/[a-z]+/ask/$
+某主题问答+翻页						http://lvyou.big5.elong.com/bbs/lvxing/ask/123.html
+会员BLOG主页						http://lvyou.big5.elong.com/878/													^/\d+/$	
+游记索引							http://lvyou.big5.elong.com/878/tour/											^/\d+/tour/$	
+游记								http://lvyou.big5.elong.com/878/tour/a1hblnp9.html								^/\d+/tour/[\w\d]+\.html$	
+游记分类(以及翻页)					http://lvyou.big5.elong.com/878/tour/list-678-1.html	 							^/\d+/tour/list-\d+\d+\.html$	
+画报索引							http://lvyou.big5.elong.com/878/pictorial/										^/\d+/pictorial/$	
+画报 								http://lvyou.big5.elong.com/878/pictorial/a1h7k8rc.html							^/\d+/pictorial/[\w\d]+\.html$	
+相册索引							http://lvyou.big5.elong.com/878/picture/											^/\d+/picture/$	
+相册								http://lvyou.big5.elong.com/878/picture/a1ebb884.html							^/\d+/picture/[\w\d]+\.html$	
+文章配图相册中的图片				http://lvyou.big5.elong.com/5209149/picture/a1hfgqua/3233339.html				^/\d+/picture/[\w\d]+/\d+\.html$
+提问索引							http://lvyou.big5.elong.com/878/ask/												^/\d+/ask/$	
+提问								http://lvyou.big5.elong.com/878/ask/a1928j9e.html								^/\d+/ask/[\w\d]+\.html$

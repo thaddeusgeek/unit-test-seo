@@ -1,0 +1,8 @@
+Url正则
+^/$
+^/[a-z]+/$
+^/[a-z]+/[a-z]+/$
+^/[a-z]+/[a-z]+/\d+/\d+\.html$
+^/[a-z]+/center-\d+\.html$
+^/[a-z]+/inn\.html$
+^/[a-z]+/star-\d+\.html$
