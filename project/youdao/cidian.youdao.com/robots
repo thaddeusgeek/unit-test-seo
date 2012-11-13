@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /mystery.jsp
-Disallow: /track.jsp
-Disallow: /download.jsp
-Disallow: /infobarclick.jsp
