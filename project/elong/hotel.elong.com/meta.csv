@@ -1,7 +1,7 @@
 "节点","旧url","旧url正则","新url","新url正则","title","title正则","keywords"
 "主页","http://hotel.elong.com/",,"http://hotel.elong.com/","^/$","【酒店预订】宾馆预订(预定)_艺龙旅行网",,"酒店,宾馆,酒店预订(预定)"
 "品牌大全首页","http://hotel.elong.com/hotel-chain/",,"http://hotel.elong.com/hotel-chain/",,"【酒店品牌大全】艺龙旅行网",,"酒店,品牌,酒店品牌大全"
-"某品牌首页",,,"暂不修改,保持原样",,"【如家快捷酒店】预订_价格查询_艺龙旅行网",,"如家快捷酒店,预订(预定),价格"
+"某品牌首页","http://hotel.elong.com/hotel-chain/Home_Inn-0B32-hotels/",,"暂不修改,保持原样",,"【如家快捷酒店】预订_价格查询_艺龙旅行网",,"如家快捷酒店,预订(预定),价格"
 ,,,,,,,
 "城市酒店列表-P1","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/","^/[a-z]+/$","【北京_酒店预订】宾馆预订(预定)_住宿价格查询_艺龙旅行网",,"北京,酒店,宾馆,预订（预定）,价格"
 "城市酒店列表-Pn","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/p2.html","^/[a-z]+/p\d+$","【北京_酒店预订】宾馆预订(预定)_住宿价格查询_2_艺龙旅行网",,"北京,酒店,宾馆,预订（预定）,价格"
