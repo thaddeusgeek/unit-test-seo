@@ -1,0 +1,15 @@
+Url正则
+^/$
+^/hotel/[a-z]+/$
+^/hotel/[a-z]+/p\d+\.html$
+^/hotel/[a-z]+/\d+/$
+^/hotel/[a-z]+/\d+/review\.html$
+^/hotel/[a-z]+/\d+/image\.html$
+^/hotel/[a-z]+/\d+/map\.html$
+^/hotel/[a-z]+/cheapest\.html$
+^/hotel/[a-z]+/popular\.html$
+^/hotel/[a-z]+/[a-z]+/$
+^/hotel/[a-z]+/[a-z]+/cheapest\.html$
+^/hotel/[a-z]+/[a-z]+/popular\.html$
+^/hotel/[a-z]+/[a-z]+/hospital_\d+/inn\.html$ 
+^/hotel/[a-z]+/[a-z]+/star[3-5]\.html$ 

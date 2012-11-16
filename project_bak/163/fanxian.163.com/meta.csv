@@ -1,0 +1,18 @@
+---
+- ^/$
+- ^/(deals|coupons|mall|taobao)/$
+- ^/deals/cates/(all|digital|dresses|shoes|cometics|food|abroad|other)$
+- ^/deals/\d+$
+- ^/mall/cates/(host|digital|book|clothing|home|beauty|baby|other|all)$
+- ^/mall/(newegg|51buy|suning|efeihu|dangdang|vancl|vipshop|yougou|xiu|uya100|yihaodian|vegaga|womai|lafaso|jumei|xiu|miqi|redbaby|jxdyf|sigo|leyou2|taobao|nuomi|ctrip|58|newegg|newegg|newegg|51buy|51buy|51buy|suning|suning|suning|efeihu|efeihu|efeihu|coo8|ouku|360buy|5366|amazon|dangdang|dangdang|dangdang|vancl|vancl|vancl|vipshop|vipshop|vipshop|yougou|yougou|yougou|xiu|xiu|xiu|letao|yintai|moonbasa|okbuy|lamiu|aimer|banggo|m18|k121|vivian|mbaobao|masamaso|vjia|ihush|paixie|pb89|xinbaigo|pupai|olomo|shopin|jiapin|uiyi|5lux|uya100|uya100|uya100|yihaodian|yihaodian|yihaodian|vegaga|vegaga|vegaga|womai|womai|womai|lafaso|lafaso|lafaso|jumei|jumei|jumei|xiu|xiu|xiu|miqi|miqi|miqi|d1|tiantian|no5|xiutuan|likeface|dhc|redbaby|redbaby|redbaby|jxdyf|jxdyf|jxdyf|sigo|sigo|sigo|leyou2|leyou2|leyou2|taobao|taobao|taobao|nuomi|nuomi|nuomi|ctrip|ctrip|ctrip|58|58|58|didatuan|winenice|quwan|lingshi|mangocity|qmango|163|tieyou|mengmai)$
+- ^/help/$
+- ^/help/(dingdan|fanxian|taobao|tixian|qita)$
+- ^/coupons/\d+$
+- ^/coupons/mall/(newegg|51buy|suning|efeihu|dangdang|vancl|vipshop|yougou|xiu|uya100|yihaodian|vegaga|womai|lafaso|jumei|xiu|miqi|redbaby|jxdyf|sigo|leyou2|taobao|nuomi|ctrip|58|newegg|newegg|newegg|51buy|51buy|51buy|suning|suning|suning|efeihu|efeihu|efeihu|coo8|ouku|360buy|5366|amazon|dangdang|dangdang|dangdang|vancl|vancl|vancl|vipshop|vipshop|vipshop|yougou|yougou|yougou|xiu|xiu|xiu|letao|yintai|moonbasa|okbuy|lamiu|aimer|banggo|m18|k121|vivian|mbaobao|masamaso|vjia|ihush|paixie|pb89|xinbaigo|pupai|olomo|shopin|jiapin|uiyi|5lux|uya100|uya100|uya100|yihaodian|yihaodian|yihaodian|vegaga|vegaga|vegaga|womai|womai|womai|lafaso|lafaso|lafaso|jumei|jumei|jumei|xiu|xiu|xiu|miqi|miqi|miqi|d1|tiantian|no5|xiutuan|likeface|dhc|redbaby|redbaby|redbaby|jxdyf|jxdyf|jxdyf|sigo|sigo|sigo|leyou2|leyou2|leyou2|taobao|taobao|taobao|nuomi|nuomi|nuomi|ctrip|ctrip|ctrip|58|58|58|didatuan|winenice|quwan|lingshi|mangocity|qmango|163|tieyou|mengmai)$
+- ^/list/\w+/$
+- ^/list/\w+/\d+\.html$
+- ^/detail/[0-9a-f]+/$
+- ^/cate/\w+/
+- ^/cate/\w+/\d+\.html
+- ^/cate/\w+/\w+/
+- ^/cate/\w+/\w+/\d+\.html

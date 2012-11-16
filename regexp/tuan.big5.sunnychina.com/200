@@ -1,0 +1,9 @@
+^/$
+^/[a-z]+/$
+^/[a-z]+/[a-z]+/$
+^/[a-z]+/[a-z]+/\d+/\d+\.html$
+^/[a-z]+/center-\d+\.html$
+^/[a-z]+/star-\d+\.html$
+^/dealgroup\.html$
+^/howbuy\.html$
+^/faq\.html$

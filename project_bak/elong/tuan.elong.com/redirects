@@ -1,0 +1,5 @@
+http://tuan.elong.com/beijing_0101_jiudian_tuangou/			^/beijing_\d+_jiudian_tuangou/$				http://tuan.elong.com/beijing/
+http://tuan.elong.com/beijing_0101_d0003_jiudian_tuangou/			^/beijing_\d+_d\d+_jiudian_tuangou/$		http://tuan.elong.com/beijing/chaoyang/
+http://tuan.elong.com/chengdu_jiudian_tuangou-20988/ 		^/[a-z]+_jiudian_tuangou-\d+/$				http://tuan.elong.com/beijing/chaoyang/0036567/1.html
+http://tuan.elong.com/beijing_0101_b010103_jiudian_tuangou/			^/[a-z]+_\d+_b\d+_jiudian_tuangou/$		http://tuan.elong.com/beijing/center-123.html
+http://tuan.elong.com/beijing_0101_s-2_jiudian_tuangou/			^/[a-z]+_\d+_s-\d+_jiudian_tuangou/$			http://tuan.elong.com/beijing/star-123.html	   

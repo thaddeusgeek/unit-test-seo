@@ -1,0 +1,9 @@
+Url正则
+^/$
+^/zz-([a-zA-Z0-9]+)-([a-zA-Z0-9]+).html$
+^/zz-([a-zA-Z0-9]+)-([a-zA-Z0-9]+).html$
+^/news\/$
+^/news(\d+).html$
+^/checi\/$
+^/checi\/([a-zA-Z0-9]+).html$
+^/zhan\/([a-zA-Z0-9]+).html$

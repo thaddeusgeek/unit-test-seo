@@ -1,0 +1,5 @@
+Url正则
+^/$
+^/[a-z]+/$
+            ^/[a-z]+/[a-z]+/$
+        ^/travel_intro_\d+\.html$

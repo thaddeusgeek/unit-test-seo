@@ -1,0 +1,16 @@
+国际酒店主页 ,http://globalhotel.elong.net/,^/$
+洲区域酒店索引,http://globalhotel.elong.net/europe.html,^/[a-z]+\.html$
+国家酒店索引,http://globalhotel.elong.net/usa/,^/[a-z_-]+/$
+城市酒店索引(最受欢迎的酒店),http://globalhotel.elong.net/usa/new_york/ ,^/[a-z_-]+/[a-z_-]+/$
+城市+最便宜的酒店 , ,http://globalhotel.elong.net/usa/new_york/cheapeast.html ,^/[a-z_-]+/[a-z_-]+/cheapest\.html$
+城市+最豪华的酒店,http://globalhotel.elong.net/usa/new_york/best.html,^/[a-z]+/[a-z_]+/best\.html$
+城市+打折的酒店 ,http://globalhotel.elong.net/usa/new_york/sale.html ,^/[a-z_-]+/[a-z_-]+/sale\.html$
+城市+口碑最好的酒店 ,http://globalhotel.elong.net/usa/new_york/rating.html ,^/[a-z_-]+/[a-z_-]+/rating\.html$
+城市+星级, ,http://globalhotel.elong.net/usa/new_york/start-123.html ,^/[a-z_-]+/[a-z_-]+/start2\.html$
+城市+地标酒店索引,http://globalhotel.elong.net/usa/new_york/times-square/ ,^/[a-z_-]+/[a-z_-]+/[a-z_-]+/$
+城市+地标+最便宜酒店索引,http://globalhotel.elong.net/usa/new_york/times-square/cheapest.html ,^/[a-z_-]+/[a-z_-]+/[a-z_-]+/cheapest.html$
+城市+地标+最豪华酒店索引,http://globalhotel.elong.net/usa/new_york/times-square/best.html ,^/[a-z_-]+/[a-z_-]+/[a-z_-]+/popuplar.html$
+城市+地标+打折酒店索引,http://globalhotel.elong.net/usa/new_york/times-square/sale.html ,^/[a-z_-]+/[a-z_-]+/[a-z_-]+/sale.html$
+城市+地标+口碑最好的酒店索引,http://globalhotel.elong.net/usa/new_york/times-square/rating.html ,^/[a-z_-]+/[a-z_-]+/[a-z_-]+/rating.html$
+城市+地标+星级,   ,http://globalhotel.elong.net/usa/new_york/times-square/start-123.html ,^/[a-z_-]+/[a-z_-]+/start2\.html$
+酒店详情页,http://globalhotel.elong.net/usa/new_york/132479.html,^/\d+/$      

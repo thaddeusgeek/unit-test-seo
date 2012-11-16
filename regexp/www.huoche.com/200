@@ -1,0 +1,25 @@
+Url正则
+                           ^/$
+                   ^/jipiao/$
+   ^/jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)$
+   ^/jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/p\d+.html
+   ^/jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/day\d+/$
+^jipiao/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/day1/p\d+.html
+^/jipiao/sale/$ 
+^/jipiao/sale/[a-z]+/$ 
+                   ^/changtu/$
+^/changtu/sheng/([a-z]+)$
+^/changtu/sheng/([a-z]+)$
+^changtu/([a-zA-Z0-9]+)-([a-zA-Z0-9]+)/$
+^/changtu/info/\d+.html$
+                       ^/bus/$
+                       ^/t\d+/$
+                           ^/b\d+/
+               ^/bs\d+.html$
+                   ^/dingpiao/$
+   ^/dingpiao/sheng/([a-z]+)$
+               ^/dingpiao/([a-zA-Z0-9]+)/$
+   ^/dingpiao/([a-zA-Z0-9]+)/p\d+.html$
+   ^/dingpiao/([a-zA-Z0-9]+)/area/\d+/$
+   ^/dingpiao/([a-zA-Z0-9]+)/area/\d+/P\d+.html$
+   ^/shoupiao/\d+.html$

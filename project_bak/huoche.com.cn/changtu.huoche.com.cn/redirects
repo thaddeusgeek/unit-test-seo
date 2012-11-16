@@ -1,0 +1,2 @@
+http://changtu.huoche.com.cn/search.php?state=2&city=18&q=%E4%B8%8A%E6%B5%B7&commit=%E6%90%9C%E7%B4%A2 ^/search.php?state=\d+&city=\d+&q=(%[A-F\d]{2})+&commit=(%[A-F\d]{2})+$	http://changtu.huoche.com.cn/cc/7030
+http://changtu.huoche.com.cn/c/beijing/%E4%B8%8A%E6%B5%B7			^/c/[a-z]+/(%[A-F\d]{2})+									http://changtu.huoche.com.cn/beijing-shanghai/

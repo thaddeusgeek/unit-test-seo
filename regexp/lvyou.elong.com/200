@@ -1,0 +1,21 @@
+Url正则
+^/$
+^/bbs/lvxing/all/$·
+^/bbs/lvxing/all/\d+\.html$
+^/bbs/lvxing/tour/$
+^/bbs/lvxing/tour/\d+\.html$
+^/bbs/lvxing/pictorial/$
+^/bbs/lvxing/pictorial/\d+\.html$
+^/bbs/lvxing/ask/$
+^/bbs/lvxing/ask/\d+\.html$
+^/\d+/$
+^/\d+/tour/$
+^/\d+/tour/[a-z\d]+\.html$
+ ^/\d+/tour/list-\d+-\d+\.html$
+^/\d+/pictorial/$
+^/\d+/pictorial/[a-z\d]+\.html$
+^/\d+/picture/$
+^/\d+/picture/[a-z\d]+\.html$
+^/\d+/picture/[a-z\d]+/\d+\.html$
+^/\d+/ask/$
+^/\d+/ask/[a-z\d]+\.html$

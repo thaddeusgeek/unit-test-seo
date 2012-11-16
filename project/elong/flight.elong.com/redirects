@@ -1,4 +1,4 @@
-http://flight.elong.com/cn_etermlist.html											http://flight.elong.com/discount/
+http://flight.elong.com/cn_etermlist.html				^/cn_etermlist\.html$						http://flight.elong.com/discount/
 http://flight.elong.com/cn_ETermFillorder_28.html									http://flight.elong.com/discount/cz-1.html
 http://flight.elong.com/search/cn_list_BJS_SHA_2012-11-10_Y.html					http://flight.elong.com/beijing-shanghai/
 http://flight.elong.com/search/cn_list_BJS_SHA_2012-11-10_M.html					http://flight.elong.com/beijing-shanghai/business.html
