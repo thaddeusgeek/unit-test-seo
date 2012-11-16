@@ -1,0 +1,5 @@
+^/beijing_\d+_jiudian_tuangou/$
+^/beijing_\d+_d\d+_jiudian_tuangou/$
+^/[a-z]+_jiudian_tuangou-\d+/$
+^/[a-z]+_\d+_b\d+_jiudian_tuangou/$
+^/[a-z]+_\d+_s-\d+_jiudian_tuangou/$

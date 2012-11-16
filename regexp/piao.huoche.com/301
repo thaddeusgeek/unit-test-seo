@@ -1,0 +1,4 @@
+^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+
+^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+
+^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+
+^/help/\?pay$

@@ -1,0 +1,27 @@
+主页   									http://www.huoche.com/									^/$
+售票点大全   								http://www.huoche.com/piao/								^/piao\/$
+铁路资讯   								http://www.huoche.com/teiluzixun/nanchang				^/teiluzixun\/\w+\/$
+机票列表   								http://www.huoche.com/jipiao/WUH-CAN-2012-09-24/		^/jipiao\/\w+\-\w+\-\d+\-\d+\-\d+\/$
+机票   								    http://www.huoche.com/shanghaijipiao/	城市+^/\d+jipiao\/$
+订票点   								http://www.huoche.com/dingpiao/shoupiao/3149/	^/dingpiao\/shoupiao\/\d+\/$
+全国公交线路查询   						http://www.huoche.com/bus/	^/bus\/$
+北京公交车列表   							http://www.huoche.com/t1/	^/t\d+\/$
+北京101电车电车公交线路   					http://www.huoche.com/b74/	^/b\d+\/$
+公交站点   								http://www.huoche.com/bs3969/	^/bs\d+\/$
+
+
+火车票预售期大全   								  http://piao.huoche.com/presell.php	^/presell\.php$
+北京的预售期   									http://piao.huoche.com/presell/%E5%A4%AA%E5%8E%9F/	^/presell\/.*?\/$
+2012年全国各地代售点售票窗口火车票预售期   									http://piao.huoche.com/presell2012.php	^/presell2012\.php$
+帮助中心   									http://piao.huoche.com/help/	^/help\/$
+服务保证   									http://piao.huoche.com/help/?pay	改为 http://piao.huoche.com/help/pay/    新手指南 支付/退款 购票常识 配送方式 ^/help\/\w+/\$
+
+
+铁路资讯    								  http://news.huoche.com/	news.huoche.com ^/$
+铁路资讯列表页   									http://news.huoche.com/huoche/ysqgonggao/	 http://news.huoche.com/jipiao/  ^/huoche\/\w*\/$
+铁路资讯列表   									http://news.huoche.com/teiluzixun/jiangsu.html	省级 ^/huoche\/teiluzixun\/\w*\.html$
+铁路资讯详细页   								 http://news.huoche.com/newsinfo38723	^/newsinfo\d+\/$
+
+
+常用工具   									http://tool.huoche.com/	tool.huoche.com  ^/$
+

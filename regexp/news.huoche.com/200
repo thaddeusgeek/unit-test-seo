@@ -1,0 +1,6 @@
+Url正则
+^/$
+^/huoche/[a-z]+/$
+^/jipiao/$
+^/huoche/teiluzixun/[a-z]+\.html$
+^/newsinfo\d+$

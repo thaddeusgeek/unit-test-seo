@@ -1,0 +1,4 @@
+^/\d+/all$
+^/tour/list-(.*)-1\.html$
+^/pictoral/list-(.*)-1\.html$
+^/ask/list-(.*)-1\.html$

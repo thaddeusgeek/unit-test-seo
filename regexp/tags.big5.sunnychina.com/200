@@ -1,0 +1,10 @@
+^/$
+^/list_\d+_[a-z]+/$
+^/list_\d+_[a-z]+/p\d+\.html$
+^/\d+_\d+_[a-z]+/$
+^/\d+_\d+_[a-z]+/p\d+\.html$
+^/hotel/\d+\.html$
+^/hotel/\d+/image\.html$
+^/hotel/\d+/review\.html$
+^/hotel/\d+/map\.html$
+^/hotel/\d+/poi\.html$

@@ -1,0 +1,16 @@
+Url正则
+ ^/$
+   ^/[a-z]+/$
+^/[a-z]+/[a-z]+/$
+^/[a-z]+/[a-z]+/inn\.html$
+^/[a-z]+/[a-z]+/star3\.html$
+^/[a-z]+/[a-z]+/star4\.html$
+^/[a-z]+/[a-z]+/star5\.html$
+^/[a-z]+/[a-z]+/p\d+\.html$
+^/[a-z]+/center-\d+/
+^/[a-z]+/center-\d+/inn\.html$
+^/[a-z]+/center-\d+/star3\.html$
+^/[a-z]+/center-\d+/star4\.html$
+^/[a-z]+/center-\d+/star5\.html$
+^/[a-z]+/center-\d+/p\d+\.html$
+ ^/[a-z]+/[a-z]+_\d+-hotel\.html$

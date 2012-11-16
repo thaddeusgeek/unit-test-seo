@@ -1,0 +1,10 @@
+http://piao.huoche.com/search.php?from=%E5%8C%97%E4%BA%AC&to=%E4%B8%8A%E6%B5%B7&departureDate=2012-10-01&trainName=						^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+			http://piao.huoche.com/beijing-shanghai/
+http://piao.huoche.com/search.php?from=%E5%8C%97%E4%BA%AC&to=%E4%B8%8A%E6%B5%B7&departureDate=2012-09-29&trainName=						^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+			http://piao.huoche.com/beijing-shanghai/day2.html
+http://piao.huoche.com/search.php?from=%E5%8C%97%E4%BA%AC&to=%E4%B8%8A%E6%B5%B7&departureDate=2012-09-30&trainName=						^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+			http://piao.huoche.com/beijing-shanghai/day3.html
+http://lieche.huoche.com/zz-beijing-shanghai/					^/zz-[a-z]+-[a-z]+/$									http://lieche.huoche.com/beijing-shanghai/Z63.html
+http://www.huoche.com/jipiao/detail.php?from=PEK&fromcode=&to=SHA&tocode=&date=2012-09-29&Rtdate=&type=1&fromid=Kuwxl-S1095951_jp		^/jipiao/detail\.php\?from=[A-Za-z]+(&.*?=.*?)*?&to=[A-Za-z]+			http://www.huoche.com/jipiao/beijing-shanghai
+http://www.huoche.com/beijingjipiao/											^/beijingjipiao/$													http://www.huoche.com/jipiao/sale/beijing/
+http://www.huoche.com/changtu/area/11880/									^/changtu/area/\d+/$																																																																																		http://www.huoche.com/changtu/beijing-shanghai/
+http://www.huoche.com/beijingqichezhan					^/beijingchezhan/$																			http://www.huoche.com/changtu/beijing/
+
+http://www.huoche.com/jipiao/										^/jipiao/$																http://www.huoche.com/jipiao/sale/	

@@ -1,0 +1,11 @@
+主页,http://huiyuan.big5.elong.com/                                                 /^\/$/
+城市酒店列表页 ,http://huiyuan.big5.elong.com/beijing/                                         /^\/\w+\-\d+\/$/  
+城市行政区酒店列表,http://huiyuan.big5.elong.com/beijing/tongzhou/,^/[a-z]+/[a-z]+/$
+城市行政区经济型酒店列表,http://huiyuan.big5.elong.com/beijing/tongzhou/inn.html,^/[a-z]+/[a-z]+/inn\.html$
+城市行政区三星级酒店列表,http://huiyuan.big5.elong.com/beijing/tongzhou/star3.html,^/[a-z]+/[a-z]+/star[3-5]\.html$
+城市+行政区酒店列表+翻页,http://huiyuan.big5.elong.com/beijing/tongzhou/p2.html,
+城市商圈酒店列表,http://huiyuan.big5.elong.com/beijing/center-123/,^/[a-z]+/center-\d+/
+城市商圈经济型酒店列表,http://huiyuan.big5.elong.com/beijing/center-123/inn.html,^/[a-z]+/center-\d+/inn\.html$
+城市商圈三星级酒店列表,http://huiyuan.big5.elong.com/beijing/center-123/star3.html,^/[a-z]+/center-\d+/star[3-5]\.html$
+城市商圈酒店列表+翻页,http://huiyuan.big5.elong.com/beijing/center-123/p2.html,
+产品详细页,http://huixuan.big5.elong.com/beijing/wangfujing_1300-hotel.html,^/[a-z]+/[a-z]+_\d+-hotel\.html$

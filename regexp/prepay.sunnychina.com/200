@@ -1,0 +1,23 @@
+Url正则
+^/$
+^/[a-z]+/$
+^/[a-z]+/p\d+\.html$
+        ^/[a-z]+/[a-z]+/$
+            ^/[a-z]+/[a-z]+/p\d+\.html$
+    ^/[a-z]+/center_\d+/$
+                ^/[a-z]+/center_\d+/p\d+\.html$
+    ^/[a-z]+/college_\d+/$
+            ^/[a-z]+/college_\d+/p\d+\.html$
+        ^/[a-z]+/hospital_\d+/$
+            ^/[a-z]+/hospital_\d+/p\d+\.html$
+^/[a-z]+/scenic_\d+/$
+                ^/[a-z]+/scenic_\d+/p\d+\.html$
+        ^/[a-z]+/train_\d+/$
+                ^/[a-z]+/train_\d+/p\d+\.html$
+    ^/[a-z]+/airport_\d+/$
+            ^/[a-z]+/airport_\d+/p\d+\.html$
+            ^/[a-z]+/metroline_\d+/$
+            ^/[a-z]+/metroline_\d+/p\d+\.html$
+        ^/[a-z]+/metro_\d+/$
+                ^/[a-z]+/metro_\d+/p\d+\.html$
+    ^/info_\d+\.html$

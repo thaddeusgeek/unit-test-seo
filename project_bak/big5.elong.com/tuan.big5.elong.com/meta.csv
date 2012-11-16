@@ -1,0 +1,6 @@
+主页,http://tuan.big5.elong.com/,^/$
+城市列表页,http://tuan.big5.elong.com/beijing/,^/[a-z]+/$
+城市+行政区,http://tuan.big5.elong.com/beijing/chaoyang/,^/[a-z]+/[a-z]+/$
+产品详细页,http://tuan.big5.elong.com/beijing/chaoyang/0036567/1.html,^/[a-z]+/[a-z]+/\d+/\d+\.html$
+城市+单一商圈,http://tuan.big5.elong.com/beijing/center-123.html,^/center-\d+\.html$
+城市+星级,http://tuan.big5.elong.com/beijing/star-123.html,^/star-\d+\.html$

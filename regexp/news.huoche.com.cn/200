@@ -1,0 +1,6 @@
+Url正则
+^/$
+^/[a-z]+/$
+^/\d+\.html$
+^/air\.html$
+^/student\.html$

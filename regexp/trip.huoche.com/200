@@ -1,0 +1,5 @@
+Url正则
+^/$
+^/asia.html$
+^/china.html$
+^/[a-z]+\.html$ 

@@ -1,0 +1,10 @@
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_n_0_0_0_3_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_n_0_0_0_9_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_n_0_0_0_11_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_(\w+-)+\d+_0_0_0_7_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_(\w+-)+\d+_0_0_0_3_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_(\w+-)+\d+_0_0_0_9_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_(\w+-)+\d+_0_0_0_11_0_0\.html$
+^/list_[A-Za-z]+_[A-Za-z]+_[A-Za-z]+_(\w+-)+\d+_\d+_0_0_0_7_0_0\.html$
+^/detail_\d+\.html$
