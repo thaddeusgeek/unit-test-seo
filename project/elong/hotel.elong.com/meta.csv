@@ -12,7 +12,7 @@
 "酒店的住客点评","http://hotel.elong.com/Beijing_Hotel_Beijing-50101002-reviews/#iTop",,"http://hotel.elong.com/beijing/50101002/review.html","^/review_cn_\d+\.html$","攀枝花川惠大酒店口碑怎么样_好不好_艺龙旅行网用户点评",,"攀枝花川惠大酒店,口碑,点评"
 ,,,,,,,
 "城市品牌酒店列表-P1","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/brand_123/","^/[a-z]+/brand_123/$","【北京_如家快捷酒店】预订(预定)_住宿价格查询_艺龙旅行网",,"北京,如家,快捷酒店,预订（预定),价格"
-"城市品牌酒店列表-Pn","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/brand_123/p1.html","^/[a-z]+/brand_123/p\d+\.html/$","【北京_如家快捷酒店】预订(预定)_住宿价格查询_2_艺龙旅行网",,"北京,如家,快捷酒店,预订（预定),价格"
+"城市品牌酒店列表-Pn","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/brand_123/p2.html","^/[a-z]+/brand_123/p\d+\.html/$","【北京_如家快捷酒店】预订(预定)_住宿价格查询_2_艺龙旅行网",,"北京,如家,快捷酒店,预订（预定),价格"
 "城市品牌经济型酒店列表","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/brand_123/inn.html",,,,
 "城市品牌三/四/五星级酒店列表","http://hotel.elong.com/city/Beijing-0C0101-hotels/",,"http://hotel.elong.com/beijing/brand_123/star_3.html",,,,
 ,,,,,,,
