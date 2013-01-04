@@ -1,5 +1,0 @@
-  ^/chinatours/$
-^/chinatours/[a-z]+-[a-z]+/$
-^/chinatours/[a-z]+_[a-z]+/p\d+\.html$
-^/chinatours/[a-z]+/$
-^/chinatours/([^-]+-)+[^-]+\.html$

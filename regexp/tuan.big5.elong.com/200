@@ -1,6 +1,0 @@
-^/$
-^/[a-z]+/$
-^/[a-z]+/[a-z]+/$
-^/[a-z]+/[a-z]+/\d+/\d+\.html$
-^/center-\d+\.html$
-^/star-\d+\.html$

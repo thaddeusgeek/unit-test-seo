@@ -1,7 +1,0 @@
-^/[a-z]+/[a-z]+/$
-^/[a-z]+/[a-z]+/inn\.html$
-^/[a-z]+/[a-z]+/star[3-5]\.html$
-^/[a-z]+/center-\d+/
-^/[a-z]+/center-\d+/inn\.html$
-^/[a-z]+/center-\d+/star[3-5]\.html$
-^/[a-z]+/[a-z]+_\d+-hotel\.html$

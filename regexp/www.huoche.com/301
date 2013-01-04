@@ -1,9 +1,0 @@
-^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+
-^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+
-^/search\.php\?from=(%[A-F\d]{2})+&to=(%[A-F\d]{2})+
-^/zz-[a-z]+-[a-z]+/$
-^/jipiao/detail\.php\?from=[A-Za-z]+(&.*?=.*?)*?&to=[A-Za-z]+
-^/beijingjipiao/$
-^/changtu/area/\d+/$
-^/beijingchezhan/$
-^/jipiao/$

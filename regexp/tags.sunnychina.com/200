@@ -1,6 +1,0 @@
-Url正则
-^/$
-^/list_\d+_[a-z]+/$
-^/list_\d+_[a-z]+/p\d+\.html$
-^/\d+_\d+_[a-z]+/$
-^/\d+_\d+_[a-z]+/p\d+\.html$
